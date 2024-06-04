@@ -1,2 +1,5 @@
-# do_i_wanna_paleo
-paleo-linked methods for network reconstruction
+# Paleo-linked methods for network reconstruction
+
+A primer/template for thinking about the reconstruction of paleo networks. Particularly thinking about what we actually do with the data, how we interpret structure and function (linking the 'summary statistics' to ecological theory), and understanding the conceptual differences between a metaweb and a realised network (and how we downsample from one to the other).
+
+In terms of turning these concepts into a tangible 'item' the idea is to compare and contrast some of the canonical methods used for reconstructing paleo food webs across different transitions (*e.g.,* extinction events), see how these different methods might (or not) result in different 'summary statistics' and also make sure to link the 'summary statistic' to the relevant ecological theory (in the context of both structure and function).
