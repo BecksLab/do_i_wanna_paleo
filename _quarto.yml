@@ -1,0 +1,30 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Paleo-linked methods for network reconstruction"
+  page-navigation: true
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - section: "Rationale"
+        contents:
+          - index.qmd
+      - section: "(Re)constructing paleo networks"
+        contents:
+          - 01_reconstruction_methods.qmd
+          - 02_PFIM.qmd
+          - 03_bodymass_ratio.qmd
+      - section: "Form vs Function"
+        contents:
+          - 04_structure_vs_form.qmd
+      - section: "Downsampling"
+        contents:
+          - 05_meta_vs_realised.qmd
+
+format:
+    html:
+        embed-resources: true
+title-block-banner: true

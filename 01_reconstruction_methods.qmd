@@ -1,0 +1,16 @@
+---
+title: "How we reconstruct paleo food webs"
+date: last-modified
+author: "Tanya Strydom and friends"
+format:
+    html:
+        embed-resources: true
+title-block-banner: true
+bibliography: references.bib
+---
+
+## Why build paleo food webs?
+
+## What do they mean?
+
+## How do we do it?

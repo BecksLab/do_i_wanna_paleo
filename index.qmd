@@ -1,0 +1,13 @@
+---
+title: "Paleo-linked methods for network reconstruction"
+author: "Tanya Strydom and friends"
+date: last-modified
+bibliography: references.bib
+
+format:
+    html:
+        embed-resources: true
+title-block-banner: true
+---
+
+**TODO**

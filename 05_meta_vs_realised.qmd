@@ -1,0 +1,12 @@
+---
+title: "Metawebs vs realised webs"
+date: last-modified
+author: "Tanya Strydom and friends"
+format:
+    html:
+        embed-resources: true
+title-block-banner: true
+bibliography: references.bib
+---
+
+The importance of understanding how the two differ. How do we downsample a metaweb to make it a realised web.
