@@ -14,7 +14,7 @@ bibliography: references.bib
 
 ## Overview
 
-This concept of using body mass ratios to determine potential feeding links between species was primarily developed by @rohr2010 and has become quite popular in paleo settings [*e.g.,* @yeakel2014; @pires2015]
+This concept of using body mass ratios to determine potential feeding links between species was primarily developed by @rohr2010 and has become quite popular in paleo settings [@yeakel2014; @pires2015]
 
 ## Methods
 
