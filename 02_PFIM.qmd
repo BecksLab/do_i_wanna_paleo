@@ -1,7 +1,10 @@
 ---
 title: "PFIM"
 date: last-modified
-author: "Tanya Strydom and friends"
+author:
+  - name: Tanya Strydom
+    orcid: 0000-0001-6067-1349
+  - name: Friends
 format:
     html:
         embed-resources: true
