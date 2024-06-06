@@ -1,13 +1,68 @@
 [
   {
-    "objectID": "04_structure_vs_form.html",
-    "href": "04_structure_vs_form.html",
-    "title": "Structure vs Function",
+    "objectID": "05_meta_vs_realised.html",
+    "href": "05_meta_vs_realised.html",
+    "title": "Metawebs vs realised webs",
     "section": "",
-    "text": "Linking structure and function to ecological processes",
+    "text": "The importance of understanding how the two differ. How do we downsample a metaweb to make it a realised web.",
     "crumbs": [
-      "Form vs Function",
-      "Structure vs Function"
+      "Downsampling",
+      "Metawebs vs realised webs"
+    ]
+  },
+  {
+    "objectID": "03_bodymass_ratio.html",
+    "href": "03_bodymass_ratio.html",
+    "title": "Bodymass-ratio",
+    "section": "",
+    "text": "This concept of using body mass ratios to determine potential feeding links between species was primarily developed by Rohr et al. (2010) and has become quite popular in paleo settings Pires et al. (2015)",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Bodymass-ratio"
+    ]
+  },
+  {
+    "objectID": "03_bodymass_ratio.html#overview",
+    "href": "03_bodymass_ratio.html#overview",
+    "title": "Bodymass-ratio",
+    "section": "",
+    "text": "This concept of using body mass ratios to determine potential feeding links between species was primarily developed by Rohr et al. (2010) and has become quite popular in paleo settings Pires et al. (2015)",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Bodymass-ratio"
+    ]
+  },
+  {
+    "objectID": "03_bodymass_ratio.html#methods",
+    "href": "03_bodymass_ratio.html#methods",
+    "title": "Bodymass-ratio",
+    "section": "Methods",
+    "text": "Methods",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Bodymass-ratio"
+    ]
+  },
+  {
+    "objectID": "03_bodymass_ratio.html#example",
+    "href": "03_bodymass_ratio.html#example",
+    "title": "Bodymass-ratio",
+    "section": "Example",
+    "text": "Example",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Bodymass-ratio"
+    ]
+  },
+  {
+    "objectID": "03_bodymass_ratio.html#references",
+    "href": "03_bodymass_ratio.html#references",
+    "title": "Bodymass-ratio",
+    "section": "References",
+    "text": "References\n\n\nPires, Mathias M., Paul L. Koch, Richard A. Fariña, Marcus A. M. de Aguiar, Sérgio F. dos Reis, and Paulo R. Guimarães. 2015. “Pleistocene Megafaunal Interaction Networks Became More Vulnerable After Human Arrival.” Proceedings of the Royal Society B: Biological Sciences 282 (1814): 20151367. https://doi.org/10.1098/rspb.2015.1367.\n\n\nRohr, Rudolf Philippe, Heike Scherer, Patrik Kehrli, Christian Mazza, and Louis-Félix Bersier. 2010. “Modeling Food Webs: Exploring Unexplained Structure Using Latent Traits.” The American Naturalist 176 (2): 170–77. https://doi.org/10.1086/653667.\n\n\nYeakel, Justin D., Mathias M. Pires, Lars Rudolf, Nathaniel J. Dominy, Paul L. Koch, Paulo R. Guimarães, and Thilo Gross. 2014. “Collapse of an Ecological Network in Ancient Egypt.” PNAS 111 (40): 14472–77. https://doi.org/10.1073/pnas.1408471111.",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Bodymass-ratio"
     ]
   },
   {
@@ -44,14 +99,47 @@
     ]
   },
   {
-    "objectID": "05_meta_vs_realised.html",
-    "href": "05_meta_vs_realised.html",
-    "title": "Metawebs vs realised webs",
-    "section": "",
-    "text": "The importance of understanding how the two differ. How do we downsample a metaweb to make it a realised web.",
+    "objectID": "index.html#references",
+    "href": "index.html#references",
+    "title": "Paleo-linked methods for network reconstruction",
+    "section": "References",
+    "text": "References",
     "crumbs": [
-      "Downsampling",
-      "Metawebs vs realised webs"
+      "Rationale",
+      "Paleo-linked methods for network reconstruction"
+    ]
+  },
+  {
+    "objectID": "04_structure_vs_form.html",
+    "href": "04_structure_vs_form.html",
+    "title": "Structure vs Function",
+    "section": "",
+    "text": "Linking structure and function to ecological processes",
+    "crumbs": [
+      "Form vs Function",
+      "Structure vs Function"
+    ]
+  },
+  {
+    "objectID": "02_PFIM.html",
+    "href": "02_PFIM.html",
+    "title": "PFIM",
+    "section": "",
+    "text": "The Paleo Food web Inference Model (PFIM, Shaw et al., n.d.) uses a series of rules for a set of trait categories (such as habitat and body size) to determine if an interaction can feasibly occur between a species pair.",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "PFIM"
+    ]
+  },
+  {
+    "objectID": "02_PFIM.html#overview",
+    "href": "02_PFIM.html#overview",
+    "title": "PFIM",
+    "section": "",
+    "text": "The Paleo Food web Inference Model (PFIM, Shaw et al., n.d.) uses a series of rules for a set of trait categories (such as habitat and body size) to determine if an interaction can feasibly occur between a species pair.",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "PFIM"
     ]
   },
   {
@@ -77,25 +165,14 @@
     ]
   },
   {
-    "objectID": "03_bodymass_ratio.html#methods",
-    "href": "03_bodymass_ratio.html#methods",
-    "title": "Bodymass-ratio",
-    "section": "Methods",
-    "text": "Methods",
+    "objectID": "02_PFIM.html#references",
+    "href": "02_PFIM.html#references",
+    "title": "PFIM",
+    "section": "References",
+    "text": "References\n\n\nShaw, Jack O., Alexander M. Dunhill, Andrew P. Beckerman, Jennifer A. Dunne, and Pincelli M. Hull. n.d. “A Framework for Reconstructing Ancient Food Webs Using Functional Trait Data.” https://doi.org/10.1101/2024.01.30.578036.",
     "crumbs": [
       "(Re)constructing paleo networks",
-      "Bodymass-ratio"
-    ]
-  },
-  {
-    "objectID": "03_bodymass_ratio.html#example",
-    "href": "03_bodymass_ratio.html#example",
-    "title": "Bodymass-ratio",
-    "section": "Example",
-    "text": "Example",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "Bodymass-ratio"
+      "PFIM"
     ]
   }
 ]
