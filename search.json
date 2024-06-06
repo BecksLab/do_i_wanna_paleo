@@ -1,0 +1,101 @@
+[
+  {
+    "objectID": "04_structure_vs_form.html",
+    "href": "04_structure_vs_form.html",
+    "title": "Structure vs Function",
+    "section": "",
+    "text": "Linking structure and function to ecological processes",
+    "crumbs": [
+      "Form vs Function",
+      "Structure vs Function"
+    ]
+  },
+  {
+    "objectID": "01_reconstruction_methods.html#what-do-they-mean",
+    "href": "01_reconstruction_methods.html#what-do-they-mean",
+    "title": "How we reconstruct paleo food webs",
+    "section": "What do they mean?",
+    "text": "What do they mean?",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "How we reconstruct paleo food webs"
+    ]
+  },
+  {
+    "objectID": "01_reconstruction_methods.html#how-do-we-do-it",
+    "href": "01_reconstruction_methods.html#how-do-we-do-it",
+    "title": "How we reconstruct paleo food webs",
+    "section": "How do we do it?",
+    "text": "How do we do it?",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "How we reconstruct paleo food webs"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Paleo-linked methods for network reconstruction",
+    "section": "",
+    "text": "TODO",
+    "crumbs": [
+      "Rationale",
+      "Paleo-linked methods for network reconstruction"
+    ]
+  },
+  {
+    "objectID": "05_meta_vs_realised.html",
+    "href": "05_meta_vs_realised.html",
+    "title": "Metawebs vs realised webs",
+    "section": "",
+    "text": "The importance of understanding how the two differ. How do we downsample a metaweb to make it a realised web.",
+    "crumbs": [
+      "Downsampling",
+      "Metawebs vs realised webs"
+    ]
+  },
+  {
+    "objectID": "02_PFIM.html#methods",
+    "href": "02_PFIM.html#methods",
+    "title": "PFIM",
+    "section": "Methods",
+    "text": "Methods",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "PFIM"
+    ]
+  },
+  {
+    "objectID": "02_PFIM.html#example",
+    "href": "02_PFIM.html#example",
+    "title": "PFIM",
+    "section": "Example",
+    "text": "Example",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "PFIM"
+    ]
+  },
+  {
+    "objectID": "03_bodymass_ratio.html#methods",
+    "href": "03_bodymass_ratio.html#methods",
+    "title": "Bodymass-ratio",
+    "section": "Methods",
+    "text": "Methods",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Bodymass-ratio"
+    ]
+  },
+  {
+    "objectID": "03_bodymass_ratio.html#example",
+    "href": "03_bodymass_ratio.html#example",
+    "title": "Bodymass-ratio",
+    "section": "Example",
+    "text": "Example",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Bodymass-ratio"
+    ]
+  }
+]
