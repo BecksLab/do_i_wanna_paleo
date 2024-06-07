@@ -13,7 +13,15 @@ format:
 title-block-banner: true
 ---
 
-**TODO**
+A primer/template for thinking about the reconstruction of paleo networks. Particularly thinking about what we actually do with the data, how we interpret structure and function (linking the 'summary statistics' to ecological theory), and understanding the conceptual differences between a metaweb and a realised network (and how we downsample from one to the other).
+
+In terms of turning these concepts into a tangible 'item' the idea is to compare and contrast some of the canonical methods used for reconstructing paleo food webs across different transitions (*e.g.,* extinction events), see how these different methods might (or not) result in different 'summary statistics' and also make sure to link the 'summary statistic' to the relevant ecological theory (in the context of both structure and function).
+
+We could even do a dashboard!! - See Andrew's below (although it is not rendering properly, which is grating).
+
+```{=html}
+ <iframe id="example1" src="http://andrew-beckerman.shinyapps.io/SecondaryExtinctionGame" style="border: none; width: 100%; height: 720px" frameborder="0"></iframe>
+```
 
 ## References {.unnumbered}
 
