@@ -14,7 +14,7 @@ bibliography: references.bib
 
 ## Overview
 
-The Paleo Food web Inference Model [PFIM, @shaw] uses a series of rules for a set of trait categories (such as habitat and body size) to determine if an interaction can feasibly occur between a species pair.
+The Paleo Food web Inference Model [PFIM, @shaw2024] uses a series of rules for a set of trait categories (such as habitat and body size) to determine if an interaction can feasibly occur between a species pair.
 
 ## Methods
 
