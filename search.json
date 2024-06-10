@@ -92,7 +92,7 @@
     "href": "PFIM.html",
     "title": "PFIM",
     "section": "",
-    "text": "The Paleo Food web Inference Model (PFIM, Shaw et al., n.d.) uses a series of rules for a set of trait categories (such as habitat and body size) to determine if an interaction can feasibly occur between a species pair.",
+    "text": "The Paleo Food web Inference Model (PFIM, Shaw et al. 2024) uses a series of rules for a set of trait categories (such as habitat and body size) to determine if an interaction can feasibly occur between a species pair.",
     "crumbs": [
       "(Re)constructing paleo networks",
       "PFIM"
@@ -103,7 +103,7 @@
     "href": "PFIM.html#overview",
     "title": "PFIM",
     "section": "",
-    "text": "The Paleo Food web Inference Model (PFIM, Shaw et al., n.d.) uses a series of rules for a set of trait categories (such as habitat and body size) to determine if an interaction can feasibly occur between a species pair.",
+    "text": "The Paleo Food web Inference Model (PFIM, Shaw et al. 2024) uses a series of rules for a set of trait categories (such as habitat and body size) to determine if an interaction can feasibly occur between a species pair.",
     "crumbs": [
       "(Re)constructing paleo networks",
       "PFIM"
@@ -136,7 +136,7 @@
     "href": "PFIM.html#references",
     "title": "PFIM",
     "section": "References",
-    "text": "References\n\n\nShaw, Jack O., Alexander M. Dunhill, Andrew P. Beckerman, Jennifer A. Dunne, and Pincelli M. Hull. n.d. “A Framework for Reconstructing Ancient Food Webs Using Functional Trait Data.” https://doi.org/10.1101/2024.01.30.578036.",
+    "text": "References\n\n\nShaw, Jack O., Alexander M. Dunhill, Andrew P. Beckerman, Jennifer A. Dunne, and Pincelli M. Hull. 2024. “A Framework for Reconstructing Ancient Food Webs Using Functional Trait Data.” https://doi.org/10.1101/2024.01.30.578036.",
     "crumbs": [
       "(Re)constructing paleo networks",
       "PFIM"
