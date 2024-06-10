@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://BecksLab.github.io/do_i_wanna_paleo/05_meta_vs_realised.html</loc>
-    <lastmod>2024-06-07T14:30:52.918Z</lastmod>
+    <loc>https://BecksLab.github.io/do_i_wanna_paleo/expert_knowledge.html</loc>
+    <lastmod>2024-06-10T08:04:04.752Z</lastmod>
   </url>
   <url>
-    <loc>https://BecksLab.github.io/do_i_wanna_paleo/03_bodymass_ratio.html</loc>
-    <lastmod>2024-06-07T14:30:52.918Z</lastmod>
-  </url>
-  <url>
-    <loc>https://BecksLab.github.io/do_i_wanna_paleo/01_reconstruction_methods.html</loc>
-    <lastmod>2024-06-07T14:30:52.918Z</lastmod>
+    <loc>https://BecksLab.github.io/do_i_wanna_paleo/structure_vs_form.html</loc>
+    <lastmod>2024-06-10T08:04:04.752Z</lastmod>
   </url>
   <url>
     <loc>https://BecksLab.github.io/do_i_wanna_paleo/index.html</loc>
-    <lastmod>2024-06-07T14:30:52.918Z</lastmod>
+    <lastmod>2024-06-10T08:04:04.752Z</lastmod>
   </url>
   <url>
-    <loc>https://BecksLab.github.io/do_i_wanna_paleo/04_structure_vs_form.html</loc>
-    <lastmod>2024-06-07T14:30:52.918Z</lastmod>
+    <loc>https://BecksLab.github.io/do_i_wanna_paleo/reconstruction_methods.html</loc>
+    <lastmod>2024-06-10T08:04:04.752Z</lastmod>
   </url>
   <url>
-    <loc>https://BecksLab.github.io/do_i_wanna_paleo/02_PFIM.html</loc>
-    <lastmod>2024-06-07T14:30:52.918Z</lastmod>
+    <loc>https://BecksLab.github.io/do_i_wanna_paleo/PFIM.html</loc>
+    <lastmod>2024-06-10T08:04:04.752Z</lastmod>
+  </url>
+  <url>
+    <loc>https://BecksLab.github.io/do_i_wanna_paleo/meta_vs_realised.html</loc>
+    <lastmod>2024-06-10T08:04:04.752Z</lastmod>
+  </url>
+  <url>
+    <loc>https://BecksLab.github.io/do_i_wanna_paleo/bodymass_ratio.html</loc>
+    <lastmod>2024-06-10T08:04:04.752Z</lastmod>
   </url>
 </urlset>
