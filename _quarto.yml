@@ -14,16 +14,16 @@ website:
           - index.qmd
       - section: "(Re)constructing paleo networks"
         contents:
-          - 01_reconstruction_methods.qmd
+          - reconstruction_methods.qmd
           - expert_knowledge.qmd
-          - 02_PFIM.qmd
-          - 03_bodymass_ratio.qmd
+          - PFIM.qmd
+          - bodymass_ratio.qmd
       - section: "Form vs Function"
         contents:
-          - 04_structure_vs_form.qmd
+          - structure_vs_form.qmd
       - section: "Downsampling"
         contents:
-          - 05_meta_vs_realised.qmd
+          - meta_vs_realised.qmd
 
 format:
     html:
