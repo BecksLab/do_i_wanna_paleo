@@ -1,10 +1,6 @@
 ---
 title: "Bodymass-ratio"
 date: last-modified
-author:
-  - name: Tanya Strydom
-    orcid: 0000-0001-6067-1349
-  - name: Friends
 format:
     html:
         embed-resources: true
