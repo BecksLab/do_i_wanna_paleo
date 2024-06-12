@@ -14,16 +14,17 @@ website:
           - index.qmd
       - section: "(Re)constructing paleo networks"
         contents:
-          - reconstruction_methods.qmd
-          - expert_knowledge.qmd
-          - PFIM.qmd
-          - bodymass_ratio.qmd
-      - section: "Form vs Function"
-        contents:
-          - structure_vs_form.qmd
+          - 01_reconstruction_methods.qmd
+          - 02_bodymass_ratio.qmd
+          - 03_expert_knowledge.qmd
+          - 04_PFIM.qmd
       - section: "Downsampling"
         contents:
-          - meta_vs_realised.qmd
+          - 05_meta_vs_realised.qmd
+      - section: "Form vs Function"
+        contents:
+          - 06_structure_vs_form.qmd
+
 
 author:
   - name: Tanya Strydom
