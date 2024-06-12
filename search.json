@@ -1,7 +1,18 @@
 [
   {
-    "objectID": "expert_knowledge.html#methods",
-    "href": "expert_knowledge.html#methods",
+    "objectID": "05_meta_vs_realised.html",
+    "href": "05_meta_vs_realised.html",
+    "title": "Metawebs vs realised webs",
+    "section": "",
+    "text": "The importance of understanding how the two differ. How do we downsample a metaweb to make it a realised web.",
+    "crumbs": [
+      "Downsampling",
+      "Metawebs vs realised webs"
+    ]
+  },
+  {
+    "objectID": "03_expert_knowledge.html#methods",
+    "href": "03_expert_knowledge.html#methods",
     "title": "Expert Knowledge",
     "section": "Methods",
     "text": "Methods",
@@ -11,8 +22,8 @@
     ]
   },
   {
-    "objectID": "expert_knowledge.html#example",
-    "href": "expert_knowledge.html#example",
+    "objectID": "03_expert_knowledge.html#example",
+    "href": "03_expert_knowledge.html#example",
     "title": "Expert Knowledge",
     "section": "Example",
     "text": "Example",
@@ -22,25 +33,14 @@
     ]
   },
   {
-    "objectID": "expert_knowledge.html#references",
-    "href": "expert_knowledge.html#references",
+    "objectID": "03_expert_knowledge.html#references",
+    "href": "03_expert_knowledge.html#references",
     "title": "Expert Knowledge",
     "section": "References",
     "text": "References",
     "crumbs": [
       "(Re)constructing paleo networks",
       "Expert Knowledge"
-    ]
-  },
-  {
-    "objectID": "structure_vs_form.html",
-    "href": "structure_vs_form.html",
-    "title": "Structure vs Function",
-    "section": "",
-    "text": "Linking structure and function to ecological processes",
-    "crumbs": [
-      "Form vs Function",
-      "Structure vs Function"
     ]
   },
   {
@@ -66,30 +66,19 @@
     ]
   },
   {
-    "objectID": "reconstruction_methods.html#what-do-they-mean",
-    "href": "reconstruction_methods.html#what-do-they-mean",
-    "title": "How we reconstruct paleo food webs",
-    "section": "What do they mean?",
-    "text": "What do they mean?",
+    "objectID": "06_structure_vs_form.html",
+    "href": "06_structure_vs_form.html",
+    "title": "Structure vs Function",
+    "section": "",
+    "text": "Linking structure and function to ecological processes",
     "crumbs": [
-      "(Re)constructing paleo networks",
-      "How we reconstruct paleo food webs"
+      "Form vs Function",
+      "Structure vs Function"
     ]
   },
   {
-    "objectID": "reconstruction_methods.html#how-do-we-do-it",
-    "href": "reconstruction_methods.html#how-do-we-do-it",
-    "title": "How we reconstruct paleo food webs",
-    "section": "How do we do it?",
-    "text": "How do we do it?",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "How we reconstruct paleo food webs"
-    ]
-  },
-  {
-    "objectID": "PFIM.html",
-    "href": "PFIM.html",
+    "objectID": "04_PFIM.html",
+    "href": "04_PFIM.html",
     "title": "PFIM",
     "section": "",
     "text": "The Paleo Food web Inference Model (PFIM, Shaw et al. 2024) uses a series of rules for a set of trait categories (such as habitat and body size) to determine if an interaction can feasibly occur between a species pair.",
@@ -99,8 +88,8 @@
     ]
   },
   {
-    "objectID": "PFIM.html#overview",
-    "href": "PFIM.html#overview",
+    "objectID": "04_PFIM.html#overview",
+    "href": "04_PFIM.html#overview",
     "title": "PFIM",
     "section": "",
     "text": "The Paleo Food web Inference Model (PFIM, Shaw et al. 2024) uses a series of rules for a set of trait categories (such as habitat and body size) to determine if an interaction can feasibly occur between a species pair.",
@@ -110,8 +99,8 @@
     ]
   },
   {
-    "objectID": "PFIM.html#methods",
-    "href": "PFIM.html#methods",
+    "objectID": "04_PFIM.html#methods",
+    "href": "04_PFIM.html#methods",
     "title": "PFIM",
     "section": "Methods",
     "text": "Methods",
@@ -121,8 +110,8 @@
     ]
   },
   {
-    "objectID": "PFIM.html#example",
-    "href": "PFIM.html#example",
+    "objectID": "04_PFIM.html#example",
+    "href": "04_PFIM.html#example",
     "title": "PFIM",
     "section": "Example",
     "text": "Example",
@@ -132,8 +121,8 @@
     ]
   },
   {
-    "objectID": "PFIM.html#references",
-    "href": "PFIM.html#references",
+    "objectID": "04_PFIM.html#references",
+    "href": "04_PFIM.html#references",
     "title": "PFIM",
     "section": "References",
     "text": "References\n\n\nShaw, Jack O., Alexander M. Dunhill, Andrew P. Beckerman, Jennifer A. Dunne, and Pincelli M. Hull. 2024. “A Framework for Reconstructing Ancient Food Webs Using Functional Trait Data.” https://doi.org/10.1101/2024.01.30.578036.",
@@ -143,19 +132,30 @@
     ]
   },
   {
-    "objectID": "meta_vs_realised.html",
-    "href": "meta_vs_realised.html",
-    "title": "Metawebs vs realised webs",
-    "section": "",
-    "text": "The importance of understanding how the two differ. How do we downsample a metaweb to make it a realised web.",
+    "objectID": "01_reconstruction_methods.html#what-do-they-mean",
+    "href": "01_reconstruction_methods.html#what-do-they-mean",
+    "title": "How we reconstruct paleo food webs",
+    "section": "What do they mean?",
+    "text": "What do they mean?",
     "crumbs": [
-      "Downsampling",
-      "Metawebs vs realised webs"
+      "(Re)constructing paleo networks",
+      "How we reconstruct paleo food webs"
     ]
   },
   {
-    "objectID": "bodymass_ratio.html",
-    "href": "bodymass_ratio.html",
+    "objectID": "01_reconstruction_methods.html#how-do-we-do-it",
+    "href": "01_reconstruction_methods.html#how-do-we-do-it",
+    "title": "How we reconstruct paleo food webs",
+    "section": "How do we do it?",
+    "text": "How do we do it?",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "How we reconstruct paleo food webs"
+    ]
+  },
+  {
+    "objectID": "02_bodymass_ratio.html",
+    "href": "02_bodymass_ratio.html",
     "title": "Bodymass-ratio",
     "section": "",
     "text": "This concept of using body mass ratios to determine potential feeding links between species was primarily developed by Rohr et al. (2010) and has become quite popular in paleo settings (Yeakel et al. 2014; Pires et al. 2015)",
@@ -165,8 +165,8 @@
     ]
   },
   {
-    "objectID": "bodymass_ratio.html#overview",
-    "href": "bodymass_ratio.html#overview",
+    "objectID": "02_bodymass_ratio.html#overview",
+    "href": "02_bodymass_ratio.html#overview",
     "title": "Bodymass-ratio",
     "section": "",
     "text": "This concept of using body mass ratios to determine potential feeding links between species was primarily developed by Rohr et al. (2010) and has become quite popular in paleo settings (Yeakel et al. 2014; Pires et al. 2015)",
@@ -176,8 +176,8 @@
     ]
   },
   {
-    "objectID": "bodymass_ratio.html#methods",
-    "href": "bodymass_ratio.html#methods",
+    "objectID": "02_bodymass_ratio.html#methods",
+    "href": "02_bodymass_ratio.html#methods",
     "title": "Bodymass-ratio",
     "section": "Methods",
     "text": "Methods",
@@ -187,8 +187,8 @@
     ]
   },
   {
-    "objectID": "bodymass_ratio.html#example",
-    "href": "bodymass_ratio.html#example",
+    "objectID": "02_bodymass_ratio.html#example",
+    "href": "02_bodymass_ratio.html#example",
     "title": "Bodymass-ratio",
     "section": "Example",
     "text": "Example",
@@ -198,8 +198,8 @@
     ]
   },
   {
-    "objectID": "bodymass_ratio.html#references",
-    "href": "bodymass_ratio.html#references",
+    "objectID": "02_bodymass_ratio.html#references",
+    "href": "02_bodymass_ratio.html#references",
     "title": "Bodymass-ratio",
     "section": "References",
     "text": "References\n\n\nPires, Mathias M., Paul L. Koch, Richard A. Fariña, Marcus A. M. de Aguiar, Sérgio F. dos Reis, and Paulo R. Guimarães. 2015. “Pleistocene Megafaunal Interaction Networks Became More Vulnerable After Human Arrival.” Proceedings of the Royal Society B: Biological Sciences 282 (1814): 20151367. https://doi.org/10.1098/rspb.2015.1367.\n\n\nRohr, Rudolf Philippe, Heike Scherer, Patrik Kehrli, Christian Mazza, and Louis-Félix Bersier. 2010. “Modeling Food Webs: Exploring Unexplained Structure Using Latent Traits.” The American Naturalist 176 (2): 170–77. https://doi.org/10.1086/653667.\n\n\nYeakel, Justin D., Mathias M. Pires, Lars Rudolf, Nathaniel J. Dominy, Paul L. Koch, Paulo R. Guimarães, and Thilo Gross. 2014. “Collapse of an Ecological Network in Ancient Egypt.” PNAS 111 (40): 14472–77. https://doi.org/10.1073/pnas.1408471111.",
