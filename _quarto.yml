@@ -18,12 +18,13 @@ website:
           - 02_bodymass_ratio.qmd
           - 03_expert_knowledge.qmd
           - 04_PFIM.qmd
+          - 05_contemporary.qmd
       - section: "Downsampling"
         contents:
-          - 05_meta_vs_realised.qmd
+          - 06_meta_vs_realised.qmd
       - section: "Form vs Function"
         contents:
-          - 06_structure_vs_form.qmd
+          - 07_structure_vs_form.qmd
 
 
 author:
