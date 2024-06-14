@@ -1,13 +1,57 @@
 [
   {
-    "objectID": "05_meta_vs_realised.html",
-    "href": "05_meta_vs_realised.html",
-    "title": "Metawebs vs realised webs",
+    "objectID": "02_bodymass_ratio.html",
+    "href": "02_bodymass_ratio.html",
+    "title": "Bodymass-ratio",
     "section": "",
-    "text": "The importance of understanding how the two differ. How do we downsample a metaweb to make it a realised web.",
+    "text": "This concept of using body mass ratios to determine potential feeding links between species was primarily developed by Rohr et al. (2010) and has become quite popular in paleo settings (Yeakel et al. 2014; Pires et al. 2015)",
     "crumbs": [
-      "Downsampling",
-      "Metawebs vs realised webs"
+      "(Re)constructing paleo networks",
+      "Bodymass-ratio"
+    ]
+  },
+  {
+    "objectID": "02_bodymass_ratio.html#overview",
+    "href": "02_bodymass_ratio.html#overview",
+    "title": "Bodymass-ratio",
+    "section": "",
+    "text": "This concept of using body mass ratios to determine potential feeding links between species was primarily developed by Rohr et al. (2010) and has become quite popular in paleo settings (Yeakel et al. 2014; Pires et al. 2015)",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Bodymass-ratio"
+    ]
+  },
+  {
+    "objectID": "02_bodymass_ratio.html#methods",
+    "href": "02_bodymass_ratio.html#methods",
+    "title": "Bodymass-ratio",
+    "section": "Methods",
+    "text": "Methods",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Bodymass-ratio"
+    ]
+  },
+  {
+    "objectID": "02_bodymass_ratio.html#example",
+    "href": "02_bodymass_ratio.html#example",
+    "title": "Bodymass-ratio",
+    "section": "Example",
+    "text": "Example",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Bodymass-ratio"
+    ]
+  },
+  {
+    "objectID": "02_bodymass_ratio.html#references",
+    "href": "02_bodymass_ratio.html#references",
+    "title": "Bodymass-ratio",
+    "section": "References",
+    "text": "References\n\n\nPires, Mathias M., Paul L. Koch, Richard A. Fariña, Marcus A. M. de Aguiar, Sérgio F. dos Reis, and Paulo R. Guimarães. 2015. “Pleistocene Megafaunal Interaction Networks Became More Vulnerable After Human Arrival.” Proceedings of the Royal Society B: Biological Sciences 282 (1814): 20151367. https://doi.org/10.1098/rspb.2015.1367.\n\n\nRohr, Rudolf Philippe, Heike Scherer, Patrik Kehrli, Christian Mazza, and Louis-Félix Bersier. 2010. “Modeling Food Webs: Exploring Unexplained Structure Using Latent Traits.” The American Naturalist 176 (2): 170–77. https://doi.org/10.1086/653667.\n\n\nYeakel, Justin D., Mathias M. Pires, Lars Rudolf, Nathaniel J. Dominy, Paul L. Koch, Paulo R. Guimarães, and Thilo Gross. 2014. “Collapse of an Ecological Network in Ancient Egypt.” PNAS 111 (40): 14472–77. https://doi.org/10.1073/pnas.1408471111.",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Bodymass-ratio"
     ]
   },
   {
@@ -44,30 +88,30 @@
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Paleo-linked methods for network reconstruction",
-    "section": "",
-    "text": "A primer/template for thinking about the reconstruction of paleo networks. Particularly thinking about what we actually do with the data, how we interpret structure and function (linking the ‘summary statistics’ to ecological theory), and understanding the conceptual differences between a metaweb and a realised network (and how we downsample from one to the other).\nIn terms of turning these concepts into a tangible ‘item’ the idea is to compare and contrast some of the canonical methods used for reconstructing paleo food webs across different transitions (e.g., extinction events), see how these different methods might (or not) result in different ‘summary statistics’ and also make sure to link the ‘summary statistic’ to the relevant ecological theory (in the context of both structure and function).\nWe could even do a dashboard!! - See Andrew’s below (although it is not rendering properly, which is grating).",
+    "objectID": "01_reconstruction_methods.html#what-do-they-mean",
+    "href": "01_reconstruction_methods.html#what-do-they-mean",
+    "title": "How we reconstruct paleo food webs",
+    "section": "What do they mean?",
+    "text": "What do they mean?",
     "crumbs": [
-      "Rationale",
-      "Paleo-linked methods for network reconstruction"
+      "(Re)constructing paleo networks",
+      "How we reconstruct paleo food webs"
     ]
   },
   {
-    "objectID": "index.html#references",
-    "href": "index.html#references",
-    "title": "Paleo-linked methods for network reconstruction",
-    "section": "References",
-    "text": "References",
+    "objectID": "01_reconstruction_methods.html#how-do-we-do-it",
+    "href": "01_reconstruction_methods.html#how-do-we-do-it",
+    "title": "How we reconstruct paleo food webs",
+    "section": "How do we do it?",
+    "text": "How do we do it?",
     "crumbs": [
-      "Rationale",
-      "Paleo-linked methods for network reconstruction"
+      "(Re)constructing paleo networks",
+      "How we reconstruct paleo food webs"
     ]
   },
   {
-    "objectID": "06_structure_vs_form.html",
-    "href": "06_structure_vs_form.html",
+    "objectID": "07_structure_vs_form.html",
+    "href": "07_structure_vs_form.html",
     "title": "Structure vs Function",
     "section": "",
     "text": "Linking structure and function to ecological processes",
@@ -132,80 +176,91 @@
     ]
   },
   {
-    "objectID": "01_reconstruction_methods.html#what-do-they-mean",
-    "href": "01_reconstruction_methods.html#what-do-they-mean",
-    "title": "How we reconstruct paleo food webs",
-    "section": "What do they mean?",
-    "text": "What do they mean?",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "How we reconstruct paleo food webs"
-    ]
-  },
-  {
-    "objectID": "01_reconstruction_methods.html#how-do-we-do-it",
-    "href": "01_reconstruction_methods.html#how-do-we-do-it",
-    "title": "How we reconstruct paleo food webs",
-    "section": "How do we do it?",
-    "text": "How do we do it?",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "How we reconstruct paleo food webs"
-    ]
-  },
-  {
-    "objectID": "02_bodymass_ratio.html",
-    "href": "02_bodymass_ratio.html",
-    "title": "Bodymass-ratio",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Paleo-linked methods for network reconstruction",
     "section": "",
-    "text": "This concept of using body mass ratios to determine potential feeding links between species was primarily developed by Rohr et al. (2010) and has become quite popular in paleo settings (Yeakel et al. 2014; Pires et al. 2015)",
+    "text": "A primer/template for thinking about the reconstruction of paleo networks. Particularly thinking about what we actually do with the data, how we interpret structure and function (linking the ‘summary statistics’ to ecological theory), and understanding the conceptual differences between a metaweb and a realised network (and how we downsample from one to the other).\nIn terms of turning these concepts into a tangible ‘item’ the idea is to compare and contrast some of the canonical methods used for reconstructing paleo food webs across different transitions (e.g., extinction events), see how these different methods might (or not) result in different ‘summary statistics’ and also make sure to link the ‘summary statistic’ to the relevant ecological theory (in the context of both structure and function).\nWe could even do a dashboard!! - See Andrew’s below (although it is not rendering properly, which is grating).",
     "crumbs": [
-      "(Re)constructing paleo networks",
-      "Bodymass-ratio"
+      "Rationale",
+      "Paleo-linked methods for network reconstruction"
     ]
   },
   {
-    "objectID": "02_bodymass_ratio.html#overview",
-    "href": "02_bodymass_ratio.html#overview",
-    "title": "Bodymass-ratio",
+    "objectID": "index.html#references",
+    "href": "index.html#references",
+    "title": "Paleo-linked methods for network reconstruction",
+    "section": "References",
+    "text": "References",
+    "crumbs": [
+      "Rationale",
+      "Paleo-linked methods for network reconstruction"
+    ]
+  },
+  {
+    "objectID": "06_meta_vs_realised.html",
+    "href": "06_meta_vs_realised.html",
+    "title": "Metawebs vs realised webs",
     "section": "",
-    "text": "This concept of using body mass ratios to determine potential feeding links between species was primarily developed by Rohr et al. (2010) and has become quite popular in paleo settings (Yeakel et al. 2014; Pires et al. 2015)",
+    "text": "The importance of understanding how the two differ. How do we downsample a metaweb to make it a realised web.",
     "crumbs": [
-      "(Re)constructing paleo networks",
-      "Bodymass-ratio"
+      "Downsampling",
+      "Metawebs vs realised webs"
     ]
   },
   {
-    "objectID": "02_bodymass_ratio.html#methods",
-    "href": "02_bodymass_ratio.html#methods",
-    "title": "Bodymass-ratio",
+    "objectID": "05_contemporary.html",
+    "href": "05_contemporary.html",
+    "title": "Using contemporary proxies",
+    "section": "",
+    "text": "There is also the potential to use the feeding links between contemporary to predict ones between historic/prehistoric e.g., Fricke et al. (2022) showcases how the use of machine learning (binary classifiers) that is trained using contemporary interaction data has a better predictive accuracy than the body mass ratio model from Rohr et al. (2010). However, there is of course the caveat that there is a ‘time cap’ as to how far back in time we expect this type of approach to to be able to ‘work’. Fricke et al. (2022) focused on mammals from the Late Pleistocene which are of course (physically (trait space)/phylogenetically) well represented by current mammal species and so the assumption that we can use these present links to inform past ones has merit. However as we move deeper into time there are ‘novel’ (at least in terms of contemporary species) forms and phylogenetic lineages and so these types of models probably wont work very well…",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Using contemporary proxies"
+    ]
+  },
+  {
+    "objectID": "05_contemporary.html#overview",
+    "href": "05_contemporary.html#overview",
+    "title": "Using contemporary proxies",
+    "section": "",
+    "text": "There is also the potential to use the feeding links between contemporary to predict ones between historic/prehistoric e.g., Fricke et al. (2022) showcases how the use of machine learning (binary classifiers) that is trained using contemporary interaction data has a better predictive accuracy than the body mass ratio model from Rohr et al. (2010). However, there is of course the caveat that there is a ‘time cap’ as to how far back in time we expect this type of approach to to be able to ‘work’. Fricke et al. (2022) focused on mammals from the Late Pleistocene which are of course (physically (trait space)/phylogenetically) well represented by current mammal species and so the assumption that we can use these present links to inform past ones has merit. However as we move deeper into time there are ‘novel’ (at least in terms of contemporary species) forms and phylogenetic lineages and so these types of models probably wont work very well…",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Using contemporary proxies"
+    ]
+  },
+  {
+    "objectID": "05_contemporary.html#methods",
+    "href": "05_contemporary.html#methods",
+    "title": "Using contemporary proxies",
     "section": "Methods",
     "text": "Methods",
     "crumbs": [
       "(Re)constructing paleo networks",
-      "Bodymass-ratio"
+      "Using contemporary proxies"
     ]
   },
   {
-    "objectID": "02_bodymass_ratio.html#example",
-    "href": "02_bodymass_ratio.html#example",
-    "title": "Bodymass-ratio",
+    "objectID": "05_contemporary.html#example",
+    "href": "05_contemporary.html#example",
+    "title": "Using contemporary proxies",
     "section": "Example",
     "text": "Example",
     "crumbs": [
       "(Re)constructing paleo networks",
-      "Bodymass-ratio"
+      "Using contemporary proxies"
     ]
   },
   {
-    "objectID": "02_bodymass_ratio.html#references",
-    "href": "02_bodymass_ratio.html#references",
-    "title": "Bodymass-ratio",
+    "objectID": "05_contemporary.html#references",
+    "href": "05_contemporary.html#references",
+    "title": "Using contemporary proxies",
     "section": "References",
-    "text": "References\n\n\nPires, Mathias M., Paul L. Koch, Richard A. Fariña, Marcus A. M. de Aguiar, Sérgio F. dos Reis, and Paulo R. Guimarães. 2015. “Pleistocene Megafaunal Interaction Networks Became More Vulnerable After Human Arrival.” Proceedings of the Royal Society B: Biological Sciences 282 (1814): 20151367. https://doi.org/10.1098/rspb.2015.1367.\n\n\nRohr, Rudolf Philippe, Heike Scherer, Patrik Kehrli, Christian Mazza, and Louis-Félix Bersier. 2010. “Modeling Food Webs: Exploring Unexplained Structure Using Latent Traits.” The American Naturalist 176 (2): 170–77. https://doi.org/10.1086/653667.\n\n\nYeakel, Justin D., Mathias M. Pires, Lars Rudolf, Nathaniel J. Dominy, Paul L. Koch, Paulo R. Guimarães, and Thilo Gross. 2014. “Collapse of an Ecological Network in Ancient Egypt.” PNAS 111 (40): 14472–77. https://doi.org/10.1073/pnas.1408471111.",
+    "text": "References\n\n\nFricke, Evan C., Chia Hsieh, Owen Middleton, Daniel Gorczynski, Caroline D. Cappello, Oscar Sanisidro, John Rowan, Jens-Christian Svenning, and Lydia Beaudrot. 2022. “Collapse of Terrestrial Mammal Food Webs Since the Late Pleistocene.” Science 377 (6609): 1008–11. https://doi.org/10.1126/science.abn4012.\n\n\nRohr, Rudolf Philippe, Heike Scherer, Patrik Kehrli, Christian Mazza, and Louis-Félix Bersier. 2010. “Modeling Food Webs: Exploring Unexplained Structure Using Latent Traits.” The American Naturalist 176 (2): 170–77. https://doi.org/10.1086/653667.",
     "crumbs": [
       "(Re)constructing paleo networks",
-      "Bodymass-ratio"
+      "Using contemporary proxies"
     ]
   }
 ]
