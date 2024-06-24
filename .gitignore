@@ -51,3 +51,4 @@ rsconnect/
 # quarto stuff
 /.quarto/
 /docs/
+_scrap.jl
