@@ -1,5 +1,49 @@
 [
   {
+    "objectID": "06_meta_vs_realised.html",
+    "href": "06_meta_vs_realised.html",
+    "title": "Metawebs vs realised webs",
+    "section": "",
+    "text": "The importance of understanding how the two differ. How do we downsample a metaweb to make it a realised web.",
+    "crumbs": [
+      "Downsampling",
+      "Metawebs vs realised webs"
+    ]
+  },
+  {
+    "objectID": "07_structure_vs_form.html",
+    "href": "07_structure_vs_form.html",
+    "title": "Structure vs Function",
+    "section": "",
+    "text": "Linking structure and function to ecological processes",
+    "crumbs": [
+      "Form vs Function",
+      "Structure vs Function"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Paleo-linked methods for network reconstruction",
+    "section": "",
+    "text": "A primer/template for thinking about the reconstruction of paleo networks. Particularly thinking about what we actually do with the data, how we interpret structure and function (linking the ‘summary statistics’ to ecological theory), and understanding the conceptual differences between a metaweb and a realised network (and how we downsample from one to the other).\nIn terms of turning these concepts into a tangible ‘item’ the idea is to compare and contrast some of the canonical methods used for reconstructing paleo food webs across different transitions (e.g., extinction events), see how these different methods might (or not) result in different ‘summary statistics’ and also make sure to link the ‘summary statistic’ to the relevant ecological theory (in the context of both structure and function).\nWe could even do a dashboard!! - See Andrew’s below (although it is not rendering properly, which is grating).",
+    "crumbs": [
+      "Rationale",
+      "Paleo-linked methods for network reconstruction"
+    ]
+  },
+  {
+    "objectID": "index.html#references",
+    "href": "index.html#references",
+    "title": "Paleo-linked methods for network reconstruction",
+    "section": "References",
+    "text": "References",
+    "crumbs": [
+      "Rationale",
+      "Paleo-linked methods for network reconstruction"
+    ]
+  },
+  {
     "objectID": "04_PFIM.html",
     "href": "04_PFIM.html",
     "title": "PFIM",
@@ -37,7 +81,7 @@
     "href": "04_PFIM.html#example",
     "title": "PFIM",
     "section": "Example",
-    "text": "Example\n\nusing CSV\nusing DataFrames\n\ninclude(\"lib/pfim/pfim.jl\")\n\ndf = DataFrame(CSV.File(\"data/toarcian_subset.csv\"))\n\npfim_network = PFIM(df)\n\nrandomdraws(pfim_network)\n\nA binary unipartite network\n → 11 interactions\n → 12 species",
+    "text": "Example\n\n# set seed\nimport Random\nRandom.seed!(66)\n\n# import the mock dataset\ndf = DataFrame(CSV.File(\"data/toarcian_subset.csv\"))\n\n# this is a probabilistic network\npfim_network = PFIM(df)\n\n# this is a probabilistic network by default we can make it binary using the random draws function\nrandomdraws(pfim_network)\n\nA binary unipartite network\n → 9 interactions\n → 12 species",
     "crumbs": [
       "(Re)constructing paleo networks",
       "PFIM"
@@ -52,28 +96,6 @@
     "crumbs": [
       "(Re)constructing paleo networks",
       "PFIM"
-    ]
-  },
-  {
-    "objectID": "01_reconstruction_methods.html#what-do-they-mean",
-    "href": "01_reconstruction_methods.html#what-do-they-mean",
-    "title": "How we reconstruct paleo food webs",
-    "section": "What do they mean?",
-    "text": "What do they mean?",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "How we reconstruct paleo food webs"
-    ]
-  },
-  {
-    "objectID": "01_reconstruction_methods.html#how-do-we-do-it",
-    "href": "01_reconstruction_methods.html#how-do-we-do-it",
-    "title": "How we reconstruct paleo food webs",
-    "section": "How do we do it?",
-    "text": "How do we do it?",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "How we reconstruct paleo food webs"
     ]
   },
   {
@@ -132,14 +154,58 @@
     ]
   },
   {
-    "objectID": "07_structure_vs_form.html",
-    "href": "07_structure_vs_form.html",
-    "title": "Structure vs Function",
-    "section": "",
-    "text": "Linking structure and function to ecological processes",
+    "objectID": "01_reconstruction_methods.html#what-do-they-mean",
+    "href": "01_reconstruction_methods.html#what-do-they-mean",
+    "title": "How we reconstruct paleo food webs",
+    "section": "What do they mean?",
+    "text": "What do they mean?",
     "crumbs": [
-      "Form vs Function",
-      "Structure vs Function"
+      "(Re)constructing paleo networks",
+      "How we reconstruct paleo food webs"
+    ]
+  },
+  {
+    "objectID": "01_reconstruction_methods.html#how-do-we-do-it",
+    "href": "01_reconstruction_methods.html#how-do-we-do-it",
+    "title": "How we reconstruct paleo food webs",
+    "section": "How do we do it?",
+    "text": "How do we do it?",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "How we reconstruct paleo food webs"
+    ]
+  },
+  {
+    "objectID": "03_expert_knowledge.html#methods",
+    "href": "03_expert_knowledge.html#methods",
+    "title": "Expert Knowledge",
+    "section": "Methods",
+    "text": "Methods",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Expert Knowledge"
+    ]
+  },
+  {
+    "objectID": "03_expert_knowledge.html#example",
+    "href": "03_expert_knowledge.html#example",
+    "title": "Expert Knowledge",
+    "section": "Example",
+    "text": "Example",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Expert Knowledge"
+    ]
+  },
+  {
+    "objectID": "03_expert_knowledge.html#references",
+    "href": "03_expert_knowledge.html#references",
+    "title": "Expert Knowledge",
+    "section": "References",
+    "text": "References",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Expert Knowledge"
     ]
   },
   {
@@ -195,72 +261,6 @@
     "crumbs": [
       "(Re)constructing paleo networks",
       "Bodymass-ratio"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Paleo-linked methods for network reconstruction",
-    "section": "",
-    "text": "A primer/template for thinking about the reconstruction of paleo networks. Particularly thinking about what we actually do with the data, how we interpret structure and function (linking the ‘summary statistics’ to ecological theory), and understanding the conceptual differences between a metaweb and a realised network (and how we downsample from one to the other).\nIn terms of turning these concepts into a tangible ‘item’ the idea is to compare and contrast some of the canonical methods used for reconstructing paleo food webs across different transitions (e.g., extinction events), see how these different methods might (or not) result in different ‘summary statistics’ and also make sure to link the ‘summary statistic’ to the relevant ecological theory (in the context of both structure and function).\nWe could even do a dashboard!! - See Andrew’s below (although it is not rendering properly, which is grating).",
-    "crumbs": [
-      "Rationale",
-      "Paleo-linked methods for network reconstruction"
-    ]
-  },
-  {
-    "objectID": "index.html#references",
-    "href": "index.html#references",
-    "title": "Paleo-linked methods for network reconstruction",
-    "section": "References",
-    "text": "References",
-    "crumbs": [
-      "Rationale",
-      "Paleo-linked methods for network reconstruction"
-    ]
-  },
-  {
-    "objectID": "06_meta_vs_realised.html",
-    "href": "06_meta_vs_realised.html",
-    "title": "Metawebs vs realised webs",
-    "section": "",
-    "text": "The importance of understanding how the two differ. How do we downsample a metaweb to make it a realised web.",
-    "crumbs": [
-      "Downsampling",
-      "Metawebs vs realised webs"
-    ]
-  },
-  {
-    "objectID": "03_expert_knowledge.html#methods",
-    "href": "03_expert_knowledge.html#methods",
-    "title": "Expert Knowledge",
-    "section": "Methods",
-    "text": "Methods",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "Expert Knowledge"
-    ]
-  },
-  {
-    "objectID": "03_expert_knowledge.html#example",
-    "href": "03_expert_knowledge.html#example",
-    "title": "Expert Knowledge",
-    "section": "Example",
-    "text": "Example",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "Expert Knowledge"
-    ]
-  },
-  {
-    "objectID": "03_expert_knowledge.html#references",
-    "href": "03_expert_knowledge.html#references",
-    "title": "Expert Knowledge",
-    "section": "References",
-    "text": "References",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "Expert Knowledge"
     ]
   }
 ]
