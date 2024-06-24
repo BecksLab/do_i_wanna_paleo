@@ -36,3 +36,6 @@ format:
     html:
         embed-resources: true
 title-block-banner: true
+
+execute:
+  freeze: auto

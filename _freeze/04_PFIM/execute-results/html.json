@@ -1,0 +1,12 @@
+{
+  "hash": "e617860d0e7f4ddf3e20a7f12a6f5e5b",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"PFIM\"\ndate: last-modified\nformat:\n    html:\n        embed-resources: true\ntitle-block-banner: true\nbibliography: references.bib\n---\n\n## Overview\n\n> @fricke2022 methods discuss how in the *\"using functional traits (especially binary or categorical traits), one can overestimate the ecological similarity of species, and thus the similarity of interaction patterns\"*. \n\nThe Paleo Food web Inference Model (PFIM, @shaw2024) uses a series of rules for a set of trait categories (such as habitat and body size) to determine if an interaction can feasibly occur between a species pair.\n\n## Methods\n\n## Example\n\n\n::: {#79f5c86c .cell execution_count=2}\n``` {.julia .cell-code}\n# set seed\nimport Random\nRandom.seed!(66)\n\n# import the mock dataset\ndf = DataFrame(CSV.File(\"data/toarcian_subset.csv\"))\n\n# this is a probabilistic network\npfim_network = PFIM(df)\n\n# this is a probabilistic network by default we can make it binary using the random draws function\nrandomdraws(pfim_network)\n\n```\n\n::: {.cell-output .cell-output-display execution_count=3}\n```\nA binary unipartite network\n → 9 interactions\n → 12 species\n```\n:::\n:::\n\n\n## References {.unnumbered}\n\n::: {#refs}\n:::\n\n",
+    "supporting": [
+      "04_PFIM_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}
