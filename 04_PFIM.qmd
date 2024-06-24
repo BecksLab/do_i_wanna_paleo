@@ -18,6 +18,23 @@ The Paleo Food web Inference Model (PFIM, @shaw2024) uses a series of rules for 
 
 ## Example
 
+``` {julia}
+
+using CSV
+using DataFrames
+
+include("lib/pfim/pfim.jl")
+
+df = DataFrame(CSV.File("data/toarcian_subset.csv"))
+
+pfim_network = PFIM(df)
+
+randomdraws(pfim_network)
+
+
+
+```
+
 ## References {.unnumbered}
 
 ::: {#refs}
