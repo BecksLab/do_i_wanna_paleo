@@ -53,3 +53,4 @@ rsconnect/
 /docs/
 _scrap.jl
 Manifest.toml
+.DS_Store
