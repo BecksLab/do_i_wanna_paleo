@@ -6,6 +6,7 @@ format:
         embed-resources: true
 title-block-banner: true
 bibliography: references.bib
+jupyter: julia-1.10
 ---
 
 ## Overview
@@ -24,6 +25,11 @@ The Paleo Food web Inference Model (PFIM, @shaw2024) uses a series of rules for 
 import Pkg; Pkg.activate(".")
 
 Pkg.instantiate()
+
+# set seed
+
+import Random
+Random.seed!(66)
 
 # now we can activate the other packages as well as the lib folders that has the PFIM rules and functions.
 
