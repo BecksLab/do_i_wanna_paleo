@@ -14,7 +14,46 @@ This concept of using body mass ratios to determine potential feeding links betw
 
 ## Methods
 
+Core idea relates to the ratio between consumer and resource body sizes - which supposedly stems from niche theory (still trying to reconcile that myself). The probability of a link existing between a consumer and resource (in its most basic form) is defined as follows:
+
+$$
+P_{ij} = \frac{p}{1+p}
+$$
+
+where
+
+$$
+p = exp[\alpha + \beta log(\frac{M_{i}}{M_{j}}) + \gamma log^{2}(\frac{M_{i}}{M_{j}})]
+$${#eq-bodymass}
+
+The original latent-trait model developed by @rohr2010 also included an additional latent trait term $v_{i} \delta f_{j}$ however for simplicity we will use @eq-bodymass as per @yeakel2014. Based on @rohr2010 it is possible to estimate the parameters $\alpha$, $\delta$, and $\gamma$ using a GLM but we will use the parameters from @yeakel2014, which was 'trained' on the Serengeti food web data and are as follows: $\alpha = 1.41$, $\delta = 3.75$, and $\gamma = 1.87$.
+
 ## Example
+
+```{julia}
+
+using CSV
+using DataFrames
+
+include("lib/bodymass/bodymass.jl")
+
+# set seed
+import Random
+Random.seed!(66)
+
+# import the mock dataset
+df = DataFrame(CSV.File("data/toarcian_subset.csv"))
+
+# were going to create some interim bodymass values
+using Distributions
+bodymass = rand(Truncated(Normal(0, 1), 0, 1), nrow(df))
+
+bodymass_network = bmratio(df.species, bodymass)
+
+# this is a probabilistic network by default we can make it binary using the random draws function
+randomdraws(bodymass_network)
+
+```
 
 ## References {.unnumbered}
 

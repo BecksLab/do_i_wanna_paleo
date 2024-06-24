@@ -1,0 +1,12 @@
+{
+  "hash": "225aa7d0971f1d13a486b74649325c8e",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"Bodymass-ratio\"\ndate: last-modified\nformat:\n    html:\n        embed-resources: true\ntitle-block-banner: true\nbibliography: references.bib\n---\n\n## Overview\n\nThis concept of using body mass ratios to determine potential feeding links between species was primarily developed by @rohr2010 and has become quite popular in paleo settings [@yeakel2014; @pires2015]\n\n## Methods\n\nCore idea relates to the ratio between consumer and resource body sizes - which supposedly stems from niche theory (still trying to reconcile that myself). The probability of a link existing between a consumer and resource (in its most basic form) is defined as follows:\n\n$$\nP_{ij} = \\frac{p}{1+p}\n$$\n\nwhere\n\n$$\np = exp[\\alpha + \\beta log(\\frac{M_{i}}{M_{j}}) + \\gamma log^{2}(\\frac{M_{i}}{M_{j}})]\n$${#eq-bodymass}\n\nThe original latent-trait model developed by @rohr2010 also included an additional latent trait term $v_{i} \\delta f_{j}$ however for simplicity we will use @eq-bodymass as per @yeakel2014. Based on @rohr2010 it is possible to estimate the parameters $\\alpha$, $\\delta$, and $\\gamma$ using a GLM but we will use the parameters from @yeakel2014, which was 'trained' on the Serengeti food web data and are as follows: $\\alpha = 1.41$, $\\delta = 3.75$, and $\\gamma = 1.87$.\n\n## Example\n\n::: {#782a14ec .cell execution_count=1}\n``` {.julia .cell-code}\nusing CSV\nusing DataFrames\n\ninclude(\"lib/bodymass/bodymass.jl\")\n\n# set seed\nimport Random\nRandom.seed!(66)\n\n# import the mock dataset\ndf = DataFrame(CSV.File(\"data/toarcian_subset.csv\"))\n\n# were going to create some interim bodymass values\nusing Distributions\nbodymass = rand(Truncated(Normal(0, 1), 0, 1), nrow(df))\n\nbodymass_network = bmratio(df.species, bodymass)\n\n# this is a probabilistic network by default we can make it binary using the random draws function\nrandomdraws(bodymass_network)\n```\n\n::: {.cell-output .cell-output-display execution_count=2}\n```\nA binary unipartite network\n → 8 interactions\n → 12 species\n```\n:::\n:::\n\n\n## References {.unnumbered}\n\n::: {#refs}\n:::\n\n",
+    "supporting": [
+      "02_bodymass_ratio_files/figure-html"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}
