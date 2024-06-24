@@ -81,7 +81,7 @@
     "href": "04_PFIM.html#example",
     "title": "PFIM",
     "section": "Example",
-    "text": "Example\n\n# set seed\nimport Random\nRandom.seed!(66)\n\n# import the mock dataset\ndf = DataFrame(CSV.File(\"data/toarcian_subset.csv\"))\n\n# this is a probabilistic network\npfim_network = PFIM(df)\n\n# this is a probabilistic network by default we can make it binary using the random draws function\nrandomdraws(pfim_network)\n\nA binary unipartite network\n → 9 interactions\n → 12 species",
+    "text": "Example\n\nusing CSV\nusing DataFrames\n\ninclude(\"lib/pfim/pfim.jl\")\n\n# set seed\nimport Random\nRandom.seed!(66)\n\n# import the mock dataset\ndf = DataFrame(CSV.File(\"data/toarcian_subset.csv\"))\n\n# this is a probabilistic network\npfim_network = PFIM(df)\n\n# this is a probabilistic network by default we can make it binary using the random draws function\nrandomdraws(pfim_network)\n\nA binary unipartite network\n → 9 interactions\n → 12 species",
     "crumbs": [
       "(Re)constructing paleo networks",
       "PFIM"
@@ -235,7 +235,7 @@
     "href": "02_bodymass_ratio.html#methods",
     "title": "Bodymass-ratio",
     "section": "Methods",
-    "text": "Methods",
+    "text": "Methods\nCore idea relates to the ratio between consumer and resource body sizes - which supposedly stems from niche theory (still trying to reconcile that myself). The probability of a link existing between a consumer and resource (in its most basic form) is defined as follows:\n\\[\nP_{ij} = \\frac{p}{1+p}\n\\]\nwhere\n\\[\np = exp[\\alpha + \\beta log(\\frac{M_{i}}{M_{j}}) + \\gamma log^{2}(\\frac{M_{i}}{M_{j}})]\n\\tag{1}\\]\nThe original latent-trait model developed by Rohr et al. (2010) also included an additional latent trait term \\(v_{i} \\delta f_{j}\\) however for simplicity we will use Equation 1 as per Yeakel et al. (2014). Based on Rohr et al. (2010) it is possible to estimate the parameters \\(\\alpha\\), \\(\\delta\\), and \\(\\gamma\\) using a GLM but we will use the parameters from Yeakel et al. (2014), which was ‘trained’ on the Serengeti food web data and are as follows: \\(\\alpha = 1.41\\), \\(\\delta = 3.75\\), and \\(\\gamma = 1.87\\).",
     "crumbs": [
       "(Re)constructing paleo networks",
       "Bodymass-ratio"
@@ -246,7 +246,7 @@
     "href": "02_bodymass_ratio.html#example",
     "title": "Bodymass-ratio",
     "section": "Example",
-    "text": "Example",
+    "text": "Example\n\nusing CSV\nusing DataFrames\n\ninclude(\"lib/bodymass/bodymass.jl\")\n\n# set seed\nimport Random\nRandom.seed!(66)\n\n# import the mock dataset\ndf = DataFrame(CSV.File(\"data/toarcian_subset.csv\"))\n\n# were going to create some interim bodymass values\nusing Distributions\nbodymass = rand(Truncated(Normal(0, 1), 0, 1), nrow(df))\n\nbodymass_network = bmratio(df.species, bodymass)\n\n# this is a probabilistic network by default we can make it binary using the random draws function\nrandomdraws(bodymass_network)\n\nA binary unipartite network\n → 8 interactions\n → 12 species",
     "crumbs": [
       "(Re)constructing paleo networks",
       "Bodymass-ratio"
