@@ -6,7 +6,7 @@ format:
         embed-resources: true
 title-block-banner: true
 bibliography: references.bib
-jupyter: julia-1.10
+jupyter: julia-1.8
 ---
 
 ## Overview
