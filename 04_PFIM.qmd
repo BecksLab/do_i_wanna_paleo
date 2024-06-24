@@ -20,15 +20,26 @@ The Paleo Food web Inference Model (PFIM, @shaw2024) uses a series of rules for 
 
 ``` {julia}
 
+## Activate project environment
+import Pkg; Pkg.activate(".")
+
+Pkg.instantiate()
+
+# now we can activate the other packages as well as the lib folders that has the PFIM rules and functions.
+
 using CSV
 using DataFrames
 
 include("lib/pfim/pfim.jl")
 
+# import the mock dataset
+
 df = DataFrame(CSV.File("data/toarcian_subset.csv"))
 
+# this is a probabilistic network
 pfim_network = PFIM(df)
 
+# this is a probabilistic network by default we can make it binary using the random draws function
 randomdraws(pfim_network)
 
 
