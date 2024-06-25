@@ -11,7 +11,15 @@ mutable struct PFIMspecies
     tiering_trait::tier
 end
 
-# create community with appropraite types
+"""
+_pfim_community(data::DataFrame)
+
+    Internal function that takes a DataFrame and transforms it into an
+    array containing PFIMspecies. This is done so that the 'metadata' 
+    is infomred by a species as opposed to a table that needs to be
+    indexed...
+
+"""
 function _pfim_community(data::DataFrame)
 
 
@@ -30,7 +38,14 @@ function _pfim_community(data::DataFrame)
     return PFIMcommunity
 end
 
-# determine link feasibility
+"""
+    _pfim_link(consumer::PFIMspecies, resource::PFIMspecies)
+
+    Internal function that actually determines the link feasibility for
+    a given pair of PFIMspecies. Retuns either 1 (link present) or 0
+    (link absent)
+
+"""
 function _pfim_link(consumer::PFIMspecies, resource::PFIMspecies)
 
     trait_sum =
@@ -47,7 +62,13 @@ function _pfim_link(consumer::PFIMspecies, resource::PFIMspecies)
     return link
 end
 
-# construct network
+"""
+    _PFIM_network(PFIMcommunity::Vector{PFIMspecies})
+
+    Internal function that constructs a network for a a given 
+    PFIMcommunity.
+
+"""
 function _PFIM_network(PFIMcommunity::Vector{PFIMspecies})
 
     S = length(PFIMcommunity)
@@ -65,8 +86,21 @@ function _PFIM_network(PFIMcommunity::Vector{PFIMspecies})
     return network, int_matrix
 end
 
-# downsample
 
+"""
+   PFIM(data::DataFrame; y::Float64 = 2.5)
+
+    Takes a data fram and impliments the feeding rules to determine the
+    feasibility of links between species. As well as applying the link
+    distribution downsampling approach.
+    
+    #### References
+    
+    Shaw, Jack O., Alexander M. Dunhill, Andrew P. Beckerman, Jennifer A.
+    Dunne, and Pincelli M. Hull. 2024. “A Framework for Reconstructing 
+    Ancient Food Webs Using Functional Trait Data.” 
+    https://doi.org/10.1101/2024.01.30.578036.
+"""
 function PFIM(data::DataFrame; y::Float64 = 2.5)
 
     S = nrow(data)
