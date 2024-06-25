@@ -10,6 +10,8 @@ bibliography: references.bib
 
 ## Overview
 
+Both expert knowledge but also as derived from fossil observations? *e.g.,* gut content as well as signs of predation/feeding. @dunne2008 is probably the quintessential paleo example but there are others...
+
 ## Methods
 
 ## Example

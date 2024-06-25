@@ -9,3 +9,9 @@ bibliography: references.bib
 ---
 
 Linking structure and function to ecological processes
+
+## Section Overview
+
+-   We can use the networks that we built from the previous section and showcase how they (maybe) are giving way different metrics (telling different stories)
+
+-   I think if we have multiple networks for different time points as well we can compare within and between network differences? (need to have a think on that)

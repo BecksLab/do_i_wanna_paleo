@@ -10,6 +10,32 @@ bibliography: references.bib
 
 ## Why build paleo food webs?
 
-## What do they mean?
+-   Becuase its interesting?
+
+-   Value in using hindcasting to aid in forecasting. *e.g.,* the Toarcian ms shows how we can use these pelao communities to understand trophic-level responses to extinctions.
 
 ## How do we do it?
+
+-   There is an evolving body of work that focuses on developing tools specifically for the task of predicting food webs.
+
+-   There are a handful that have been developed specifically in the context of paleo settings *e.g.,* TODO
+
+-   Different underlying theory though
+
+## Understanding how networks are different
+
+-   Not always representing the same things (*i.e.,* different underlying philosophies). So, although they may all be representing food webs (and feeding links between species) they are 'telling different stories'
+
+-   Need to be careful when we are 'presenting'/analysing these different food webs and we can't really compare on contrast
+
+-   *e.g.,* @brimacombe2023 shows that the research group influences the 'criteria' that defines interactions/networks and so we can't actually meaningfully integrate these networks into the same database and assume that they 'fit' together.
+
+-   Petchy dilemma?
+
+## Section Overview
+
+-   introduce/discuss some of the paleo food web reconstruction methods
+
+-   construct networks for (ideally) a datasets across distinct time units using these (or some of) approaches
+
+-   compare and contrast if they tell us a different story
