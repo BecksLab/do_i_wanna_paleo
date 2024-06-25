@@ -22,6 +22,17 @@
     ]
   },
   {
+    "objectID": "07_structure_vs_form.html#section-overview",
+    "href": "07_structure_vs_form.html#section-overview",
+    "title": "Structure vs Function",
+    "section": "Section Overview",
+    "text": "Section Overview\n\nWe can use the networks that we built from the previous section and showcase how they (maybe) are giving way different metrics (telling different stories)\nI think if we have multiple networks for different time points as well we can compare within and between network differences? (need to have a think on that)",
+    "crumbs": [
+      "Form vs Function",
+      "Structure vs Function"
+    ]
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Paleo-linked methods for network reconstruction",
@@ -154,11 +165,22 @@
     ]
   },
   {
-    "objectID": "01_reconstruction_methods.html#what-do-they-mean",
-    "href": "01_reconstruction_methods.html#what-do-they-mean",
+    "objectID": "01_reconstruction_methods.html",
+    "href": "01_reconstruction_methods.html",
     "title": "How we reconstruct paleo food webs",
-    "section": "What do they mean?",
-    "text": "What do they mean?",
+    "section": "",
+    "text": "Becuase its interesting?\nValue in using hindcasting to aid in forecasting. e.g., the Toarcian ms shows how we can use these pelao communities to understand trophic-level responses to extinctions.",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "How we reconstruct paleo food webs"
+    ]
+  },
+  {
+    "objectID": "01_reconstruction_methods.html#why-build-paleo-food-webs",
+    "href": "01_reconstruction_methods.html#why-build-paleo-food-webs",
+    "title": "How we reconstruct paleo food webs",
+    "section": "",
+    "text": "Becuase its interesting?\nValue in using hindcasting to aid in forecasting. e.g., the Toarcian ms shows how we can use these pelao communities to understand trophic-level responses to extinctions.",
     "crumbs": [
       "(Re)constructing paleo networks",
       "How we reconstruct paleo food webs"
@@ -169,10 +191,54 @@
     "href": "01_reconstruction_methods.html#how-do-we-do-it",
     "title": "How we reconstruct paleo food webs",
     "section": "How do we do it?",
-    "text": "How do we do it?",
+    "text": "How do we do it?\n\nThere is an evolving body of work that focuses on developing tools specifically for the task of predicting food webs.\nThere are a handful that have been developed specifically in the context of paleo settings e.g., TODO\nDifferent underlying theory though",
     "crumbs": [
       "(Re)constructing paleo networks",
       "How we reconstruct paleo food webs"
+    ]
+  },
+  {
+    "objectID": "01_reconstruction_methods.html#understanding-how-networks-are-different",
+    "href": "01_reconstruction_methods.html#understanding-how-networks-are-different",
+    "title": "How we reconstruct paleo food webs",
+    "section": "Understanding how networks are different",
+    "text": "Understanding how networks are different\n\nNot always representing the same things (i.e., different underlying philosophies). So, although they may all be representing food webs (and feeding links between species) they are ‘telling different stories’\nNeed to be careful when we are ‘presenting’/analysing these different food webs and we can’t really compare on contrast\ne.g., Brimacombe et al. (2023) shows that the research group influences the ‘criteria’ that defines interactions/networks and so we can’t actually meaningfully integrate these networks into the same database and assume that they ‘fit’ together.\nPetchy dilemma?",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "How we reconstruct paleo food webs"
+    ]
+  },
+  {
+    "objectID": "01_reconstruction_methods.html#section-overview",
+    "href": "01_reconstruction_methods.html#section-overview",
+    "title": "How we reconstruct paleo food webs",
+    "section": "Section Overview",
+    "text": "Section Overview\n\nintroduce/discuss some of the paleo food web reconstruction methods\nconstruct networks for (ideally) a datasets across distinct time units using these (or some of) approaches\ncompare and contrast if they tell us a different story",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "How we reconstruct paleo food webs"
+    ]
+  },
+  {
+    "objectID": "03_expert_knowledge.html",
+    "href": "03_expert_knowledge.html",
+    "title": "Expert Knowledge",
+    "section": "",
+    "text": "Both expert knowledge but also as derived from fossil observations? e.g., gut content as well as signs of predation/feeding. Dunne et al. (2008) is probably the quintessential paleo example but there are others…",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Expert Knowledge"
+    ]
+  },
+  {
+    "objectID": "03_expert_knowledge.html#overview",
+    "href": "03_expert_knowledge.html#overview",
+    "title": "Expert Knowledge",
+    "section": "",
+    "text": "Both expert knowledge but also as derived from fossil observations? e.g., gut content as well as signs of predation/feeding. Dunne et al. (2008) is probably the quintessential paleo example but there are others…",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Expert Knowledge"
     ]
   },
   {
@@ -202,7 +268,7 @@
     "href": "03_expert_knowledge.html#references",
     "title": "Expert Knowledge",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDunne, Jennifer A, Richard J Williams, Neo D Martinez, Rachel A Wood, and Douglas H Erwin. 2008. “Compilation and Network Analyses of Cambrian Food Webs.” Edited by Andrew P Dobson. PLoS Biology 6 (4): e102. https://doi.org/10.1371/journal.pbio.0060102.",
     "crumbs": [
       "(Re)constructing paleo networks",
       "Expert Knowledge"
