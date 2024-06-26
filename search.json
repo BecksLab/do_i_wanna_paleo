@@ -1,35 +1,68 @@
 [
   {
-    "objectID": "06_meta_vs_realised.html",
-    "href": "06_meta_vs_realised.html",
+    "objectID": "02_bodymass_ratio.html",
+    "href": "02_bodymass_ratio.html",
+    "title": "Bodymass-ratio",
+    "section": "",
+    "text": "This concept of using body mass ratios to determine potential feeding links between species was primarily developed by Rohr et al. (2010) and has become quite popular in paleo settings (Yeakel et al. 2014; Pires et al. 2015)",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Bodymass-ratio"
+    ]
+  },
+  {
+    "objectID": "02_bodymass_ratio.html#overview",
+    "href": "02_bodymass_ratio.html#overview",
+    "title": "Bodymass-ratio",
+    "section": "",
+    "text": "This concept of using body mass ratios to determine potential feeding links between species was primarily developed by Rohr et al. (2010) and has become quite popular in paleo settings (Yeakel et al. 2014; Pires et al. 2015)",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Bodymass-ratio"
+    ]
+  },
+  {
+    "objectID": "02_bodymass_ratio.html#methods",
+    "href": "02_bodymass_ratio.html#methods",
+    "title": "Bodymass-ratio",
+    "section": "Methods",
+    "text": "Methods\nCore idea relates to the ratio between consumer and resource body sizes - which supposedly stems from niche theory (still trying to reconcile that myself). The probability of a link existing between a consumer and resource (in its most basic form) is defined as follows:\n\\[\nP_{ij} = \\frac{p}{1+p}\n\\]\nwhere\n\\[\np = exp[\\alpha + \\beta log(\\frac{M_{i}}{M_{j}}) + \\gamma log^{2}(\\frac{M_{i}}{M_{j}})]\n\\tag{1}\\]\nThe original latent-trait model developed by Rohr et al. (2010) also included an additional latent trait term \\(v_{i} \\delta f_{j}\\) however for simplicity we will use Equation 1 as per Yeakel et al. (2014). Based on Rohr et al. (2010) it is possible to estimate the parameters \\(\\alpha\\), \\(\\delta\\), and \\(\\gamma\\) using a GLM but we will use the parameters from Yeakel et al. (2014), which was ‘trained’ on the Serengeti food web data and are as follows: \\(\\alpha = 1.41\\), \\(\\delta = 3.75\\), and \\(\\gamma = 1.87\\).",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Bodymass-ratio"
+    ]
+  },
+  {
+    "objectID": "02_bodymass_ratio.html#example",
+    "href": "02_bodymass_ratio.html#example",
+    "title": "Bodymass-ratio",
+    "section": "Example",
+    "text": "Example\n\nusing CSV\nusing DataFrames\n\ninclude(\"lib/bodymass/bodymass.jl\")\n\n# set seed\nimport Random\nRandom.seed!(66)\n\n# import the mock dataset\ndf = DataFrame(CSV.File(\"data/toarcian_subset.csv\"))\n\n# were going to create some interim bodymass values\nusing Distributions\nbodymass = rand(Truncated(Normal(0, 1), 0, 1), nrow(df))\n\nbodymass_network = bmratio(df.species, bodymass)\n\n# this is a probabilistic network by default we can make it binary using the random draws function\nrandomdraws(bodymass_network)\n\nA binary unipartite network\n → 8 interactions\n → 12 species",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Bodymass-ratio"
+    ]
+  },
+  {
+    "objectID": "02_bodymass_ratio.html#references",
+    "href": "02_bodymass_ratio.html#references",
+    "title": "Bodymass-ratio",
+    "section": "References",
+    "text": "References\n\n\nPires, Mathias M., Paul L. Koch, Richard A. Fariña, Marcus A. M. de Aguiar, Sérgio F. dos Reis, and Paulo R. Guimarães. 2015. “Pleistocene Megafaunal Interaction Networks Became More Vulnerable After Human Arrival.” Proceedings of the Royal Society B: Biological Sciences 282 (1814): 20151367. https://doi.org/10.1098/rspb.2015.1367.\n\n\nRohr, Rudolf Philippe, Heike Scherer, Patrik Kehrli, Christian Mazza, and Louis-Félix Bersier. 2010. “Modeling Food Webs: Exploring Unexplained Structure Using Latent Traits.” The American Naturalist 176 (2): 170–77. https://doi.org/10.1086/653667.\n\n\nYeakel, Justin D., Mathias M. Pires, Lars Rudolf, Nathaniel J. Dominy, Paul L. Koch, Paulo R. Guimarães, and Thilo Gross. 2014. “Collapse of an Ecological Network in Ancient Egypt.” PNAS 111 (40): 14472–77. https://doi.org/10.1073/pnas.1408471111.",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Bodymass-ratio"
+    ]
+  },
+  {
+    "objectID": "07_meta_vs_realised.html",
+    "href": "07_meta_vs_realised.html",
     "title": "Metawebs vs realised webs",
     "section": "",
     "text": "The importance of understanding how the two differ. How do we downsample a metaweb to make it a realised web.",
     "crumbs": [
       "Downsampling",
       "Metawebs vs realised webs"
-    ]
-  },
-  {
-    "objectID": "07_structure_vs_form.html",
-    "href": "07_structure_vs_form.html",
-    "title": "Structure vs Function",
-    "section": "",
-    "text": "Linking structure and function to ecological processes",
-    "crumbs": [
-      "Form vs Function",
-      "Structure vs Function"
-    ]
-  },
-  {
-    "objectID": "07_structure_vs_form.html#section-overview",
-    "href": "07_structure_vs_form.html#section-overview",
-    "title": "Structure vs Function",
-    "section": "Section Overview",
-    "text": "Section Overview\n\nWe can use the networks that we built from the previous section and showcase how they (maybe) are giving way different metrics (telling different stories)\nI think if we have multiple networks for different time points as well we can compare within and between network differences? (need to have a think on that)",
-    "crumbs": [
-      "Form vs Function",
-      "Structure vs Function"
     ]
   },
   {
@@ -275,58 +308,25 @@
     ]
   },
   {
-    "objectID": "02_bodymass_ratio.html",
-    "href": "02_bodymass_ratio.html",
-    "title": "Bodymass-ratio",
+    "objectID": "08_structure_vs_form.html",
+    "href": "08_structure_vs_form.html",
+    "title": "Structure vs Function",
     "section": "",
-    "text": "This concept of using body mass ratios to determine potential feeding links between species was primarily developed by Rohr et al. (2010) and has become quite popular in paleo settings (Yeakel et al. 2014; Pires et al. 2015)",
+    "text": "Linking structure and function to ecological processes",
     "crumbs": [
-      "(Re)constructing paleo networks",
-      "Bodymass-ratio"
+      "Form vs Function",
+      "Structure vs Function"
     ]
   },
   {
-    "objectID": "02_bodymass_ratio.html#overview",
-    "href": "02_bodymass_ratio.html#overview",
-    "title": "Bodymass-ratio",
-    "section": "",
-    "text": "This concept of using body mass ratios to determine potential feeding links between species was primarily developed by Rohr et al. (2010) and has become quite popular in paleo settings (Yeakel et al. 2014; Pires et al. 2015)",
+    "objectID": "08_structure_vs_form.html#section-overview",
+    "href": "08_structure_vs_form.html#section-overview",
+    "title": "Structure vs Function",
+    "section": "Section Overview",
+    "text": "Section Overview\n\nWe can use the networks that we built from the previous section and showcase how they (maybe) are giving way different metrics (telling different stories)\nI think if we have multiple networks for different time points as well we can compare within and between network differences? (need to have a think on that)",
     "crumbs": [
-      "(Re)constructing paleo networks",
-      "Bodymass-ratio"
-    ]
-  },
-  {
-    "objectID": "02_bodymass_ratio.html#methods",
-    "href": "02_bodymass_ratio.html#methods",
-    "title": "Bodymass-ratio",
-    "section": "Methods",
-    "text": "Methods\nCore idea relates to the ratio between consumer and resource body sizes - which supposedly stems from niche theory (still trying to reconcile that myself). The probability of a link existing between a consumer and resource (in its most basic form) is defined as follows:\n\\[\nP_{ij} = \\frac{p}{1+p}\n\\]\nwhere\n\\[\np = exp[\\alpha + \\beta log(\\frac{M_{i}}{M_{j}}) + \\gamma log^{2}(\\frac{M_{i}}{M_{j}})]\n\\tag{1}\\]\nThe original latent-trait model developed by Rohr et al. (2010) also included an additional latent trait term \\(v_{i} \\delta f_{j}\\) however for simplicity we will use Equation 1 as per Yeakel et al. (2014). Based on Rohr et al. (2010) it is possible to estimate the parameters \\(\\alpha\\), \\(\\delta\\), and \\(\\gamma\\) using a GLM but we will use the parameters from Yeakel et al. (2014), which was ‘trained’ on the Serengeti food web data and are as follows: \\(\\alpha = 1.41\\), \\(\\delta = 3.75\\), and \\(\\gamma = 1.87\\).",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "Bodymass-ratio"
-    ]
-  },
-  {
-    "objectID": "02_bodymass_ratio.html#example",
-    "href": "02_bodymass_ratio.html#example",
-    "title": "Bodymass-ratio",
-    "section": "Example",
-    "text": "Example\n\nusing CSV\nusing DataFrames\n\ninclude(\"lib/bodymass/bodymass.jl\")\n\n# set seed\nimport Random\nRandom.seed!(66)\n\n# import the mock dataset\ndf = DataFrame(CSV.File(\"data/toarcian_subset.csv\"))\n\n# were going to create some interim bodymass values\nusing Distributions\nbodymass = rand(Truncated(Normal(0, 1), 0, 1), nrow(df))\n\nbodymass_network = bmratio(df.species, bodymass)\n\n# this is a probabilistic network by default we can make it binary using the random draws function\nrandomdraws(bodymass_network)\n\nA binary unipartite network\n → 8 interactions\n → 12 species",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "Bodymass-ratio"
-    ]
-  },
-  {
-    "objectID": "02_bodymass_ratio.html#references",
-    "href": "02_bodymass_ratio.html#references",
-    "title": "Bodymass-ratio",
-    "section": "References",
-    "text": "References\n\n\nPires, Mathias M., Paul L. Koch, Richard A. Fariña, Marcus A. M. de Aguiar, Sérgio F. dos Reis, and Paulo R. Guimarães. 2015. “Pleistocene Megafaunal Interaction Networks Became More Vulnerable After Human Arrival.” Proceedings of the Royal Society B: Biological Sciences 282 (1814): 20151367. https://doi.org/10.1098/rspb.2015.1367.\n\n\nRohr, Rudolf Philippe, Heike Scherer, Patrik Kehrli, Christian Mazza, and Louis-Félix Bersier. 2010. “Modeling Food Webs: Exploring Unexplained Structure Using Latent Traits.” The American Naturalist 176 (2): 170–77. https://doi.org/10.1086/653667.\n\n\nYeakel, Justin D., Mathias M. Pires, Lars Rudolf, Nathaniel J. Dominy, Paul L. Koch, Paulo R. Guimarães, and Thilo Gross. 2014. “Collapse of an Ecological Network in Ancient Egypt.” PNAS 111 (40): 14472–77. https://doi.org/10.1073/pnas.1408471111.",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "Bodymass-ratio"
+      "Form vs Function",
+      "Structure vs Function"
     ]
   }
 ]
