@@ -1,0 +1,10 @@
+---
+title: "Comparing different methods"
+date: last-modified
+format:
+    html:
+        embed-resources: true
+title-block-banner: true
+bibliography: references.bib
+---
+
