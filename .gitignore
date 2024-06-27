@@ -54,3 +54,4 @@ rsconnect/
 _scrap.jl
 Manifest.toml
 .DS_Store
+*.R
