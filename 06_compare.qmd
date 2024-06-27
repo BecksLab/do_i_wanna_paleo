@@ -8,3 +8,42 @@ title-block-banner: true
 bibliography: references.bib
 ---
 
+IDK something with figures to kind of showcase different trends...
+
+```{r}
+
+library(ggradar)
+library(patchwork)
+library(scales)
+library(tidyverse)
+
+df = rbind(read.csv("data/processed/topology_bodymassratio.csv"),
+                    read.csv("data/processed/topology_pfim.csv")) %>% 
+        # to get the ratio
+        mutate(ratio = top/basal,
+                top = NULL,
+                basal = NULL) %>%
+        pivot_longer(
+            cols = c(complexity, distance, connectance, ratio, S1, S2, S4, S5), 
+            names_to = "stat",
+            values_to = "stat_val")
+
+ggplot(df) +
+    geom_line(aes(x = as.numeric(as.factor(df$id)), 
+                    y = stat_val, 
+                    colour = model)) +
+    geom_point(aes(x = as.numeric(as.factor(df$id)), 
+                y = stat_val, 
+                colour = model)) +
+    facet_wrap(vars(stat),
+                scales = 'free') +
+    scale_size(guide = 'none') +
+    theme_classic() +
+    xlab("time") +
+    ylab("value") +
+    theme(panel.border = element_rect(colour = 'black',
+                                      fill = "#ffffff00"),
+            axis.text.x = element_blank(),
+            axis.ticks.x = element_blank())
+
+```

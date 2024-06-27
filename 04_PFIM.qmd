@@ -23,8 +23,8 @@ The Paleo Food web Inference Model (PFIM, @shaw2024) uses a series of rules for 
 using CSV
 using DataFrames
 
-include("lib/internals.jl")
 include("lib/pfim/pfim.jl")
+include("lib/internals.jl")
 
 # set seed
 import Random

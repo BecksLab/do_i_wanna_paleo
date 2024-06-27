@@ -1,0 +1,17 @@
+{
+  "hash": "384ac05719c1951816b34dc714f55299",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Comparing different methods\"\ndate: last-modified\nformat:\n    html:\n        embed-resources: true\ntitle-block-banner: true\nbibliography: references.bib\n---\n\n\nIDK something with figures to kind of showcase different trends...\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(ggradar)\nlibrary(patchwork)\nlibrary(scales)\nlibrary(tidyverse)\n```\n\n::: {.cell-output .cell-output-stderr}\n\n```\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.0     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ readr::col_factor() masks scales::col_factor()\n✖ purrr::discard()    masks scales::discard()\n✖ dplyr::filter()     masks stats::filter()\n✖ dplyr::lag()        masks stats::lag()\nℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors\n```\n\n\n:::\n\n```{.r .cell-code}\ndf = rbind(read.csv(\"data/processed/topology_bodymassratio.csv\"),\n                    read.csv(\"data/processed/topology_pfim.csv\")) %>% \n        # to get the ratio\n        mutate(ratio = top/basal,\n                top = NULL,\n                basal = NULL) %>%\n        pivot_longer(\n            cols = c(complexity, distance, connectance, ratio, S1, S2, S4, S5), \n            names_to = \"stat\",\n            values_to = \"stat_val\")\n\nggplot(df) +\n    geom_line(aes(x = as.numeric(as.factor(df$id)), \n                    y = stat_val, \n                    colour = model)) +\n    geom_point(aes(x = as.numeric(as.factor(df$id)), \n                y = stat_val, \n                colour = model)) +\n    facet_wrap(vars(stat),\n                scales = 'free') +\n    scale_size(guide = 'none') +\n    theme_classic() +\n    xlab(\"time\") +\n    ylab(\"value\") +\n    theme(panel.border = element_rect(colour = 'black',\n                                      fill = \"#ffffff00\"),\n            axis.text.x = element_blank(),\n            axis.ticks.x = element_blank())\n```\n\n::: {.cell-output .cell-output-stderr}\n\n```\nWarning: Use of `df$id` is discouraged.\nℹ Use `id` instead.\nUse of `df$id` is discouraged.\nℹ Use `id` instead.\n```\n\n\n:::\n\n::: {.cell-output .cell-output-stderr}\n\n```\nWarning: Removed 1 row containing missing values or values outside the scale range\n(`geom_point()`).\n```\n\n\n:::\n\n::: {.cell-output-display}\n![](06_compare_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::",
+    "supporting": [
+      "06_compare_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
