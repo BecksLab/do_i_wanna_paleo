@@ -37,7 +37,7 @@
     "href": "02_bodymass_ratio.html#example",
     "title": "Bodymass-ratio",
     "section": "Example",
-    "text": "Example\n\nusing CSV\nusing DataFrames\n\ninclude(\"lib/bodymass/bodymass.jl\")\n\n# set seed\nimport Random\nRandom.seed!(66)\n\n# import the mock dataset\ndf = DataFrame(CSV.File(\"data/toarcian_subset.csv\"))\n\n# were going to create some interim bodymass values\nusing Distributions\nbodymass = rand(Truncated(Normal(0, 1), 0, 1), nrow(df))\n\nbodymass_network = bmratio(df.species, bodymass)\n\n# this is a probabilistic network by default we can make it binary using the random draws function\nrandomdraws(bodymass_network)\n\nA binary unipartite network\n → 8 interactions\n → 12 species",
+    "text": "Example\n\nusing CSV\nusing DataFrames\nusing Distributions\n\ninclude(\"lib/bodymass/bodymass.jl\")\ninclude(\"lib/internals.jl\")\n\n# set seed\nimport Random\nRandom.seed!(66)\n\ntopology = DataFrame(\n    id = Any[],\n    model = String[],\n    connectance = Float64[],\n    complexity = Float64[],\n    distance = Float64[],\n    basal = Float64[],\n    top = Float64[],\n    S1 = Float64[],\n    S2 = Float64[],\n    S4 = Float64[],\n    S5 = Float64[],\n);\n\n# get the name of all communities\nmatrix_names = readdir(joinpath(\"data\", \"raw\"))\nmatrix_names = replace.(matrix_names, \".csv\" =&gt; \"\")\n\nfor i in eachindex(matrix_names)\n    \n    file_name = matrix_names[i]\n    df = DataFrame(\n        CSV.File.(\n            joinpath(\"data\", \"raw\", \"$file_name.csv\"),\n        ),\n    )\n\n    # were going to create some interim bodymass values\n    bodymass = rand(Truncated(Normal(0, 1), 0, 1), nrow(df))\n\n    d = model_summary(df, file_name, \"bodymassratio\"; bodymass = bodymass)\n\n    push!(topology, d)\n\nend\n\n# write summaries as .csv\nCSV.write(\"data/processed/topology_bodymassratio.csv\", topology)",
     "crumbs": [
       "(Re)constructing paleo networks",
       "Bodymass-ratio"
@@ -125,7 +125,7 @@
     "href": "04_PFIM.html#example",
     "title": "PFIM",
     "section": "Example",
-    "text": "Example\n\nusing CSV\nusing DataFrames\n\ninclude(\"lib/pfim/pfim.jl\")\n\n# set seed\nimport Random\nRandom.seed!(66)\n\n# import the mock dataset\ndf = DataFrame(CSV.File(\"data/toarcian_subset.csv\"))\n\n# this is a probabilistic network\npfim_network = PFIM(df)\n\n# this is a probabilistic network by default we can make it binary using the random draws function\nrandomdraws(pfim_network)\n\nA binary unipartite network\n → 9 interactions\n → 12 species",
+    "text": "Example\n\nusing CSV\nusing DataFrames\n\ninclude(\"lib/pfim/pfim.jl\")\ninclude(\"lib/internals.jl\")\n\n# set seed\nimport Random\nRandom.seed!(66)\n\ntopology = DataFrame(\n    id = Any[],\n    model = String[],\n    connectance = Float64[],\n    complexity = Float64[],\n    distance = Float64[],\n    basal = Float64[],\n    top = Float64[],\n    S1 = Float64[],\n    S2 = Float64[],\n    S4 = Float64[],\n    S5 = Float64[],\n);\n\n# get the name of all communities\nmatrix_names = readdir(joinpath(\"data\", \"raw\"))\nmatrix_names = replace.(matrix_names, \".csv\" =&gt; \"\")\n\nfor i in eachindex(matrix_names)\n    \n    file_name = matrix_names[i]\n    df = DataFrame(\n        CSV.File.(\n            joinpath(\"data\", \"raw\", \"$file_name.csv\"),\n        ),\n    )\n\n    d = model_summary(df, file_name, \"pfim\")\n\n    push!(topology, d)\n\nend\n\n# write summaries as .csv\nCSV.write(\"data/processed/topology_pfim.csv\", topology)\n\n\"data/processed/topology_pfim.csv\"",
     "crumbs": [
       "(Re)constructing paleo networks",
       "PFIM"
@@ -195,6 +195,17 @@
     "crumbs": [
       "(Re)constructing paleo networks",
       "Using contemporary proxies"
+    ]
+  },
+  {
+    "objectID": "06_compare.html",
+    "href": "06_compare.html",
+    "title": "Comparing different methods",
+    "section": "",
+    "text": "IDK something with figures to kind of showcase different trends…\n\nlibrary(ggradar)\nlibrary(patchwork)\nlibrary(scales)\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.0     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ readr::col_factor() masks scales::col_factor()\n✖ purrr::discard()    masks scales::discard()\n✖ dplyr::filter()     masks stats::filter()\n✖ dplyr::lag()        masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\ndf = rbind(read.csv(\"data/processed/topology_bodymassratio.csv\"),\n                    read.csv(\"data/processed/topology_pfim.csv\")) %&gt;% \n        # to get the ratio\n        mutate(ratio = top/basal,\n                top = NULL,\n                basal = NULL) %&gt;%\n        pivot_longer(\n            cols = c(complexity, distance, connectance, ratio, S1, S2, S4, S5), \n            names_to = \"stat\",\n            values_to = \"stat_val\")\n\nggplot(df) +\n    geom_line(aes(x = as.numeric(as.factor(df$id)), \n                    y = stat_val, \n                    colour = model)) +\n    geom_point(aes(x = as.numeric(as.factor(df$id)), \n                y = stat_val, \n                colour = model)) +\n    facet_wrap(vars(stat),\n                scales = 'free') +\n    scale_size(guide = 'none') +\n    theme_classic() +\n    xlab(\"time\") +\n    ylab(\"value\") +\n    theme(panel.border = element_rect(colour = 'black',\n                                      fill = \"#ffffff00\"),\n            axis.text.x = element_blank(),\n            axis.ticks.x = element_blank())\n\nWarning: Use of `df$id` is discouraged.\nℹ Use `id` instead.\nUse of `df$id` is discouraged.\nℹ Use `id` instead.\n\n\nWarning: Removed 1 row containing missing values or values outside the scale range\n(`geom_point()`).",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Comparing different methods"
     ]
   },
   {
