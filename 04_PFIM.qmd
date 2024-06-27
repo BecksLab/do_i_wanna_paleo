@@ -23,24 +23,51 @@ The Paleo Food web Inference Model (PFIM, @shaw2024) uses a series of rules for 
 using CSV
 using DataFrames
 
+include("lib/internals.jl")
 include("lib/pfim/pfim.jl")
 
 # set seed
 import Random
 Random.seed!(66)
 
-# import the mock dataset
-df = DataFrame(CSV.File("data/toarcian_subset.csv"))
+topology = DataFrame(
+    id = Any[],
+    model = String[],
+    connectance = Float64[],
+    complexity = Float64[],
+    distance = Float64[],
+    basal = Float64[],
+    top = Float64[],
+    S1 = Float64[],
+    S2 = Float64[],
+    S4 = Float64[],
+    S5 = Float64[],
+);
 
-# this is a probabilistic network
-pfim_network = PFIM(df)
+# get the name of all communities
+matrix_names = readdir(joinpath("data", "raw"))
+matrix_names = replace.(matrix_names, ".csv" => "")
 
-# this is a probabilistic network by default we can make it binary using the random draws function
-randomdraws(pfim_network)
+for i in eachindex(matrix_names)
+    
+    file_name = matrix_names[i]
+    df = DataFrame(
+        CSV.File.(
+            joinpath("data", "raw", "$file_name.csv"),
+        ),
+    )
 
+    d = model_summary(df, file_name, "pfim")
 
+    push!(topology, d)
+
+end
+
+# write summaries as .csv
+CSV.write("data/processed/topology_pfim.csv", topology)
 
 ```
+
 
 ## References {.unnumbered}
 
