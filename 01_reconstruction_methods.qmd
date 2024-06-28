@@ -22,6 +22,8 @@ bibliography: references.bib
 
 -   Different underlying theory though
 
+-   Insert brief overview of the different methods that are used in a paleo context.
+
 ## Understanding how networks are different
 
 -   Not always representing the same things (*i.e.,* different underlying philosophies). So, although they may all be representing food webs (and feeding links between species) they are 'telling different stories'

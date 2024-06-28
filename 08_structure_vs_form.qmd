@@ -12,6 +12,10 @@ Linking structure and function to ecological processes
 
 ## Section Overview
 
--   We can use the networks that we built from the previous section and showcase how they (maybe) are giving way different metrics (telling different stories)
+-   What do we mean by structure = a way in which we are 'summarising' the network - usually at the 'meta' (network) level but we can also look at the 'micro' (node) level..
 
--   I think if we have multiple networks for different time points as well we can compare within and between network differences? (need to have a think on that)
+-   But does form (structure) = function??
+
+-   Also does the form-function link differ when thinking of bipartite/unipartite systems? I'm inclined to think that many of the ways in which we measure form has been developed in the context of bipartite systems and is there really an ecological reason that they will hold in unipartite systems?
+
+-   Insert a table that attempts to summarise
