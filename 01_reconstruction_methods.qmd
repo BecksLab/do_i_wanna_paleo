@@ -10,7 +10,7 @@ bibliography: references.bib
 
 ## Why build paleo food webs?
 
--   Becuase its interesting?
+-   Because its interesting?
 
 -   Value in using hindcasting to aid in forecasting. *e.g.,* the Toarcian ms shows how we can use these pelao communities to understand trophic-level responses to extinctions.
 
@@ -26,7 +26,7 @@ bibliography: references.bib
 
 ## Understanding how networks are different
 
--   Not always representing the same things (*i.e.,* different underlying philosophies). So, although they may all be representing food webs (and feeding links between species) they are 'telling different stories'
+-   Not always representing the same things (*i.e.,* different underlying philosophies). So, although they may all be representing food webs (and feeding links between species) they are 'telling different stories' - T4T work...
 
 -   Need to be careful when we are 'presenting'/analysing these different food webs and we can't really compare on contrast
 
