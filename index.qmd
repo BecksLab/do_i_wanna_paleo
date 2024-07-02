@@ -15,9 +15,6 @@ In terms of turning these concepts into a tangible 'item' the idea is to compare
 
 We could even do a dashboard!! - See Andrew's below (although it is not rendering properly, which is grating).
 
-```{=html}
- <iframe id="example1" src="http://andrew-beckerman.shinyapps.io/SecondaryExtinctionGame" style="border: none; width: 100%; height: 720px" frameborder="0"></iframe>
-```
 
 ## References {.unnumbered}
 
