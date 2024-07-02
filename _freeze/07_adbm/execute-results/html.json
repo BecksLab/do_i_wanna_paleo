@@ -1,0 +1,12 @@
+{
+  "hash": "3f37367d911315a47950969b35fbcf97",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"Allometric Diet Breadth Model (ADBM)\"\ndate: last-modified\nformat:\n    html:\n        embed-resources: true\ntitle-block-banner: true\nbibliography: references.bib\n---\n\n## Overview\n\nFeeding 'rules' are based on the energetic content of species, which is theoretically and conceptually embedded within the foraging ecology space [@petchey2008]\n\n## Methods\n\n## Example\n\n::: {#1fb36dc3 .cell execution_count=1}\n``` {.julia .cell-code}\nusing CSV\nusing DataFrames\nusing SpeciesInteractionNetworks\n\ninclude(\"lib/adbm/adbm.jl\")\ninclude(\"lib/internals.jl\")\n\n# set seed\nimport Random\nRandom.seed!(66)\n\ntopology = DataFrame(\n    id = Any[],\n    model = String[],\n    connectance = Float64[],\n    complexity = Float64[],\n    distance = Float64[],\n    basal = Float64[],\n    top = Float64[],\n    S1 = Float64[],\n    S2 = Float64[],\n    S4 = Float64[],\n    S5 = Float64[],\n);\n\n# get the name of all communities (still need their richness)\nmatrix_names = readdir(joinpath(\"data\", \"raw\"))\nmatrix_names = replace.(matrix_names, \".csv\" => \"\")\n\nfor i in eachindex(matrix_names)\n    \n    file_name = matrix_names[i]\n    df = DataFrame(\n        CSV.File.(\n            joinpath(\"data\", \"raw\", \"$file_name.csv\"),\n        ),\n    )\n\n    # were going to create some interim bodymass values\n    bodymass = rand(Truncated(Normal(0, 1), 0, 1), nrow(df))\n    # create some mock abundance/biomass values\n    biomass = rand(Truncated(Normal(0, 1), 0, 10), nrow(df))\n\n    d = model_summary(df, file_name, \"adbm\"; bodymass = bodymass, biomass = biomass)\n\n    push!(topology, d)\n\nend\n\n# write summaries as .csv\nCSV.write(\"data/processed/topology_adbm.csv\", topology)\n```\n:::\n\n\n## References {.unnumbered}\n\n::: {#refs}\n:::\n\n",
+    "supporting": [
+      "07_adbm_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

@@ -1,9 +1,7 @@
 # For implementing the ADBM model
 
-include("internals.jl")
-
 """
-  adbm_parameters(N::SpeciesInteractionNetwork{<:Partiteness, <:Binary},
+  adbm_parameters(df::DataFrame,
     bodymass::Vector{Float64};...)
 
   Returns the parameters needed for the adbm model. Defaults to the values
@@ -163,7 +161,7 @@ end
 
 
 """
-adbmmodel(S::Int64, parameters::Dict{Symbol,Any}, biomass::Vector{Float64})
+adbmmodel(df::DataFrame, parameters::Dict{Symbol,Any}, biomass::Vector{Float64})
 
   This function returns the food web based on the ADBM model of Petchey et al. 2008.
   The function takes the paramteres created by adbm_parameters and uses 
@@ -181,12 +179,12 @@ adbmmodel(S::Int64, parameters::Dict{Symbol,Any}, biomass::Vector{Float64})
 
 """
 function adbmmodel(
-    species_list::Vector{String},
+    df::DataFrame,
     parameters::Dict{Symbol,Any},
     biomass::Vector{Float64},
 )
 
-    S = length(species_list)
+    S = nrow(df)
 
     adbmMAT = zeros(Bool, (S, S))
     adbmTerms = _get_adbm_terms(S, parameters, biomass)
@@ -202,6 +200,6 @@ function adbmmodel(
         end
     end
     edges = Binary(adbmMAT)
-    nodes = Unipartite(species_list) # return actual species name metadata
+    nodes = Unipartite(df.species) # return actual species name metadata
     return SpeciesInteractionNetworks.SpeciesInteractionNetwork(nodes, edges)
 end

@@ -61,7 +61,8 @@ function model_summary(
     community_id::Any,
     model_name::String;
     bodymass::Vector{Float64} = [0.0, 0.0],
-    connectance::Float64 = 0.1
+    connectance::Float64 = 0.1,
+    biomass::Vector{Float64} = [0.0, 0.0]
 )
 
     # data checks
@@ -70,8 +71,11 @@ function model_summary(
             "Invalid value for model_name -- must be one of bodymassratio, pfim",
         )
     end
-    if model_name == "bodymassratio" && length(bodymass) != length(df.species)
+    if model_name ∈ ["bodymassratio", "adbm"] && length(bodymass) != length(df.species)
         error("Invalid length for bodymass -- must be length $(length(df.species))")
+    end
+    if model_name == "adbm" && length(biomass) != length(df.species)
+        error("Invalid length for biomass -- must be length $(length(df.species))")
     end
 
     # generate network based on specified model
@@ -86,7 +90,7 @@ function model_summary(
     else
         model_name == "adbm"
         parameters = adbm_parameters(df, bodymass)
-        N = adbmmodel(species(network), parameters, abundance)
+        N = adbmmodel(df, parameters, biomass)
     end
 
         d = _network_summary(N)
