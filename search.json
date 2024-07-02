@@ -1,62 +1,7 @@
 [
   {
-    "objectID": "02_bodymass_ratio.html",
-    "href": "02_bodymass_ratio.html",
-    "title": "Bodymass-ratio",
-    "section": "",
-    "text": "This concept of using body mass ratios to determine potential feeding links between species was primarily developed by Rohr et al. (2010) and has become quite popular in paleo settings (Yeakel et al. 2014; Pires et al. 2015)",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "Bodymass-ratio"
-    ]
-  },
-  {
-    "objectID": "02_bodymass_ratio.html#overview",
-    "href": "02_bodymass_ratio.html#overview",
-    "title": "Bodymass-ratio",
-    "section": "",
-    "text": "This concept of using body mass ratios to determine potential feeding links between species was primarily developed by Rohr et al. (2010) and has become quite popular in paleo settings (Yeakel et al. 2014; Pires et al. 2015)",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "Bodymass-ratio"
-    ]
-  },
-  {
-    "objectID": "02_bodymass_ratio.html#methods",
-    "href": "02_bodymass_ratio.html#methods",
-    "title": "Bodymass-ratio",
-    "section": "Methods",
-    "text": "Methods\nCore idea relates to the ratio between consumer and resource body sizes - which supposedly stems from niche theory (still trying to reconcile that myself). The probability of a link existing between a consumer and resource (in its most basic form) is defined as follows:\n\\[\nP_{ij} = \\frac{p}{1+p}\n\\]\nwhere\n\\[\np = exp[\\alpha + \\beta log(\\frac{M_{i}}{M_{j}}) + \\gamma log^{2}(\\frac{M_{i}}{M_{j}})]\n\\tag{1}\\]\nThe original latent-trait model developed by Rohr et al. (2010) also included an additional latent trait term \\(v_{i} \\delta f_{j}\\) however for simplicity we will use Equation 1 as per Yeakel et al. (2014). Based on Rohr et al. (2010) it is possible to estimate the parameters \\(\\alpha\\), \\(\\delta\\), and \\(\\gamma\\) using a GLM but we will use the parameters from Yeakel et al. (2014), which was ‘trained’ on the Serengeti food web data and are as follows: \\(\\alpha = 1.41\\), \\(\\delta = 3.75\\), and \\(\\gamma = 1.87\\).",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "Bodymass-ratio"
-    ]
-  },
-  {
-    "objectID": "02_bodymass_ratio.html#example",
-    "href": "02_bodymass_ratio.html#example",
-    "title": "Bodymass-ratio",
-    "section": "Example",
-    "text": "Example\n\nusing CSV\nusing DataFrames\nusing Distributions\n\ninclude(\"lib/bodymass/bodymass.jl\")\ninclude(\"lib/internals.jl\")\n\n# set seed\nimport Random\nRandom.seed!(66)\n\ntopology = DataFrame(\n    id = Any[],\n    model = String[],\n    connectance = Float64[],\n    complexity = Float64[],\n    distance = Float64[],\n    basal = Float64[],\n    top = Float64[],\n    S1 = Float64[],\n    S2 = Float64[],\n    S4 = Float64[],\n    S5 = Float64[],\n);\n\n# get the name of all communities\nmatrix_names = readdir(joinpath(\"data\", \"raw\"))\nmatrix_names = replace.(matrix_names, \".csv\" =&gt; \"\")\n\nfor i in eachindex(matrix_names)\n    \n    file_name = matrix_names[i]\n    df = DataFrame(\n        CSV.File.(\n            joinpath(\"data\", \"raw\", \"$file_name.csv\"),\n        ),\n    )\n\n    # were going to create some interim bodymass values\n    bodymass = rand(Truncated(Normal(0, 1), 0, 1), nrow(df))\n\n    d = model_summary(df, file_name, \"bodymassratio\"; bodymass = bodymass)\n\n    push!(topology, d)\n\nend\n\n# write summaries as .csv\nCSV.write(\"data/processed/topology_bodymassratio.csv\", topology)",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "Bodymass-ratio"
-    ]
-  },
-  {
-    "objectID": "02_bodymass_ratio.html#references",
-    "href": "02_bodymass_ratio.html#references",
-    "title": "Bodymass-ratio",
-    "section": "References",
-    "text": "References\n\n\nPires, Mathias M., Paul L. Koch, Richard A. Fariña, Marcus A. M. de Aguiar, Sérgio F. dos Reis, and Paulo R. Guimarães. 2015. “Pleistocene Megafaunal Interaction Networks Became More Vulnerable After Human Arrival.” Proceedings of the Royal Society B: Biological Sciences 282 (1814): 20151367. https://doi.org/10.1098/rspb.2015.1367.\n\n\nRohr, Rudolf Philippe, Heike Scherer, Patrik Kehrli, Christian Mazza, and Louis-Félix Bersier. 2010. “Modeling Food Webs: Exploring Unexplained Structure Using Latent Traits.” The American Naturalist 176 (2): 170–77. https://doi.org/10.1086/653667.\n\n\nYeakel, Justin D., Mathias M. Pires, Lars Rudolf, Nathaniel J. Dominy, Paul L. Koch, Paulo R. Guimarães, and Thilo Gross. 2014. “Collapse of an Ecological Network in Ancient Egypt.” PNAS 111 (40): 14472–77. https://doi.org/10.1073/pnas.1408471111.",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "Bodymass-ratio"
-    ]
-  },
-  {
-    "objectID": "09_structure_vs_form.html",
-    "href": "09_structure_vs_form.html",
+    "objectID": "10_structure_vs_form.html",
+    "href": "10_structure_vs_form.html",
     "title": "Structure vs Function",
     "section": "",
     "text": "Linking structure and function to ecological processes",
@@ -66,14 +11,69 @@
     ]
   },
   {
-    "objectID": "09_structure_vs_form.html#section-overview",
-    "href": "09_structure_vs_form.html#section-overview",
+    "objectID": "10_structure_vs_form.html#section-overview",
+    "href": "10_structure_vs_form.html#section-overview",
     "title": "Structure vs Function",
     "section": "Section Overview",
     "text": "Section Overview\n\nWhat do we mean by structure = a way in which we are ‘summarising’ the network - usually at the ‘meta’ (network) level but we can also look at the ‘micro’ (node) level..\nBut does form (structure) = function??\nAlso does the form-function link differ when thinking of bipartite/unipartite systems? I’m inclined to think that many of the ways in which we measure form has been developed in the context of bipartite systems and is there really an ecological reason that they will hold in unipartite systems?\nInsert a table that attempts to summarise",
     "crumbs": [
       "Form vs Function",
       "Structure vs Function"
+    ]
+  },
+  {
+    "objectID": "06_niche.html",
+    "href": "06_niche.html",
+    "title": "Niche model(s)",
+    "section": "",
+    "text": "Broadly, the niche model (Williams and Martinez 2000) is based on the idea that networks follow a trophic hierarchy and that the structure of the network can be determined by distributing interactions along single dimension (*sensu* the “niche axis”; Allesina, Alonso, and Pascual (2008)), which is essentially a case of partitioning the species (based on their niches) along a one-dimensional resource. This is possible because there is the underlying assumption that food webs have an expected ‘shape’ (the standard ‘trophic pyramid’), which is constrained by connectence, and so the links between species (i.e the number of links) will be constrained as such. (something about ties to the idea of intervality?)",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Niche model(s)"
+    ]
+  },
+  {
+    "objectID": "06_niche.html#overview",
+    "href": "06_niche.html#overview",
+    "title": "Niche model(s)",
+    "section": "",
+    "text": "Broadly, the niche model (Williams and Martinez 2000) is based on the idea that networks follow a trophic hierarchy and that the structure of the network can be determined by distributing interactions along single dimension (*sensu* the “niche axis”; Allesina, Alonso, and Pascual (2008)), which is essentially a case of partitioning the species (based on their niches) along a one-dimensional resource. This is possible because there is the underlying assumption that food webs have an expected ‘shape’ (the standard ‘trophic pyramid’), which is constrained by connectence, and so the links between species (i.e the number of links) will be constrained as such. (something about ties to the idea of intervality?)",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Niche model(s)"
+    ]
+  },
+  {
+    "objectID": "06_niche.html#methods",
+    "href": "06_niche.html#methods",
+    "title": "Niche model(s)",
+    "section": "Methods",
+    "text": "Methods\nDigging onto the details, the niche model introduces the idea that species interactions are based on the ‘feeding niche’ of a species. Broadly, all species are randomly assigned a ‘feeding niche’ range along the resource axis, and all species that fall in the range of a species can be consumed by that species (thereby allowing for cannibalism). The niche of each species is randomly assigned and the range of each species’ niche is (in part) also constrained by the specified connectance of the network. The original model itself has undergone some modification, however it appears that adding to the ‘complexity’ of the niche model does not improve on its ability to generate a more ecologically ‘correct’ network (Williams and Martinez 2008).\n\nI guess we can plop the OG schematic of the niche model in here…\n\nAn important feature to keep in mind when it comes to the niche model is that it defines a the nodes of the network as ‘trophic species’, that is nodes are considered the ‘same’ because they have the same diet and not because they are of the same taxonomic group, one can also think of nodes to thus represent feeding guilds. Importantly this means that the niche model is ‘species agnostic’ and it is not possible to recover pairwise links between specific pairs of species as the network itself is not informed by the identity of the species but rather on the assumption that ‘trophic species’ have a position along the niche axis. Although this way of defining the networks my seem to be a gross oversimplification it does have the advantage that it does not require a lot of data upfront (only species richness and the expected connectance of a network) while (supposedly) granting us a summary of the network structure\n\nsecret aside is that the problem we have with using something like the niche model is that 1) it is not species specific and 2) we are making gross assumptions with regards to what we suspect the connectance of paleo food webs are. But maybe we are still going to get similar structural outputs - who knows…",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Niche model(s)"
+    ]
+  },
+  {
+    "objectID": "06_niche.html#example",
+    "href": "06_niche.html#example",
+    "title": "Niche model(s)",
+    "section": "Example",
+    "text": "Example\nAlthough the niche model doe snot require that much data it still requires that we make the critical assumption with regards to what we think the connectance of these paleo food webs/communities will look like… Also it means it is not a metric that we can ‘track’ when is comes to looking at how the networks change across space…\nI’m going to use 0.1 for now as a place holder but we will probably have to have a think on this\n\nCo = 0.1\n\n0.1\n\n\nAnd now we can run through the motions (so to speak)\n\nusing CSV\nusing DataFrames\nusing SpeciesInteractionNetworks\n\ninclude(\"lib/internals.jl\")\n\n# set seed\nimport Random\nRandom.seed!(66)\n\ntopology = DataFrame(\n    id = Any[],\n    model = String[],\n    connectance = Float64[],\n    complexity = Float64[],\n    distance = Float64[],\n    basal = Float64[],\n    top = Float64[],\n    S1 = Float64[],\n    S2 = Float64[],\n    S4 = Float64[],\n    S5 = Float64[],\n);\n\n# get the name of all communities (still need their richness)\nmatrix_names = readdir(joinpath(\"data\", \"raw\"))\nmatrix_names = replace.(matrix_names, \".csv\" =&gt; \"\")\n\nfor i in eachindex(matrix_names)\n    \n    file_name = matrix_names[i]\n    df = DataFrame(\n        CSV.File.(\n            joinpath(\"data\", \"raw\", \"$file_name.csv\"),\n        ),\n    )\n\n    d = model_summary(df, file_name, \"niche\"; connectance = Co)\n\n    push!(topology, d)\n\nend\n\n# write summaries as .csv\nCSV.write(\"data/processed/topology_niche.csv\", topology)\n\n\"data/processed/topology_niche.csv\"",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Niche model(s)"
+    ]
+  },
+  {
+    "objectID": "06_niche.html#references",
+    "href": "06_niche.html#references",
+    "title": "Niche model(s)",
+    "section": "References",
+    "text": "References\n\n\nAllesina, Stefano, David Alonso, and Mercedes Pascual. 2008. “A General Model for Food Web Structure.” Science 320 (5876): 658–61. https://doi.org/10.1126/science.1156269.\n\n\nWilliams, Richard J., and Neo D. Martinez. 2000. “Simple Rules Yield Complex Food Webs.” Nature 404 (6774): 180–83. https://doi.org/10.1038/35004572.\n\n\n———. 2008. “Success and its limits among structural models of complex food webs.” The Journal of Animal Ecology 77 (3): 512–19. https://doi.org/10.1111/j.1365-2656.2008.01362.x.",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Niche model(s)"
     ]
   },
   {
@@ -187,72 +187,6 @@
     ]
   },
   {
-    "objectID": "05_contemporary.html",
-    "href": "05_contemporary.html",
-    "title": "Using contemporary proxies",
-    "section": "",
-    "text": "“simplifying assumption that species have similar interaction determinants over space and time”\n\nThere is also the potential to use the feeding links between contemporary to predict ones between historic/prehistoric e.g., Fricke et al. (2022) showcases how the use of machine learning (binary classifiers) that is trained using contemporary interaction data has a better predictive accuracy than the body mass ratio model from Rohr et al. (2010). However, there is of course the caveat that there is a ‘time cap’ as to how far back in time we expect this type of approach to to be able to ‘work’. Fricke et al. (2022) focused on mammals from the Late Pleistocene which are of course (physically (trait space)/phylogenetically) well represented by current mammal species and so the assumption that we can use these present links to inform past ones has merit. However as we move deeper into time there are ‘novel’ (at least in terms of contemporary species) forms and phylogenetic lineages and so these types of models probably wont work very well…",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "Using contemporary proxies"
-    ]
-  },
-  {
-    "objectID": "05_contemporary.html#overview",
-    "href": "05_contemporary.html#overview",
-    "title": "Using contemporary proxies",
-    "section": "",
-    "text": "“simplifying assumption that species have similar interaction determinants over space and time”\n\nThere is also the potential to use the feeding links between contemporary to predict ones between historic/prehistoric e.g., Fricke et al. (2022) showcases how the use of machine learning (binary classifiers) that is trained using contemporary interaction data has a better predictive accuracy than the body mass ratio model from Rohr et al. (2010). However, there is of course the caveat that there is a ‘time cap’ as to how far back in time we expect this type of approach to to be able to ‘work’. Fricke et al. (2022) focused on mammals from the Late Pleistocene which are of course (physically (trait space)/phylogenetically) well represented by current mammal species and so the assumption that we can use these present links to inform past ones has merit. However as we move deeper into time there are ‘novel’ (at least in terms of contemporary species) forms and phylogenetic lineages and so these types of models probably wont work very well…",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "Using contemporary proxies"
-    ]
-  },
-  {
-    "objectID": "05_contemporary.html#methods",
-    "href": "05_contemporary.html#methods",
-    "title": "Using contemporary proxies",
-    "section": "Methods",
-    "text": "Methods",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "Using contemporary proxies"
-    ]
-  },
-  {
-    "objectID": "05_contemporary.html#example",
-    "href": "05_contemporary.html#example",
-    "title": "Using contemporary proxies",
-    "section": "Example",
-    "text": "Example",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "Using contemporary proxies"
-    ]
-  },
-  {
-    "objectID": "05_contemporary.html#references",
-    "href": "05_contemporary.html#references",
-    "title": "Using contemporary proxies",
-    "section": "References",
-    "text": "References\n\n\nFricke, Evan C., Chia Hsieh, Owen Middleton, Daniel Gorczynski, Caroline D. Cappello, Oscar Sanisidro, John Rowan, Jens-Christian Svenning, and Lydia Beaudrot. 2022. “Collapse of Terrestrial Mammal Food Webs Since the Late Pleistocene.” Science 377 (6609): 1008–11. https://doi.org/10.1126/science.abn4012.\n\n\nRohr, Rudolf Philippe, Heike Scherer, Patrik Kehrli, Christian Mazza, and Louis-Félix Bersier. 2010. “Modeling Food Webs: Exploring Unexplained Structure Using Latent Traits.” The American Naturalist 176 (2): 170–77. https://doi.org/10.1086/653667.",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "Using contemporary proxies"
-    ]
-  },
-  {
-    "objectID": "07_compare.html",
-    "href": "07_compare.html",
-    "title": "Comparing different methods",
-    "section": "",
-    "text": "We can use the networks that we built from the previous section and showcase how they (maybe) are giving way different metrics (telling different stories)\nI think if we have multiple networks for different time points as well we can compare within and between network differences? (need to have a think on that)",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "Comparing different methods"
-    ]
-  },
-  {
     "objectID": "04_PFIM.html",
     "href": "04_PFIM.html",
     "title": "PFIM",
@@ -308,6 +242,83 @@
     ]
   },
   {
+    "objectID": "09_meta_vs_realised.html",
+    "href": "09_meta_vs_realised.html",
+    "title": "Metawebs vs realised webs",
+    "section": "",
+    "text": "The importance of understanding how the two differ. How do we downsample a metaweb to make it a realised web.",
+    "crumbs": [
+      "Downsampling",
+      "Metawebs vs realised webs"
+    ]
+  },
+  {
+    "objectID": "05_contemporary.html",
+    "href": "05_contemporary.html",
+    "title": "Using contemporary proxies",
+    "section": "",
+    "text": "“simplifying assumption that species have similar interaction determinants over space and time”\n\nThere is also the potential to use the feeding links between contemporary to predict ones between historic/prehistoric e.g., Fricke et al. (2022) showcases how the use of machine learning (binary classifiers) that is trained using contemporary interaction data has a better predictive accuracy than the body mass ratio model from Rohr et al. (2010). However, there is of course the caveat that there is a ‘time cap’ as to how far back in time we expect this type of approach to to be able to ‘work’. Fricke et al. (2022) focused on mammals from the Late Pleistocene which are of course (physically (trait space)/phylogenetically) well represented by current mammal species and so the assumption that we can use these present links to inform past ones has merit. However as we move deeper into time there are ‘novel’ (at least in terms of contemporary species) forms and phylogenetic lineages and so these types of models probably wont work very well…",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Using contemporary proxies"
+    ]
+  },
+  {
+    "objectID": "05_contemporary.html#overview",
+    "href": "05_contemporary.html#overview",
+    "title": "Using contemporary proxies",
+    "section": "",
+    "text": "“simplifying assumption that species have similar interaction determinants over space and time”\n\nThere is also the potential to use the feeding links between contemporary to predict ones between historic/prehistoric e.g., Fricke et al. (2022) showcases how the use of machine learning (binary classifiers) that is trained using contemporary interaction data has a better predictive accuracy than the body mass ratio model from Rohr et al. (2010). However, there is of course the caveat that there is a ‘time cap’ as to how far back in time we expect this type of approach to to be able to ‘work’. Fricke et al. (2022) focused on mammals from the Late Pleistocene which are of course (physically (trait space)/phylogenetically) well represented by current mammal species and so the assumption that we can use these present links to inform past ones has merit. However as we move deeper into time there are ‘novel’ (at least in terms of contemporary species) forms and phylogenetic lineages and so these types of models probably wont work very well…",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Using contemporary proxies"
+    ]
+  },
+  {
+    "objectID": "05_contemporary.html#methods",
+    "href": "05_contemporary.html#methods",
+    "title": "Using contemporary proxies",
+    "section": "Methods",
+    "text": "Methods",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Using contemporary proxies"
+    ]
+  },
+  {
+    "objectID": "05_contemporary.html#example",
+    "href": "05_contemporary.html#example",
+    "title": "Using contemporary proxies",
+    "section": "Example",
+    "text": "Example",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Using contemporary proxies"
+    ]
+  },
+  {
+    "objectID": "05_contemporary.html#references",
+    "href": "05_contemporary.html#references",
+    "title": "Using contemporary proxies",
+    "section": "References",
+    "text": "References\n\n\nFricke, Evan C., Chia Hsieh, Owen Middleton, Daniel Gorczynski, Caroline D. Cappello, Oscar Sanisidro, John Rowan, Jens-Christian Svenning, and Lydia Beaudrot. 2022. “Collapse of Terrestrial Mammal Food Webs Since the Late Pleistocene.” Science 377 (6609): 1008–11. https://doi.org/10.1126/science.abn4012.\n\n\nRohr, Rudolf Philippe, Heike Scherer, Patrik Kehrli, Christian Mazza, and Louis-Félix Bersier. 2010. “Modeling Food Webs: Exploring Unexplained Structure Using Latent Traits.” The American Naturalist 176 (2): 170–77. https://doi.org/10.1086/653667.",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Using contemporary proxies"
+    ]
+  },
+  {
+    "objectID": "08_compare.html",
+    "href": "08_compare.html",
+    "title": "Comparing different methods",
+    "section": "",
+    "text": "We can use the networks that we built from the previous section and showcase how they (maybe) are giving way different metrics (telling different stories)\nI think if we have multiple networks for different time points as well we can compare within and between network differences? (need to have a think on that)",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Comparing different methods"
+    ]
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Paleo-linked methods for network reconstruction",
@@ -330,69 +341,113 @@
     ]
   },
   {
-    "objectID": "08_meta_vs_realised.html",
-    "href": "08_meta_vs_realised.html",
-    "title": "Metawebs vs realised webs",
+    "objectID": "07_adbm.html",
+    "href": "07_adbm.html",
+    "title": "Allometric Diet Breadth Model (ADBM)",
     "section": "",
-    "text": "The importance of understanding how the two differ. How do we downsample a metaweb to make it a realised web.",
-    "crumbs": [
-      "Downsampling",
-      "Metawebs vs realised webs"
-    ]
-  },
-  {
-    "objectID": "06_niche.html",
-    "href": "06_niche.html",
-    "title": "Niche model(s)",
-    "section": "",
-    "text": "Broadly, the niche model (Williams and Martinez 2000) is based on the idea that networks follow a trophic hierarchy and that the structure of the network can be determined by distributing interactions along single dimension (*sensu* the “niche axis”; Allesina, Alonso, and Pascual (2008)), which is essentially a case of partitioning the species (based on their niches) along a one-dimensional resource. This is possible because there is the underlying assumption that food webs have an expected ‘shape’ (the standard ‘trophic pyramid’), which is constrained by connectence, and so the links between species (i.e the number of links) will be constrained as such. (something about ties to the idea of intervality?)",
+    "text": "Feeding ‘rules’ are based on the energetic content of species, which is theoretically and conceptually embedded within the foraging ecology space (Petchey et al. 2008)",
     "crumbs": [
       "(Re)constructing paleo networks",
-      "Niche model(s)"
+      "Allometric Diet Breadth Model (ADBM)"
     ]
   },
   {
-    "objectID": "06_niche.html#overview",
-    "href": "06_niche.html#overview",
-    "title": "Niche model(s)",
+    "objectID": "07_adbm.html#overview",
+    "href": "07_adbm.html#overview",
+    "title": "Allometric Diet Breadth Model (ADBM)",
     "section": "",
-    "text": "Broadly, the niche model (Williams and Martinez 2000) is based on the idea that networks follow a trophic hierarchy and that the structure of the network can be determined by distributing interactions along single dimension (*sensu* the “niche axis”; Allesina, Alonso, and Pascual (2008)), which is essentially a case of partitioning the species (based on their niches) along a one-dimensional resource. This is possible because there is the underlying assumption that food webs have an expected ‘shape’ (the standard ‘trophic pyramid’), which is constrained by connectence, and so the links between species (i.e the number of links) will be constrained as such. (something about ties to the idea of intervality?)",
+    "text": "Feeding ‘rules’ are based on the energetic content of species, which is theoretically and conceptually embedded within the foraging ecology space (Petchey et al. 2008)",
     "crumbs": [
       "(Re)constructing paleo networks",
-      "Niche model(s)"
+      "Allometric Diet Breadth Model (ADBM)"
     ]
   },
   {
-    "objectID": "06_niche.html#methods",
-    "href": "06_niche.html#methods",
-    "title": "Niche model(s)",
+    "objectID": "07_adbm.html#methods",
+    "href": "07_adbm.html#methods",
+    "title": "Allometric Diet Breadth Model (ADBM)",
     "section": "Methods",
-    "text": "Methods\nDigging onto the details, the niche model introduces the idea that species interactions are based on the ‘feeding niche’ of a species. Broadly, all species are randomly assigned a ‘feeding niche’ range along the resource axis, and all species that fall in the range of a species can be consumed by that species (thereby allowing for cannibalism). The niche of each species is randomly assigned and the range of each species’ niche is (in part) also constrained by the specified connectance of the network. The original model itself has undergone some modification, however it appears that adding to the ‘complexity’ of the niche model does not improve on its ability to generate a more ecologically ‘correct’ network (Williams and Martinez 2008).\n\nI guess we can plop the OG schematic of the niche model in here…\n\nAn important feature to keep in mind when it comes to the niche model is that it defines a the nodes of the network as ‘trophic species’, that is nodes are considered the ‘same’ because they have the same diet and not because they are of the same taxonomic group, one can also think of nodes to thus represent feeding guilds. Importantly this means that the niche model is ‘species agnostic’ and it is not possible to recover pairwise links between specific pairs of species as the network itself is not informed by the identity of the species but rather on the assumption that ‘trophic species’ have a position along the niche axis. Although this way of defining the networks my seem to be a gross oversimplification it does have the advantage that it does not require a lot of data upfront (only species richness and the expected connectance of a network) while (supposedly) granting us a summary of the network structure\n\nsecret aside is that the problem we have with using something like the niche model is that 1) it is not species specific and 2) we are making gross assumptions with regards to what we suspect the connectance of paleo food webs are. But maybe we are still going to get similar structural outputs - who knows…",
+    "text": "Methods",
     "crumbs": [
       "(Re)constructing paleo networks",
-      "Niche model(s)"
+      "Allometric Diet Breadth Model (ADBM)"
     ]
   },
   {
-    "objectID": "06_niche.html#example",
-    "href": "06_niche.html#example",
-    "title": "Niche model(s)",
+    "objectID": "07_adbm.html#example",
+    "href": "07_adbm.html#example",
+    "title": "Allometric Diet Breadth Model (ADBM)",
     "section": "Example",
-    "text": "Example\nAlthough the niche model doe snot require that much data it still requires that we make the critical assumption with regards to what we think the connectance of these paleo food webs/communities will look like… Also it means it is not a metric that we can ‘track’ when is comes to looking at how the networks change across space…\nI’m going to use 0.1 for now as a place holder but we will probably have to have a think on this\n\nCo = 0.1\n\n0.1\n\n\nAnd now we can run through the motions (so to speak)\n\nusing CSV\nusing DataFrames\nusing SpeciesInteractionNetworks\n\ninclude(\"lib/internals.jl\")\n\n# set seed\nimport Random\nRandom.seed!(66)\n\ntopology = DataFrame(\n    id = Any[],\n    model = String[],\n    connectance = Float64[],\n    complexity = Float64[],\n    distance = Float64[],\n    basal = Float64[],\n    top = Float64[],\n    S1 = Float64[],\n    S2 = Float64[],\n    S4 = Float64[],\n    S5 = Float64[],\n);\n\n# get the name of all communities (still need their richness)\nmatrix_names = readdir(joinpath(\"data\", \"raw\"))\nmatrix_names = replace.(matrix_names, \".csv\" =&gt; \"\")\n\nfor i in eachindex(matrix_names)\n    \n    file_name = matrix_names[i]\n    df = DataFrame(\n        CSV.File.(\n            joinpath(\"data\", \"raw\", \"$file_name.csv\"),\n        ),\n    )\n\n    d = model_summary(df, file_name, \"niche\"; connectance = Co)\n\n    push!(topology, d)\n\nend\n\n# write summaries as .csv\nCSV.write(\"data/processed/topology_niche.csv\", topology)\n\n\"data/processed/topology_niche.csv\"",
+    "text": "Example\n\nusing CSV\nusing DataFrames\nusing SpeciesInteractionNetworks\n\ninclude(\"lib/adbm/adbm.jl\")\ninclude(\"lib/internals.jl\")\n\n# set seed\nimport Random\nRandom.seed!(66)\n\ntopology = DataFrame(\n    id = Any[],\n    model = String[],\n    connectance = Float64[],\n    complexity = Float64[],\n    distance = Float64[],\n    basal = Float64[],\n    top = Float64[],\n    S1 = Float64[],\n    S2 = Float64[],\n    S4 = Float64[],\n    S5 = Float64[],\n);\n\n# get the name of all communities (still need their richness)\nmatrix_names = readdir(joinpath(\"data\", \"raw\"))\nmatrix_names = replace.(matrix_names, \".csv\" =&gt; \"\")\n\nfor i in eachindex(matrix_names)\n    \n    file_name = matrix_names[i]\n    df = DataFrame(\n        CSV.File.(\n            joinpath(\"data\", \"raw\", \"$file_name.csv\"),\n        ),\n    )\n\n    # were going to create some interim bodymass values\n    bodymass = rand(Truncated(Normal(0, 1), 0, 1), nrow(df))\n    # create some mock abundance/biomass values\n    biomass = rand(Truncated(Normal(0, 1), 0, 10), nrow(df))\n\n    d = model_summary(df, file_name, \"adbm\"; bodymass = bodymass, biomass = biomass)\n\n    push!(topology, d)\n\nend\n\n# write summaries as .csv\nCSV.write(\"data/processed/topology_adbm.csv\", topology)",
     "crumbs": [
       "(Re)constructing paleo networks",
-      "Niche model(s)"
+      "Allometric Diet Breadth Model (ADBM)"
     ]
   },
   {
-    "objectID": "06_niche.html#references",
-    "href": "06_niche.html#references",
-    "title": "Niche model(s)",
+    "objectID": "07_adbm.html#references",
+    "href": "07_adbm.html#references",
+    "title": "Allometric Diet Breadth Model (ADBM)",
     "section": "References",
-    "text": "References\n\n\nAllesina, Stefano, David Alonso, and Mercedes Pascual. 2008. “A General Model for Food Web Structure.” Science 320 (5876): 658–61. https://doi.org/10.1126/science.1156269.\n\n\nWilliams, Richard J., and Neo D. Martinez. 2000. “Simple Rules Yield Complex Food Webs.” Nature 404 (6774): 180–83. https://doi.org/10.1038/35004572.\n\n\n———. 2008. “Success and its limits among structural models of complex food webs.” The Journal of Animal Ecology 77 (3): 512–19. https://doi.org/10.1111/j.1365-2656.2008.01362.x.",
+    "text": "References\n\n\nPetchey, Owen L., Andrew P. Beckerman, Jens O. Riede, and Philip H. Warren. 2008. “Size, Foraging, and Food Web Structure.” Proceedings of the National Academy of Sciences 105 (11): 4191–96. https://doi.org/10.1073/pnas.0710672105.",
     "crumbs": [
       "(Re)constructing paleo networks",
-      "Niche model(s)"
+      "Allometric Diet Breadth Model (ADBM)"
+    ]
+  },
+  {
+    "objectID": "02_bodymass_ratio.html",
+    "href": "02_bodymass_ratio.html",
+    "title": "Bodymass-ratio",
+    "section": "",
+    "text": "This concept of using body mass ratios to determine potential feeding links between species was primarily developed by Rohr et al. (2010) and has become quite popular in paleo settings (Yeakel et al. 2014; Pires et al. 2015)",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Bodymass-ratio"
+    ]
+  },
+  {
+    "objectID": "02_bodymass_ratio.html#overview",
+    "href": "02_bodymass_ratio.html#overview",
+    "title": "Bodymass-ratio",
+    "section": "",
+    "text": "This concept of using body mass ratios to determine potential feeding links between species was primarily developed by Rohr et al. (2010) and has become quite popular in paleo settings (Yeakel et al. 2014; Pires et al. 2015)",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Bodymass-ratio"
+    ]
+  },
+  {
+    "objectID": "02_bodymass_ratio.html#methods",
+    "href": "02_bodymass_ratio.html#methods",
+    "title": "Bodymass-ratio",
+    "section": "Methods",
+    "text": "Methods\nCore idea relates to the ratio between consumer and resource body sizes - which supposedly stems from niche theory (still trying to reconcile that myself). The probability of a link existing between a consumer and resource (in its most basic form) is defined as follows:\n\\[\nP_{ij} = \\frac{p}{1+p}\n\\]\nwhere\n\\[\np = exp[\\alpha + \\beta log(\\frac{M_{i}}{M_{j}}) + \\gamma log^{2}(\\frac{M_{i}}{M_{j}})]\n\\tag{1}\\]\nThe original latent-trait model developed by Rohr et al. (2010) also included an additional latent trait term \\(v_{i} \\delta f_{j}\\) however for simplicity we will use Equation 1 as per Yeakel et al. (2014). Based on Rohr et al. (2010) it is possible to estimate the parameters \\(\\alpha\\), \\(\\delta\\), and \\(\\gamma\\) using a GLM but we will use the parameters from Yeakel et al. (2014), which was ‘trained’ on the Serengeti food web data and are as follows: \\(\\alpha = 1.41\\), \\(\\delta = 3.75\\), and \\(\\gamma = 1.87\\).",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Bodymass-ratio"
+    ]
+  },
+  {
+    "objectID": "02_bodymass_ratio.html#example",
+    "href": "02_bodymass_ratio.html#example",
+    "title": "Bodymass-ratio",
+    "section": "Example",
+    "text": "Example\n\nusing CSV\nusing DataFrames\nusing Distributions\n\ninclude(\"lib/bodymass/bodymass.jl\")\ninclude(\"lib/internals.jl\")\n\n# set seed\nimport Random\nRandom.seed!(66)\n\ntopology = DataFrame(\n    id = Any[],\n    model = String[],\n    connectance = Float64[],\n    complexity = Float64[],\n    distance = Float64[],\n    basal = Float64[],\n    top = Float64[],\n    S1 = Float64[],\n    S2 = Float64[],\n    S4 = Float64[],\n    S5 = Float64[],\n);\n\n# get the name of all communities\nmatrix_names = readdir(joinpath(\"data\", \"raw\"))\nmatrix_names = replace.(matrix_names, \".csv\" =&gt; \"\")\n\nfor i in eachindex(matrix_names)\n    \n    file_name = matrix_names[i]\n    df = DataFrame(\n        CSV.File.(\n            joinpath(\"data\", \"raw\", \"$file_name.csv\"),\n        ),\n    )\n\n    # were going to create some interim bodymass values\n    bodymass = rand(Truncated(Normal(0, 1), 0, 1), nrow(df))\n\n    d = model_summary(df, file_name, \"bodymassratio\"; bodymass = bodymass)\n\n    push!(topology, d)\n\nend\n\n# write summaries as .csv\nCSV.write(\"data/processed/topology_bodymassratio.csv\", topology)",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Bodymass-ratio"
+    ]
+  },
+  {
+    "objectID": "02_bodymass_ratio.html#references",
+    "href": "02_bodymass_ratio.html#references",
+    "title": "Bodymass-ratio",
+    "section": "References",
+    "text": "References\n\n\nPires, Mathias M., Paul L. Koch, Richard A. Fariña, Marcus A. M. de Aguiar, Sérgio F. dos Reis, and Paulo R. Guimarães. 2015. “Pleistocene Megafaunal Interaction Networks Became More Vulnerable After Human Arrival.” Proceedings of the Royal Society B: Biological Sciences 282 (1814): 20151367. https://doi.org/10.1098/rspb.2015.1367.\n\n\nRohr, Rudolf Philippe, Heike Scherer, Patrik Kehrli, Christian Mazza, and Louis-Félix Bersier. 2010. “Modeling Food Webs: Exploring Unexplained Structure Using Latent Traits.” The American Naturalist 176 (2): 170–77. https://doi.org/10.1086/653667.\n\n\nYeakel, Justin D., Mathias M. Pires, Lars Rudolf, Nathaniel J. Dominy, Paul L. Koch, Paulo R. Guimarães, and Thilo Gross. 2014. “Collapse of an Ecological Network in Ancient Egypt.” PNAS 111 (40): 14472–77. https://doi.org/10.1073/pnas.1408471111.",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Bodymass-ratio"
     ]
   }
 ]
