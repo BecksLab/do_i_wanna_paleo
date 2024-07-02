@@ -11,3 +11,4 @@ Bivalve_13,facultative_unattached,infaunal,suspension,medium
 Bivalve_14,facultative_unattached,infaunal,suspension,small
 Fish_1,motile_fast,pelagic,predator,large
 Scaphopod_1,facultative_unattached,infaunal,predator,small
+mock,nonmotile_attached,semi_infaunal,producer,small

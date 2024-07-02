@@ -1,3 +1,3 @@
 id,model,connectance,complexity,distance,basal,top,S1,S2,S4,S5
-community_1,bodymassratio,0.013888888888888888,1.0,2.0,10.0,10.0,0.0,0.0,0.0,0.0
-community_2,bodymassratio,0.012345679012345678,NaN,2.0,8.0,8.0,0.0,0.0,0.0,0.0
+community_1,bodymassratio,0.03550295857988166,0.9893300421750798,1.0,8.0,8.0,2.0,0.0,1.0,1.0
+community_2,bodymassratio,0.02,1.0,2.0,8.0,8.0,0.0,0.0,0.0,0.0
