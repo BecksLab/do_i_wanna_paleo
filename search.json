@@ -55,212 +55,25 @@
     ]
   },
   {
-    "objectID": "07_meta_vs_realised.html",
-    "href": "07_meta_vs_realised.html",
-    "title": "Metawebs vs realised webs",
+    "objectID": "09_structure_vs_form.html",
+    "href": "09_structure_vs_form.html",
+    "title": "Structure vs Function",
     "section": "",
-    "text": "The importance of understanding how the two differ. How do we downsample a metaweb to make it a realised web.",
+    "text": "Linking structure and function to ecological processes",
     "crumbs": [
-      "Downsampling",
-      "Metawebs vs realised webs"
+      "Form vs Function",
+      "Structure vs Function"
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Paleo-linked methods for network reconstruction",
-    "section": "",
-    "text": "A primer/template for thinking about the reconstruction of paleo networks. Particularly thinking about what we actually do with the data, how we interpret structure and function (linking the ‘summary statistics’ to ecological theory), and understanding the conceptual differences between a metaweb and a realised network (and how we downsample from one to the other).\nIn terms of turning these concepts into a tangible ‘item’ the idea is to compare and contrast some of the canonical methods used for reconstructing paleo food webs across different transitions (e.g., extinction events), see how these different methods might (or not) result in different ‘summary statistics’ and also make sure to link the ‘summary statistic’ to the relevant ecological theory (in the context of both structure and function).\nWe could even do a dashboard!! - See Andrew’s below (although it is not rendering properly, which is grating).",
-    "crumbs": [
-      "Rationale",
-      "Paleo-linked methods for network reconstruction"
-    ]
-  },
-  {
-    "objectID": "index.html#references",
-    "href": "index.html#references",
-    "title": "Paleo-linked methods for network reconstruction",
-    "section": "References",
-    "text": "References",
-    "crumbs": [
-      "Rationale",
-      "Paleo-linked methods for network reconstruction"
-    ]
-  },
-  {
-    "objectID": "04_PFIM.html",
-    "href": "04_PFIM.html",
-    "title": "PFIM",
-    "section": "",
-    "text": "Fricke et al. (2022) methods discuss how in the “using functional traits (especially binary or categorical traits), one can overestimate the ecological similarity of species, and thus the similarity of interaction patterns”.\n\nThe Paleo Food web Inference Model (PFIM, Shaw et al. (2024)) uses a series of rules for a set of trait categories (such as habitat and body size) to determine if an interaction can feasibly occur between a species pair.",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "PFIM"
-    ]
-  },
-  {
-    "objectID": "04_PFIM.html#overview",
-    "href": "04_PFIM.html#overview",
-    "title": "PFIM",
-    "section": "",
-    "text": "Fricke et al. (2022) methods discuss how in the “using functional traits (especially binary or categorical traits), one can overestimate the ecological similarity of species, and thus the similarity of interaction patterns”.\n\nThe Paleo Food web Inference Model (PFIM, Shaw et al. (2024)) uses a series of rules for a set of trait categories (such as habitat and body size) to determine if an interaction can feasibly occur between a species pair.",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "PFIM"
-    ]
-  },
-  {
-    "objectID": "04_PFIM.html#methods",
-    "href": "04_PFIM.html#methods",
-    "title": "PFIM",
-    "section": "Methods",
-    "text": "Methods",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "PFIM"
-    ]
-  },
-  {
-    "objectID": "04_PFIM.html#example",
-    "href": "04_PFIM.html#example",
-    "title": "PFIM",
-    "section": "Example",
-    "text": "Example\n\nusing CSV\nusing DataFrames\n\ninclude(\"lib/pfim/pfim.jl\")\ninclude(\"lib/internals.jl\")\n\n# set seed\nimport Random\nRandom.seed!(66)\n\ntopology = DataFrame(\n    id = Any[],\n    model = String[],\n    connectance = Float64[],\n    complexity = Float64[],\n    distance = Float64[],\n    basal = Float64[],\n    top = Float64[],\n    S1 = Float64[],\n    S2 = Float64[],\n    S4 = Float64[],\n    S5 = Float64[],\n);\n\n# get the name of all communities\nmatrix_names = readdir(joinpath(\"data\", \"raw\"))\nmatrix_names = replace.(matrix_names, \".csv\" =&gt; \"\")\n\nfor i in eachindex(matrix_names)\n    \n    file_name = matrix_names[i]\n    df = DataFrame(\n        CSV.File.(\n            joinpath(\"data\", \"raw\", \"$file_name.csv\"),\n        ),\n    )\n\n    d = model_summary(df, file_name, \"pfim\")\n\n    push!(topology, d)\n\nend\n\n# write summaries as .csv\nCSV.write(\"data/processed/topology_pfim.csv\", topology)\n\n\"data/processed/topology_pfim.csv\"",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "PFIM"
-    ]
-  },
-  {
-    "objectID": "04_PFIM.html#references",
-    "href": "04_PFIM.html#references",
-    "title": "PFIM",
-    "section": "References",
-    "text": "References\n\n\nFricke, Evan C., Chia Hsieh, Owen Middleton, Daniel Gorczynski, Caroline D. Cappello, Oscar Sanisidro, John Rowan, Jens-Christian Svenning, and Lydia Beaudrot. 2022. “Collapse of Terrestrial Mammal Food Webs Since the Late Pleistocene.” Science 377 (6609): 1008–11. https://doi.org/10.1126/science.abn4012.\n\n\nShaw, Jack O., Alexander M. Dunhill, Andrew P. Beckerman, Jennifer A. Dunne, and Pincelli M. Hull. 2024. “A Framework for Reconstructing Ancient Food Webs Using Functional Trait Data.” https://doi.org/10.1101/2024.01.30.578036.",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "PFIM"
-    ]
-  },
-  {
-    "objectID": "05_contemporary.html",
-    "href": "05_contemporary.html",
-    "title": "Using contemporary proxies",
-    "section": "",
-    "text": "“simplifying assumption that species have similar interaction determinants over space and time”\n\nThere is also the potential to use the feeding links between contemporary to predict ones between historic/prehistoric e.g., Fricke et al. (2022) showcases how the use of machine learning (binary classifiers) that is trained using contemporary interaction data has a better predictive accuracy than the body mass ratio model from Rohr et al. (2010). However, there is of course the caveat that there is a ‘time cap’ as to how far back in time we expect this type of approach to to be able to ‘work’. Fricke et al. (2022) focused on mammals from the Late Pleistocene which are of course (physically (trait space)/phylogenetically) well represented by current mammal species and so the assumption that we can use these present links to inform past ones has merit. However as we move deeper into time there are ‘novel’ (at least in terms of contemporary species) forms and phylogenetic lineages and so these types of models probably wont work very well…",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "Using contemporary proxies"
-    ]
-  },
-  {
-    "objectID": "05_contemporary.html#overview",
-    "href": "05_contemporary.html#overview",
-    "title": "Using contemporary proxies",
-    "section": "",
-    "text": "“simplifying assumption that species have similar interaction determinants over space and time”\n\nThere is also the potential to use the feeding links between contemporary to predict ones between historic/prehistoric e.g., Fricke et al. (2022) showcases how the use of machine learning (binary classifiers) that is trained using contemporary interaction data has a better predictive accuracy than the body mass ratio model from Rohr et al. (2010). However, there is of course the caveat that there is a ‘time cap’ as to how far back in time we expect this type of approach to to be able to ‘work’. Fricke et al. (2022) focused on mammals from the Late Pleistocene which are of course (physically (trait space)/phylogenetically) well represented by current mammal species and so the assumption that we can use these present links to inform past ones has merit. However as we move deeper into time there are ‘novel’ (at least in terms of contemporary species) forms and phylogenetic lineages and so these types of models probably wont work very well…",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "Using contemporary proxies"
-    ]
-  },
-  {
-    "objectID": "05_contemporary.html#methods",
-    "href": "05_contemporary.html#methods",
-    "title": "Using contemporary proxies",
-    "section": "Methods",
-    "text": "Methods",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "Using contemporary proxies"
-    ]
-  },
-  {
-    "objectID": "05_contemporary.html#example",
-    "href": "05_contemporary.html#example",
-    "title": "Using contemporary proxies",
-    "section": "Example",
-    "text": "Example",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "Using contemporary proxies"
-    ]
-  },
-  {
-    "objectID": "05_contemporary.html#references",
-    "href": "05_contemporary.html#references",
-    "title": "Using contemporary proxies",
-    "section": "References",
-    "text": "References\n\n\nFricke, Evan C., Chia Hsieh, Owen Middleton, Daniel Gorczynski, Caroline D. Cappello, Oscar Sanisidro, John Rowan, Jens-Christian Svenning, and Lydia Beaudrot. 2022. “Collapse of Terrestrial Mammal Food Webs Since the Late Pleistocene.” Science 377 (6609): 1008–11. https://doi.org/10.1126/science.abn4012.\n\n\nRohr, Rudolf Philippe, Heike Scherer, Patrik Kehrli, Christian Mazza, and Louis-Félix Bersier. 2010. “Modeling Food Webs: Exploring Unexplained Structure Using Latent Traits.” The American Naturalist 176 (2): 170–77. https://doi.org/10.1086/653667.",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "Using contemporary proxies"
-    ]
-  },
-  {
-    "objectID": "06_compare.html",
-    "href": "06_compare.html",
-    "title": "Comparing different methods",
-    "section": "",
-    "text": "We can use the networks that we built from the previous section and showcase how they (maybe) are giving way different metrics (telling different stories)\nI think if we have multiple networks for different time points as well we can compare within and between network differences? (need to have a think on that)\n\n\nlibrary(ggradar)\nlibrary(patchwork)\nlibrary(scales)\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.0     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ readr::col_factor() masks scales::col_factor()\n✖ purrr::discard()    masks scales::discard()\n✖ dplyr::filter()     masks stats::filter()\n✖ dplyr::lag()        masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\ndf = rbind(read.csv(\"data/processed/topology_bodymassratio.csv\"),\n                    read.csv(\"data/processed/topology_pfim.csv\")) %&gt;% \n        # to get the ratio\n        mutate(ratio = top/basal,\n                top = NULL,\n                basal = NULL) %&gt;%\n        pivot_longer(\n            cols = c(complexity, distance, connectance, ratio, S1, S2, S4, S5), \n            names_to = \"stat\",\n            values_to = \"stat_val\")\n\nggplot(df) +\n    geom_line(aes(x = as.numeric(as.factor(df$id)), \n                    y = stat_val, \n                    colour = model)) +\n    geom_point(aes(x = as.numeric(as.factor(df$id)), \n                y = stat_val, \n                colour = model)) +\n    facet_wrap(vars(stat),\n                scales = 'free') +\n    scale_size(guide = 'none') +\n    theme_classic() +\n    xlab(\"time\") +\n    ylab(\"value\") +\n    theme(panel.border = element_rect(colour = 'black',\n                                      fill = \"#ffffff00\"),\n            axis.text.x = element_blank(),\n            axis.ticks.x = element_blank())\n\nWarning: Use of `df$id` is discouraged.\nℹ Use `id` instead.\nUse of `df$id` is discouraged.\nℹ Use `id` instead.\n\n\nWarning: Removed 1 row containing missing values or values outside the scale range\n(`geom_point()`).",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "Comparing different methods"
-    ]
-  },
-  {
-    "objectID": "01_reconstruction_methods.html",
-    "href": "01_reconstruction_methods.html",
-    "title": "How we reconstruct paleo food webs",
-    "section": "",
-    "text": "Because its interesting?\nValue in using hindcasting to aid in forecasting. e.g., the Toarcian ms shows how we can use these pelao communities to understand trophic-level responses to extinctions.",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "How we reconstruct paleo food webs"
-    ]
-  },
-  {
-    "objectID": "01_reconstruction_methods.html#why-build-paleo-food-webs",
-    "href": "01_reconstruction_methods.html#why-build-paleo-food-webs",
-    "title": "How we reconstruct paleo food webs",
-    "section": "",
-    "text": "Because its interesting?\nValue in using hindcasting to aid in forecasting. e.g., the Toarcian ms shows how we can use these pelao communities to understand trophic-level responses to extinctions.",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "How we reconstruct paleo food webs"
-    ]
-  },
-  {
-    "objectID": "01_reconstruction_methods.html#how-do-we-do-it",
-    "href": "01_reconstruction_methods.html#how-do-we-do-it",
-    "title": "How we reconstruct paleo food webs",
-    "section": "How do we do it?",
-    "text": "How do we do it?\n\nThere is an evolving body of work that focuses on developing tools specifically for the task of predicting food webs.\nThere are a handful that have been developed specifically in the context of paleo settings e.g., TODO\nDifferent underlying theory though\nInsert brief overview of the different methods that are used in a paleo context.",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "How we reconstruct paleo food webs"
-    ]
-  },
-  {
-    "objectID": "01_reconstruction_methods.html#understanding-how-networks-are-different",
-    "href": "01_reconstruction_methods.html#understanding-how-networks-are-different",
-    "title": "How we reconstruct paleo food webs",
-    "section": "Understanding how networks are different",
-    "text": "Understanding how networks are different\n\nNot always representing the same things (i.e., different underlying philosophies). So, although they may all be representing food webs (and feeding links between species) they are ‘telling different stories’ - T4T work…\nNeed to be careful when we are ‘presenting’/analysing these different food webs and we can’t really compare on contrast\ne.g., Brimacombe et al. (2023) shows that the research group influences the ‘criteria’ that defines interactions/networks and so we can’t actually meaningfully integrate these networks into the same database and assume that they ‘fit’ together.\nPetchy dilemma?",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "How we reconstruct paleo food webs"
-    ]
-  },
-  {
-    "objectID": "01_reconstruction_methods.html#section-overview",
-    "href": "01_reconstruction_methods.html#section-overview",
-    "title": "How we reconstruct paleo food webs",
+    "objectID": "09_structure_vs_form.html#section-overview",
+    "href": "09_structure_vs_form.html#section-overview",
+    "title": "Structure vs Function",
     "section": "Section Overview",
-    "text": "Section Overview\n\nintroduce/discuss some of the paleo food web reconstruction methods\nconstruct networks for (ideally) a datasets across distinct time units using these (or some of) approaches\ncompare and contrast if they tell us a different story",
+    "text": "Section Overview\n\nWhat do we mean by structure = a way in which we are ‘summarising’ the network - usually at the ‘meta’ (network) level but we can also look at the ‘micro’ (node) level..\nBut does form (structure) = function??\nAlso does the form-function link differ when thinking of bipartite/unipartite systems? I’m inclined to think that many of the ways in which we measure form has been developed in the context of bipartite systems and is there really an ecological reason that they will hold in unipartite systems?\nInsert a table that attempts to summarise",
     "crumbs": [
-      "(Re)constructing paleo networks",
-      "How we reconstruct paleo food webs"
+      "Form vs Function",
+      "Structure vs Function"
     ]
   },
   {
@@ -319,25 +132,267 @@
     ]
   },
   {
-    "objectID": "08_structure_vs_form.html",
-    "href": "08_structure_vs_form.html",
-    "title": "Structure vs Function",
+    "objectID": "01_reconstruction_methods.html",
+    "href": "01_reconstruction_methods.html",
+    "title": "How we reconstruct paleo food webs",
     "section": "",
-    "text": "Linking structure and function to ecological processes",
+    "text": "Because its interesting?\nValue in using hindcasting to aid in forecasting. e.g., the Toarcian ms shows how we can use these pelao communities to understand trophic-level responses to extinctions.",
     "crumbs": [
-      "Form vs Function",
-      "Structure vs Function"
+      "(Re)constructing paleo networks",
+      "How we reconstruct paleo food webs"
     ]
   },
   {
-    "objectID": "08_structure_vs_form.html#section-overview",
-    "href": "08_structure_vs_form.html#section-overview",
-    "title": "Structure vs Function",
-    "section": "Section Overview",
-    "text": "Section Overview\n\nWhat do we mean by structure = a way in which we are ‘summarising’ the network - usually at the ‘meta’ (network) level but we can also look at the ‘micro’ (node) level..\nBut does form (structure) = function??\nAlso does the form-function link differ when thinking of bipartite/unipartite systems? I’m inclined to think that many of the ways in which we measure form has been developed in the context of bipartite systems and is there really an ecological reason that they will hold in unipartite systems?\nInsert a table that attempts to summarise",
+    "objectID": "01_reconstruction_methods.html#why-build-paleo-food-webs",
+    "href": "01_reconstruction_methods.html#why-build-paleo-food-webs",
+    "title": "How we reconstruct paleo food webs",
+    "section": "",
+    "text": "Because its interesting?\nValue in using hindcasting to aid in forecasting. e.g., the Toarcian ms shows how we can use these pelao communities to understand trophic-level responses to extinctions.",
     "crumbs": [
-      "Form vs Function",
-      "Structure vs Function"
+      "(Re)constructing paleo networks",
+      "How we reconstruct paleo food webs"
+    ]
+  },
+  {
+    "objectID": "01_reconstruction_methods.html#how-do-we-do-it",
+    "href": "01_reconstruction_methods.html#how-do-we-do-it",
+    "title": "How we reconstruct paleo food webs",
+    "section": "How do we do it?",
+    "text": "How do we do it?\n\nThere is an evolving body of work that focuses on developing tools specifically for the task of predicting food webs.\nThere are a handful that have been developed specifically in the context of paleo settings e.g., TODO\nDifferent underlying theory though\nInsert brief overview of the different methods that are used in a paleo context.",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "How we reconstruct paleo food webs"
+    ]
+  },
+  {
+    "objectID": "01_reconstruction_methods.html#understanding-how-networks-are-different",
+    "href": "01_reconstruction_methods.html#understanding-how-networks-are-different",
+    "title": "How we reconstruct paleo food webs",
+    "section": "Understanding how networks are different",
+    "text": "Understanding how networks are different\n\nNot always representing the same things (i.e., different underlying philosophies). So, although they may all be representing food webs (and feeding links between species) they are ‘telling different stories’ - T4T work…\nNeed to be careful when we are ‘presenting’/analysing these different food webs and we can’t really compare on contrast\ne.g., Brimacombe et al. (2023) shows that the research group influences the ‘criteria’ that defines interactions/networks and so we can’t actually meaningfully integrate these networks into the same database and assume that they ‘fit’ together.\nPetchy dilemma?",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "How we reconstruct paleo food webs"
+    ]
+  },
+  {
+    "objectID": "01_reconstruction_methods.html#section-overview",
+    "href": "01_reconstruction_methods.html#section-overview",
+    "title": "How we reconstruct paleo food webs",
+    "section": "Section Overview",
+    "text": "Section Overview\n\nintroduce/discuss some of the paleo food web reconstruction methods\nconstruct networks for (ideally) a datasets across distinct time units using these (or some of) approaches\ncompare and contrast if they tell us a different story",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "How we reconstruct paleo food webs"
+    ]
+  },
+  {
+    "objectID": "05_contemporary.html",
+    "href": "05_contemporary.html",
+    "title": "Using contemporary proxies",
+    "section": "",
+    "text": "“simplifying assumption that species have similar interaction determinants over space and time”\n\nThere is also the potential to use the feeding links between contemporary to predict ones between historic/prehistoric e.g., Fricke et al. (2022) showcases how the use of machine learning (binary classifiers) that is trained using contemporary interaction data has a better predictive accuracy than the body mass ratio model from Rohr et al. (2010). However, there is of course the caveat that there is a ‘time cap’ as to how far back in time we expect this type of approach to to be able to ‘work’. Fricke et al. (2022) focused on mammals from the Late Pleistocene which are of course (physically (trait space)/phylogenetically) well represented by current mammal species and so the assumption that we can use these present links to inform past ones has merit. However as we move deeper into time there are ‘novel’ (at least in terms of contemporary species) forms and phylogenetic lineages and so these types of models probably wont work very well…",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Using contemporary proxies"
+    ]
+  },
+  {
+    "objectID": "05_contemporary.html#overview",
+    "href": "05_contemporary.html#overview",
+    "title": "Using contemporary proxies",
+    "section": "",
+    "text": "“simplifying assumption that species have similar interaction determinants over space and time”\n\nThere is also the potential to use the feeding links between contemporary to predict ones between historic/prehistoric e.g., Fricke et al. (2022) showcases how the use of machine learning (binary classifiers) that is trained using contemporary interaction data has a better predictive accuracy than the body mass ratio model from Rohr et al. (2010). However, there is of course the caveat that there is a ‘time cap’ as to how far back in time we expect this type of approach to to be able to ‘work’. Fricke et al. (2022) focused on mammals from the Late Pleistocene which are of course (physically (trait space)/phylogenetically) well represented by current mammal species and so the assumption that we can use these present links to inform past ones has merit. However as we move deeper into time there are ‘novel’ (at least in terms of contemporary species) forms and phylogenetic lineages and so these types of models probably wont work very well…",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Using contemporary proxies"
+    ]
+  },
+  {
+    "objectID": "05_contemporary.html#methods",
+    "href": "05_contemporary.html#methods",
+    "title": "Using contemporary proxies",
+    "section": "Methods",
+    "text": "Methods",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Using contemporary proxies"
+    ]
+  },
+  {
+    "objectID": "05_contemporary.html#example",
+    "href": "05_contemporary.html#example",
+    "title": "Using contemporary proxies",
+    "section": "Example",
+    "text": "Example",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Using contemporary proxies"
+    ]
+  },
+  {
+    "objectID": "05_contemporary.html#references",
+    "href": "05_contemporary.html#references",
+    "title": "Using contemporary proxies",
+    "section": "References",
+    "text": "References\n\n\nFricke, Evan C., Chia Hsieh, Owen Middleton, Daniel Gorczynski, Caroline D. Cappello, Oscar Sanisidro, John Rowan, Jens-Christian Svenning, and Lydia Beaudrot. 2022. “Collapse of Terrestrial Mammal Food Webs Since the Late Pleistocene.” Science 377 (6609): 1008–11. https://doi.org/10.1126/science.abn4012.\n\n\nRohr, Rudolf Philippe, Heike Scherer, Patrik Kehrli, Christian Mazza, and Louis-Félix Bersier. 2010. “Modeling Food Webs: Exploring Unexplained Structure Using Latent Traits.” The American Naturalist 176 (2): 170–77. https://doi.org/10.1086/653667.",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Using contemporary proxies"
+    ]
+  },
+  {
+    "objectID": "07_compare.html",
+    "href": "07_compare.html",
+    "title": "Comparing different methods",
+    "section": "",
+    "text": "We can use the networks that we built from the previous section and showcase how they (maybe) are giving way different metrics (telling different stories)\nI think if we have multiple networks for different time points as well we can compare within and between network differences? (need to have a think on that)",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Comparing different methods"
+    ]
+  },
+  {
+    "objectID": "04_PFIM.html",
+    "href": "04_PFIM.html",
+    "title": "PFIM",
+    "section": "",
+    "text": "Fricke et al. (2022) methods discuss how in the “using functional traits (especially binary or categorical traits), one can overestimate the ecological similarity of species, and thus the similarity of interaction patterns”.\n\nThe Paleo Food web Inference Model (PFIM, Shaw et al. (2024)) uses a series of rules for a set of trait categories (such as habitat and body size) to determine if an interaction can feasibly occur between a species pair.",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "PFIM"
+    ]
+  },
+  {
+    "objectID": "04_PFIM.html#overview",
+    "href": "04_PFIM.html#overview",
+    "title": "PFIM",
+    "section": "",
+    "text": "Fricke et al. (2022) methods discuss how in the “using functional traits (especially binary or categorical traits), one can overestimate the ecological similarity of species, and thus the similarity of interaction patterns”.\n\nThe Paleo Food web Inference Model (PFIM, Shaw et al. (2024)) uses a series of rules for a set of trait categories (such as habitat and body size) to determine if an interaction can feasibly occur between a species pair.",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "PFIM"
+    ]
+  },
+  {
+    "objectID": "04_PFIM.html#methods",
+    "href": "04_PFIM.html#methods",
+    "title": "PFIM",
+    "section": "Methods",
+    "text": "Methods",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "PFIM"
+    ]
+  },
+  {
+    "objectID": "04_PFIM.html#example",
+    "href": "04_PFIM.html#example",
+    "title": "PFIM",
+    "section": "Example",
+    "text": "Example\n\nusing CSV\nusing DataFrames\n\ninclude(\"lib/pfim/pfim.jl\")\ninclude(\"lib/internals.jl\")\n\n# set seed\nimport Random\nRandom.seed!(66)\n\ntopology = DataFrame(\n    id = Any[],\n    model = String[],\n    connectance = Float64[],\n    complexity = Float64[],\n    distance = Float64[],\n    basal = Float64[],\n    top = Float64[],\n    S1 = Float64[],\n    S2 = Float64[],\n    S4 = Float64[],\n    S5 = Float64[],\n);\n\n# get the name of all communities\nmatrix_names = readdir(joinpath(\"data\", \"raw\"))\nmatrix_names = replace.(matrix_names, \".csv\" =&gt; \"\")\n\nfor i in eachindex(matrix_names)\n    \n    file_name = matrix_names[i]\n    df = DataFrame(\n        CSV.File.(\n            joinpath(\"data\", \"raw\", \"$file_name.csv\"),\n        ),\n    )\n\n    d = model_summary(df, file_name, \"pfim\")\n\n    push!(topology, d)\n\nend\n\n# write summaries as .csv\nCSV.write(\"data/processed/topology_pfim.csv\", topology)\n\n\"data/processed/topology_pfim.csv\"",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "PFIM"
+    ]
+  },
+  {
+    "objectID": "04_PFIM.html#references",
+    "href": "04_PFIM.html#references",
+    "title": "PFIM",
+    "section": "References",
+    "text": "References\n\n\nFricke, Evan C., Chia Hsieh, Owen Middleton, Daniel Gorczynski, Caroline D. Cappello, Oscar Sanisidro, John Rowan, Jens-Christian Svenning, and Lydia Beaudrot. 2022. “Collapse of Terrestrial Mammal Food Webs Since the Late Pleistocene.” Science 377 (6609): 1008–11. https://doi.org/10.1126/science.abn4012.\n\n\nShaw, Jack O., Alexander M. Dunhill, Andrew P. Beckerman, Jennifer A. Dunne, and Pincelli M. Hull. 2024. “A Framework for Reconstructing Ancient Food Webs Using Functional Trait Data.” https://doi.org/10.1101/2024.01.30.578036.",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "PFIM"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Paleo-linked methods for network reconstruction",
+    "section": "",
+    "text": "A primer/template for thinking about the reconstruction of paleo networks. Particularly thinking about what we actually do with the data, how we interpret structure and function (linking the ‘summary statistics’ to ecological theory), and understanding the conceptual differences between a metaweb and a realised network (and how we downsample from one to the other).\nIn terms of turning these concepts into a tangible ‘item’ the idea is to compare and contrast some of the canonical methods used for reconstructing paleo food webs across different transitions (e.g., extinction events), see how these different methods might (or not) result in different ‘summary statistics’ and also make sure to link the ‘summary statistic’ to the relevant ecological theory (in the context of both structure and function).\nWe could even do a dashboard!! - See Andrew’s below (although it is not rendering properly, which is grating).",
+    "crumbs": [
+      "Rationale",
+      "Paleo-linked methods for network reconstruction"
+    ]
+  },
+  {
+    "objectID": "index.html#references",
+    "href": "index.html#references",
+    "title": "Paleo-linked methods for network reconstruction",
+    "section": "References",
+    "text": "References",
+    "crumbs": [
+      "Rationale",
+      "Paleo-linked methods for network reconstruction"
+    ]
+  },
+  {
+    "objectID": "08_meta_vs_realised.html",
+    "href": "08_meta_vs_realised.html",
+    "title": "Metawebs vs realised webs",
+    "section": "",
+    "text": "The importance of understanding how the two differ. How do we downsample a metaweb to make it a realised web.",
+    "crumbs": [
+      "Downsampling",
+      "Metawebs vs realised webs"
+    ]
+  },
+  {
+    "objectID": "06_niche.html",
+    "href": "06_niche.html",
+    "title": "Niche model(s)",
+    "section": "",
+    "text": "Broadly, the niche model (Williams and Martinez 2000) is based on the idea that networks follow a trophic hierarchy and that the structure of the network can be determined by distributing interactions along single dimension (*sensu* the “niche axis”; Allesina, Alonso, and Pascual (2008)), which is essentially a case of partitioning the species (based on their niches) along a one-dimensional resource. This is possible because there is the underlying assumption that food webs have an expected ‘shape’ (the standard ‘trophic pyramid’), which is constrained by connectence, and so the links between species (i.e the number of links) will be constrained as such. (something about ties to the idea of intervality?)",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Niche model(s)"
+    ]
+  },
+  {
+    "objectID": "06_niche.html#overview",
+    "href": "06_niche.html#overview",
+    "title": "Niche model(s)",
+    "section": "",
+    "text": "Broadly, the niche model (Williams and Martinez 2000) is based on the idea that networks follow a trophic hierarchy and that the structure of the network can be determined by distributing interactions along single dimension (*sensu* the “niche axis”; Allesina, Alonso, and Pascual (2008)), which is essentially a case of partitioning the species (based on their niches) along a one-dimensional resource. This is possible because there is the underlying assumption that food webs have an expected ‘shape’ (the standard ‘trophic pyramid’), which is constrained by connectence, and so the links between species (i.e the number of links) will be constrained as such. (something about ties to the idea of intervality?)",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Niche model(s)"
+    ]
+  },
+  {
+    "objectID": "06_niche.html#methods",
+    "href": "06_niche.html#methods",
+    "title": "Niche model(s)",
+    "section": "Methods",
+    "text": "Methods\nDigging onto the details, the niche model introduces the idea that species interactions are based on the ‘feeding niche’ of a species. Broadly, all species are randomly assigned a ‘feeding niche’ range along the resource axis, and all species that fall in the range of a species can be consumed by that species (thereby allowing for cannibalism). The niche of each species is randomly assigned and the range of each species’ niche is (in part) also constrained by the specified connectance of the network. The original model itself has undergone some modification, however it appears that adding to the ‘complexity’ of the niche model does not improve on its ability to generate a more ecologically ‘correct’ network (Williams and Martinez 2008).\n\nI guess we can plop the OG schematic of the niche model in here…\n\nAn important feature to keep in mind when it comes to the niche model is that it defines a the nodes of the network as ‘trophic species’, that is nodes are considered the ‘same’ because they have the same diet and not because they are of the same taxonomic group, one can also think of nodes to thus represent feeding guilds. Importantly this means that the niche model is ‘species agnostic’ and it is not possible to recover pairwise links between specific pairs of species as the network itself is not informed by the identity of the species but rather on the assumption that ‘trophic species’ have a position along the niche axis. Although this way of defining the networks my seem to be a gross oversimplification it does have the advantage that it does not require a lot of data upfront (only species richness and the expected connectance of a network) while (supposedly) granting us a summary of the network structure\n\nsecret aside is that the problem we have with using something like the niche model is that 1) it is not species specific and 2) we are making gross assumptions with regards to what we suspect the connectance of paleo food webs are. But maybe we are still going to get similar structural outputs - who knows…",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Niche model(s)"
+    ]
+  },
+  {
+    "objectID": "06_niche.html#example",
+    "href": "06_niche.html#example",
+    "title": "Niche model(s)",
+    "section": "Example",
+    "text": "Example\nAlthough the niche model doe snot require that much data it still requires that we make the critical assumption with regards to what we think the connectance of these paleo food webs/communities will look like… Also it means it is not a metric that we can ‘track’ when is comes to looking at how the networks change across space…\nI’m going to use 0.1 for now as a place holder but we will probably have to have a think on this\n\nCo = 0.1\n\n0.1\n\n\nAnd now we can run through the motions (so to speak)\n\nusing CSV\nusing DataFrames\nusing SpeciesInteractionNetworks\n\ninclude(\"lib/internals.jl\")\n\n# set seed\nimport Random\nRandom.seed!(66)\n\ntopology = DataFrame(\n    id = Any[],\n    model = String[],\n    connectance = Float64[],\n    complexity = Float64[],\n    distance = Float64[],\n    basal = Float64[],\n    top = Float64[],\n    S1 = Float64[],\n    S2 = Float64[],\n    S4 = Float64[],\n    S5 = Float64[],\n);\n\n# get the name of all communities (still need their richness)\nmatrix_names = readdir(joinpath(\"data\", \"raw\"))\nmatrix_names = replace.(matrix_names, \".csv\" =&gt; \"\")\n\nfor i in eachindex(matrix_names)\n    \n    file_name = matrix_names[i]\n    df = DataFrame(\n        CSV.File.(\n            joinpath(\"data\", \"raw\", \"$file_name.csv\"),\n        ),\n    )\n\n    d = model_summary(df, file_name, \"niche\"; connectance = Co)\n\n    push!(topology, d)\n\nend\n\n# write summaries as .csv\nCSV.write(\"data/processed/topology_niche.csv\", topology)\n\n\"data/processed/topology_niche.csv\"",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Niche model(s)"
+    ]
+  },
+  {
+    "objectID": "06_niche.html#references",
+    "href": "06_niche.html#references",
+    "title": "Niche model(s)",
+    "section": "References",
+    "text": "References\n\n\nAllesina, Stefano, David Alonso, and Mercedes Pascual. 2008. “A General Model for Food Web Structure.” Science 320 (5876): 658–61. https://doi.org/10.1126/science.1156269.\n\n\nWilliams, Richard J., and Neo D. Martinez. 2000. “Simple Rules Yield Complex Food Webs.” Nature 404 (6774): 180–83. https://doi.org/10.1038/35004572.\n\n\n———. 2008. “Success and its limits among structural models of complex food webs.” The Journal of Animal Ecology 77 (3): 512–19. https://doi.org/10.1111/j.1365-2656.2008.01362.x.",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Niche model(s)"
     ]
   }
 ]
