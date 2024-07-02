@@ -11,7 +11,7 @@ include("internals.jl")
 
 """
 function adbm_parameters(
-    N::SpeciesInteractionNetwork{<:Partiteness,<:Binary},
+    df::DataFrame,
     bodymass::Vector{Float64};
     e::Float64 = 1.0,
     a_adbm::Float64 = 0.0189,
@@ -27,8 +27,6 @@ function adbm_parameters(
     Nmethod::Symbol = :original,
 )
 
-
-    A = _get_matrix(N) # matrix from N, needed to determine producers
 
     parameters = Dict{Symbol,Any}(
         :e => e,
@@ -62,8 +60,8 @@ function adbm_parameters(
     S = size(parameters[:A], 2)
     parameters[:costMat] = ones(Float64, (S, S))
 
-    # Identify producers - based on number of prey
-    is_producer = vec(sum(A, dims = 2) .== 0)
+    # Identify producers - based on tiering class
+    is_producer = df.tiering .== "producer"
     parameters[:is_producer] = is_producer
 
     # add bodymass

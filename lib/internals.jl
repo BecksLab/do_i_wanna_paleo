@@ -65,7 +65,7 @@ function model_summary(
 )
 
     # data checks
-    if model_name ∉ ["bodymassratio", "pfim", "niche"]
+    if model_name ∉ ["bodymassratio", "pfim", "niche", "adbm"]
         error(
             "Invalid value for model_name -- must be one of bodymassratio, pfim",
         )
@@ -83,6 +83,11 @@ function model_summary(
         N = randomdraws(N) # from probabalistic to binary
     elseif model_name == "niche"
         N = structuralmodel(NicheModel, nrow(df), connectance)
+    else
+        model_name == "adbm"
+        parameters = adbm_parameters(df, bodymass)
+        N = adbmmodel(species(network), parameters, abundance)
+    end
 
         d = _network_summary(N)
         D = Dict{Symbol,Any}()
@@ -97,6 +102,5 @@ function model_summary(
         D[:S2] = d[:S2]
         D[:S4] = d[:S4]
         D[:S5] = d[:S5]
-    end
-    return D
+        return D
 end
