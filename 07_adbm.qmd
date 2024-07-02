@@ -1,0 +1,22 @@
+---
+title: "Allometric Diet Breadth Model (ADBM)"
+date: last-modified
+format:
+    html:
+        embed-resources: true
+title-block-banner: true
+bibliography: references.bib
+---
+
+## Overview
+
+Feeding 'rules' are based on the energetic content of species, which is theoretically and conceptually embedded within the foraging ecology space [@petchey2008]
+
+## Methods
+
+## Example
+
+## References {.unnumbered}
+
+::: {#refs}
+:::
