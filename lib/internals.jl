@@ -61,10 +61,11 @@ function model_summary(
     community_id::Any,
     model_name::String;
     bodymass::Vector{Float64} = [0.0, 0.0],
+    connectance::Float64 = 0.1
 )
 
     # data checks
-    if model_name ∉ ["bodymassratio", "pfim"]
+    if model_name ∉ ["bodymassratio", "pfim", "niche"]
         error(
             "Invalid value for model_name -- must be one of bodymassratio, pfim",
         )
@@ -80,6 +81,8 @@ function model_summary(
     elseif model_name == "pfim"
         N = PFIM(df)
         N = randomdraws(N) # from probabalistic to binary
+    elseif model_name == "niche"
+        N = structuralmodel(NicheModel, nrow(df), connectance)
 
         d = _network_summary(N)
         D = Dict{Symbol,Any}()

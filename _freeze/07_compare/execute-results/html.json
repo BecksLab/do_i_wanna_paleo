@@ -1,0 +1,17 @@
+{
+  "hash": "8c04da5254ae59b74edf20687e150a8e",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Comparing different methods\"\ndate: last-modified\nformat:\n    html:\n        embed-resources: true\ntitle-block-banner: true\nbibliography: references.bib\n---\n\n\n-   We can use the networks that we built from the previous section and showcase how they (maybe) are giving way different metrics (telling different stories)\n\n-   I think if we have multiple networks for different time points as well we can compare within and between network differences? (need to have a think on that)\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](07_compare_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::",
+    "supporting": [
+      "07_compare_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

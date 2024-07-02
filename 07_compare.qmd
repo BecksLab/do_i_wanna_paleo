@@ -13,14 +13,19 @@ bibliography: references.bib
 -   I think if we have multiple networks for different time points as well we can compare within and between network differences? (need to have a think on that)
 
 ```{r}
+#| echo: false
+#| warning: false
 
+library(dplyr)
 library(ggradar)
 library(patchwork)
+library(readr)
 library(scales)
 library(tidyverse)
 
-df = rbind(read.csv("data/processed/topology_bodymassratio.csv"),
-                    read.csv("data/processed/topology_pfim.csv")) %>% 
+df = list.files(path="data/processed/", full.names = TRUE) %>% 
+  lapply(read_csv) %>% 
+  bind_rows %>% 
         # to get the ratio
         mutate(ratio = top/basal,
                 top = NULL,
