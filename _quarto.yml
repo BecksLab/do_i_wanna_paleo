@@ -19,13 +19,14 @@ website:
           - 03_expert_knowledge.qmd
           - 04_PFIM.qmd
           - 05_contemporary.qmd
-          - 06_compare.qmd
+          - 06_niche.qmd
+          - 07_compare.qmd
       - section: "Downsampling"
         contents:
-          - 07_meta_vs_realised.qmd
+          - 08_meta_vs_realised.qmd
       - section: "Form vs Function"
         contents:
-          - 08_structure_vs_form.qmd
+          - 09_structure_vs_form.qmd
 
 
 author:

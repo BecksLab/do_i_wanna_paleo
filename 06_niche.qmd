@@ -1,0 +1,20 @@
+---
+title: "Niche model(s)"
+date: last-modified
+format:
+    html:
+        embed-resources: true
+title-block-banner: true
+bibliography: references.bib
+---
+
+## Overview
+
+## Methods
+
+## Example
+
+## References {.unnumbered}
+
+::: {#refs}
+:::
