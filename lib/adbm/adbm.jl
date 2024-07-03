@@ -178,11 +178,7 @@ adbmmodel(df::DataFrame, parameters::Dict{Symbol,Any}, biomass::Vector{Float64})
   Academy of Sciences 105 (11): 4191–96. https://doi.org/10.1073/pnas.0710672105.
 
 """
-function adbmmodel(
-    df::DataFrame,
-    parameters::Dict{Symbol,Any},
-    biomass::Vector{Float64},
-)
+function adbmmodel(df::DataFrame, parameters::Dict{Symbol,Any}, biomass::Vector{Float64})
 
     S = nrow(df)
 

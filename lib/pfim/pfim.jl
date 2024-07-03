@@ -3,6 +3,7 @@ using SpeciesInteractionNetworks
 
 include(joinpath("rules.jl"))
 
+# create struct to contain traits for a species
 mutable struct PFIMspecies
     species::Symbol
     feeding_trait::feeding
@@ -15,8 +16,8 @@ end
 _pfim_community(data::DataFrame)
 
     Internal function that takes a DataFrame and transforms it into an
-    array containing PFIMspecies. This is done so that the 'metadata' 
-    is infomred by a species as opposed to a table that needs to be
+    array containing `PFIMspecies``. This is done so that the 'metadata' 
+    is infomred by a species as opposed to a matrix that needs to be
     indexed...
 
 """
@@ -48,12 +49,14 @@ end
 """
 function _pfim_link(consumer::PFIMspecies, resource::PFIMspecies)
 
+    # sum outcomes from the four rules
     trait_sum =
         feeding_rules(consumer.feeding_trait, resource.feeding_trait) +
         motility_rules(consumer.motility_trait, resource.motility_trait) +
         tiering_rules(consumer.tiering_trait, resource.tiering_trait) +
         size_rules(consumer.size_trait, resource.size_trait)
 
+    # if all conditions are met (sums to 4) then link is present
     if trait_sum == 4
         link = 1
     else
@@ -65,8 +68,8 @@ end
 """
     _PFIM_network(PFIMcommunity::Vector{PFIMspecies})
 
-    Internal function that constructs a network for a a given 
-    PFIMcommunity.
+    Internal function that constructs a network for a given 
+    PFIMcommunity by returning the oucome from _pfim_link().
 
 """
 function _PFIM_network(PFIMcommunity::Vector{PFIMspecies})
@@ -74,12 +77,14 @@ function _PFIM_network(PFIMcommunity::Vector{PFIMspecies})
     S = length(PFIMcommunity)
     int_matrix = zeros(Bool, (S, S))
 
+    # populate matrix
     for i in eachindex(PFIMcommunity)
         for j in eachindex(PFIMcommunity)
             int_matrix[i, j] = _pfim_link(PFIMcommunity[i], PFIMcommunity[j])
         end
     end
 
+    # create SpeciesInteractionNetwork
     nodes = Unipartite(getproperty.(PFIMcommunity, :species))
     edges = Binary(int_matrix)
     network = SpeciesInteractionNetwork(nodes, edges)
@@ -90,7 +95,7 @@ end
 """
    PFIM(data::DataFrame; y::Float64 = 2.5)
 
-    Takes a data fram and impliments the feeding rules to determine the
+    Takes a data frame and impliments the feeding rules to determine the
     feasibility of links between species. As well as applying the link
     distribution downsampling approach.
     

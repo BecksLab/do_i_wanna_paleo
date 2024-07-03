@@ -62,14 +62,12 @@ function model_summary(
     model_name::String;
     bodymass::Vector{Float64} = [0.0, 0.0],
     connectance::Float64 = 0.1,
-    biomass::Vector{Float64} = [0.0, 0.0]
+    biomass::Vector{Float64} = [0.0, 0.0],
 )
 
     # data checks
     if model_name ∉ ["bodymassratio", "pfim", "niche", "adbm"]
-        error(
-            "Invalid value for model_name -- must be one of bodymassratio, pfim",
-        )
+        error("Invalid value for model_name -- must be one of bodymassratio, pfim")
     end
     if model_name ∈ ["bodymassratio", "adbm"] && length(bodymass) != length(df.species)
         error("Invalid length for bodymass -- must be length $(length(df.species))")
@@ -93,20 +91,20 @@ function model_summary(
         N = adbmmodel(df, parameters, biomass)
     end
 
-        d = _network_summary(N)
-        D = Dict{Symbol,Any}()
-        D[:id] = community_id
-        D[:model] = model_name
-        D[:connectance] = d[:connectance]
-        D[:complexity] = d[:complexity]
-        D[:distance] = d[:distance]
-        D[:basal] = d[:basal]
-        D[:top] = d[:top]
-        D[:S1] = d[:S1]
-        D[:S2] = d[:S2]
-        D[:S4] = d[:S4]
-        D[:S5] = d[:S5]
-        return D
+    d = _network_summary(N)
+    D = Dict{Symbol,Any}()
+    D[:id] = community_id
+    D[:model] = model_name
+    D[:connectance] = d[:connectance]
+    D[:complexity] = d[:complexity]
+    D[:distance] = d[:distance]
+    D[:basal] = d[:basal]
+    D[:top] = d[:top]
+    D[:S1] = d[:S1]
+    D[:S2] = d[:S2]
+    D[:S4] = d[:S4]
+    D[:S5] = d[:S5]
+    return D
 end
 
 """
