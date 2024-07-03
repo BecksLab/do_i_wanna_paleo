@@ -12,21 +12,31 @@ bibliography: references.bib
 
 -   Because its interesting?
 
--   Value in using hindcasting to aid in forecasting. *e.g.,* the Toarcian ms shows how we can use these pelao communities to understand trophic-level responses to extinctions.
+-   Value in using hindcasting to aid in forecasting. *e.g.,* the Toarcian ms shows how we can use these paleo communities to understand trophic-level responses to extinctions.
 
 ## How do we do it?
 
 -   There is an evolving body of work that focuses on developing tools specifically for the task of predicting food webs.
 
--   There are a handful that have been developed specifically in the context of paleo settings *e.g.,* TODO
+-   There are a handful that have been developed specifically in the context of paleo settings *e.g.,* TODO but we can also talk about those that might have been developed/tested in contemporary settings but still have applicability in paleo ones.
 
 -   Different underlying theory though
 
--   Insert brief overview of the different methods that are used in a paleo context.
+-   Insert brief overview of the different methods as they pertain to approach (so the T4T triangle)
+
+-   Challenges we face (even in contemporary settings)?
+
+    -   keep high level - I think the argument here should fall more in the data tradeoffs...
 
 ## Understanding how networks are different
 
 -   Not always representing the same things (*i.e.,* different underlying philosophies). So, although they may all be representing food webs (and feeding links between species) they are 'telling different stories' - T4T work...
+
+    -   feasibility (*e.g.* PFIM) vs energy (*e.g.* ADBM)
+
+        -   fundamental vs realised niche analogy??
+
+    -   understanding what links are representing
 
 -   Need to be careful when we are 'presenting'/analysing these different food webs and we can't really compare on contrast
 
@@ -34,9 +44,17 @@ bibliography: references.bib
 
 -   Petchy dilemma?
 
+## Challenges specific to paleo communities/networks
+
+-   I think the goal here should be more a way of acknowledging some of the limitations we face and not a 'this is a complete waste of time' narrative
+
+-   Don't actually have both the complete community (preservation bias) or location specific occurrence (to account for preservation bias often need to aggregate from different locations???)
+
+-   
+
 ## Section Overview
 
--   introduce/discuss some of the paleo food web reconstruction methods
+-   introduce/discuss some of the food web reconstruction methods
 
 -   construct networks for (ideally) a datasets across distinct time units using these (or some of) approaches
 
