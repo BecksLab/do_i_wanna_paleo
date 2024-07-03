@@ -30,19 +30,7 @@ include("lib/internals.jl")
 import Random
 Random.seed!(66)
 
-topology = DataFrame(
-    id = Any[],
-    model = String[],
-    connectance = Float64[],
-    complexity = Float64[],
-    distance = Float64[],
-    basal = Float64[],
-    top = Float64[],
-    S1 = Float64[],
-    S2 = Float64[],
-    S4 = Float64[],
-    S5 = Float64[],
-);
+topology = topo_df();
 
 # get the name of all communities
 matrix_names = readdir(joinpath("data", "raw"))

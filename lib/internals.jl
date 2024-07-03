@@ -108,3 +108,24 @@ function model_summary(
         D[:S5] = d[:S5]
         return D
 end
+
+"""
+topo_df()
+
+    initiates an epty dataframe with the desired network summary fields.
+"""
+function topo_df()
+    return DataFrame(
+        id = Any[],
+        model = String[],
+        connectance = Float64[],
+        complexity = Float64[],
+        distance = Float64[],
+        basal = Float64[],
+        top = Float64[],
+        S1 = Float64[],
+        S2 = Float64[],
+        S4 = Float64[],
+        S5 = Float64[],
+    )
+end
