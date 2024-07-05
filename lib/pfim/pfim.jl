@@ -108,6 +108,13 @@ end
 """
 function PFIM(data::DataFrame; y::Float64 = 2.5)
 
+    # data checks
+    for (i, v) in enumerate(["species", "motility", "tiering", "feeding", "size"])
+        if v ∉ names(data)
+            error("Missing $(v) variable as a column in DataFrame, add or rename")
+        end
+    end
+
     S = nrow(data)
     PFIMcommunity = _pfim_community(data)
     network, matrix = _PFIM_network(PFIMcommunity)
