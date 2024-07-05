@@ -24,7 +24,11 @@ function adbm_parameters(
     Hmethod::Symbol = :ratio,
     Nmethod::Symbol = :original,
 )
-
+    
+    # data checks
+    if "tiering" ∉ names(df)
+        error("Missing $(v) variable as a column in DataFrame, add or rename")
+    end
 
     parameters = Dict{Symbol,Any}(
         :e => e,
@@ -37,7 +41,6 @@ function adbm_parameters(
         :hj => hj,
         :n => n,
         :ni => ni,
-        :A => A,
     )
 
     #check Hmethod
@@ -55,7 +58,7 @@ function adbm_parameters(
     end
 
     # add empty cost matrix
-    S = size(parameters[:A], 2)
+    S = size(df, 1)
     parameters[:costMat] = ones(Float64, (S, S))
 
     # Identify producers - based on tiering class
@@ -179,6 +182,11 @@ adbmmodel(df::DataFrame, parameters::Dict{Symbol,Any}, biomass::Vector{Float64})
 
 """
 function adbmmodel(df::DataFrame, parameters::Dict{Symbol,Any}, biomass::Vector{Float64})
+
+    # data checks
+    if "species" ∉ names(df)
+        error("Missing $(v) variable as a column in DataFrame, add or rename")
+    end
 
     S = nrow(df)
 

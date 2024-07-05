@@ -17,10 +17,10 @@ Feeding 'rules' are based on the energetic content of species, which is theoreti
 ## Example
 
 ```{julia}
-#| eval: false
 
 using CSV
 using DataFrames
+using Distributions
 using SpeciesInteractionNetworks
 
 include("lib/adbm/adbm.jl")
