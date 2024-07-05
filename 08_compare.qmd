@@ -31,15 +31,24 @@ df = list.files(path="data/processed/", full.names = TRUE) %>%
                 top = NULL,
                 basal = NULL) %>%
         pivot_longer(
-            cols = c(complexity, distance, connectance, ratio, S1, S2, S4, S5), 
+            cols = -c(id, model), 
             names_to = "stat",
             values_to = "stat_val")
 
+```
+
+Plot things...
+
+```{r}
+#| label: fig-line
+#| fig-cap: "Comparing the different structures that are recovered by the different models (colours) over a time series"
+
+
 ggplot(df) +
-    geom_line(aes(x = as.numeric(as.factor(df$id)), 
+    geom_line(aes(x = as.numeric(as.factor(`id`)), 
                     y = stat_val, 
                     colour = model)) +
-    geom_point(aes(x = as.numeric(as.factor(df$id)), 
+    geom_point(aes(x = as.numeric(as.factor(`id`)), 
                 y = stat_val, 
                 colour = model)) +
     facet_wrap(vars(stat),

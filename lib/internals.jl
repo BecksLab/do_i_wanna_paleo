@@ -95,6 +95,7 @@ function model_summary(
     D = Dict{Symbol,Any}()
     D[:id] = community_id
     D[:model] = model_name
+    D[:richness] = d[:richness]
     D[:connectance] = d[:connectance]
     D[:complexity] = d[:complexity]
     D[:distance] = d[:distance]
@@ -116,6 +117,7 @@ function topo_df()
     return DataFrame(
         id = Any[],
         model = String[],
+        richness = Int64[],
         connectance = Float64[],
         complexity = Float64[],
         distance = Float64[],
