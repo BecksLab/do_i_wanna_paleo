@@ -323,7 +323,7 @@
     "href": "08_compare.html",
     "title": "Comparing different methods",
     "section": "",
-    "text": "We can use the networks that we built from the previous section and showcase how they (maybe) are giving way different metrics (telling different stories)\nI think if we have multiple networks for different time points as well we can compare within and between network differences? (need to have a think on that)",
+    "text": "We can use the networks that we built from the previous section and showcase how they (maybe) are giving way different metrics (telling different stories)\nI think if we have multiple networks for different time points as well we can compare within and between network differences? (need to have a think on that)\n\nPlot things…\n\nggplot(df) +\n    geom_line(aes(x = as.numeric(as.factor(`id`)), \n                    y = stat_val, \n                    colour = model)) +\n    geom_point(aes(x = as.numeric(as.factor(`id`)), \n                y = stat_val, \n                colour = model)) +\n    facet_wrap(vars(stat),\n                scales = 'free') +\n    scale_size(guide = 'none') +\n    theme_classic() +\n    xlab(\"time\") +\n    ylab(\"value\") +\n    theme(panel.border = element_rect(colour = 'black',\n                                      fill = \"#ffffff00\"),\n            axis.text.x = element_blank(),\n            axis.ticks.x = element_blank())\n\n\n\n\n\n\n\nFigure 1: Comparing the different structures that are recovered by the different models (colours) over a time series",
     "crumbs": [
       "(Re)constructing paleo networks",
       "Comparing different methods"
