@@ -12,10 +12,31 @@ Linking structure and function to ecological processes
 
 ## Section Overview
 
--   What do we mean by structure = a way in which we are 'summarising' the network - usually at the 'meta' (network) level but we can also look at the 'micro' (node) level..
+-   What do we mean by structure = a way in which we are 'summarising' the network.
+
+-   What do we mean by form? (probably nebulous and poorly articulated in general, or at least not explicitly backed by firm eco theory)
+
+    -   species vs system?
 
 -   But does form (structure) = function??
 
 -   Also does the form-function link differ when thinking of bipartite/unipartite systems? I'm inclined to think that many of the ways in which we measure form has been developed in the context of bipartite systems and is there really an ecological reason that they will hold in unipartite systems?
 
--   Insert a table that attempts to summarise
+## Form at scales
+
+@delmas2019 gives a somewhat extensive overview of the different ways in which we can 'summarise' network properties (something akin to statistical moments) which is summarised in the the table below:
+
+| Summary Statistic (form)  | Ref           | Ecological interpretation (function) | Scale (I like this idea and want to push it further) |
+|---------------------------|---------------|--------------------------------------|------------------------------------------------------|
+| Specificity               |               |                                      | Micro (what do species do?)                          |
+| Generaility/vulnerability | @schoener1989 |                                      | Micro (what do species do?)                          |
+| Degree distribution       |               |                                      | Micro (what do species do?)                          |
+| Centrality                |               |                                      | Macro (how does the community look?)                 |
+| Motifs/graphlets          | @milo2002     |                                      | Meso (how do species interact?)                      |
+| Shortest path             |               | diameter, perturbation               | Meso (how do species interact?)                      |
+| Links                     |               |                                      | Macro (how does the community look?)                 |
+| Connectance               |               |                                      | Macro (how does the community look?)                 |
+| Nestedness                |               |                                      | Macro (how does the community look?)                 |
+| Intervaility              |               |                                      | Macro (how does the community look?)                 |
+| Complexity                |               |                                      | Macro (how does the community look?)                 |
+| $\beta$-diversity         |               |                                      | Meta (how do communities differ?)                    |
