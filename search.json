@@ -15,7 +15,18 @@
     "href": "10_structure_vs_form.html#section-overview",
     "title": "Structure vs Function",
     "section": "Section Overview",
-    "text": "Section Overview\n\nWhat do we mean by structure = a way in which we are ‘summarising’ the network - usually at the ‘meta’ (network) level but we can also look at the ‘micro’ (node) level..\nBut does form (structure) = function??\nAlso does the form-function link differ when thinking of bipartite/unipartite systems? I’m inclined to think that many of the ways in which we measure form has been developed in the context of bipartite systems and is there really an ecological reason that they will hold in unipartite systems?\nInsert a table that attempts to summarise",
+    "text": "Section Overview\n\nWhat do we mean by structure = a way in which we are ‘summarising’ the network.\nWhat do we mean by form? (probably nebulous and poorly articulated in general, or at least not explicitly backed by firm eco theory)\n\nspecies vs system?\n\nBut does form (structure) = function??\nAlso does the form-function link differ when thinking of bipartite/unipartite systems? I’m inclined to think that many of the ways in which we measure form has been developed in the context of bipartite systems and is there really an ecological reason that they will hold in unipartite systems?",
+    "crumbs": [
+      "Form vs Function",
+      "Structure vs Function"
+    ]
+  },
+  {
+    "objectID": "10_structure_vs_form.html#form-at-scales",
+    "href": "10_structure_vs_form.html#form-at-scales",
+    "title": "Structure vs Function",
+    "section": "Form at scales",
+    "text": "Form at scales\nDelmas et al. (2019) gives a somewhat extensive overview of the different ways in which we can ‘summarise’ network properties (something akin to statistical moments) which is summarised in the the table below:\n\n\n\n\n\n\n\n\n\nSummary Statistic (form)\nRef\nEcological interpretation (function)\nScale (I like this idea and want to push it further)\n\n\n\n\nSpecificity\n\n\nMicro (what do species do?)\n\n\nGeneraility/vulnerability\nSchoener (1989)\n\nMicro (what do species do?)\n\n\nDegree distribution\n\n\nMicro (what do species do?)\n\n\nCentrality\n\n\nMacro (how does the community look?)\n\n\nMotifs/graphlets\nMilo et al. (2002)\n\nMeso (how do species interact?)\n\n\nShortest path\n\ndiameter, perturbation\nMeso (how do species interact?)\n\n\nLinks\n\n\nMacro (how does the community look?)\n\n\nConnectance\n\n\nMacro (how does the community look?)\n\n\nNestedness\n\n\nMacro (how does the community look?)\n\n\nIntervaility\n\n\nMacro (how does the community look?)\n\n\nComplexity\n\n\nMacro (how does the community look?)\n\n\n\\(\\beta\\)-diversity\n\n\nMeta (how do communities differ?)",
     "crumbs": [
       "Form vs Function",
       "Structure vs Function"
