@@ -14,6 +14,8 @@ bibliography: references.bib
 
 There is also the potential to use the feeding links between contemporary to predict ones between historic/prehistoric *e.g.,* @fricke2022 showcases how the use of machine learning (binary classifiers) that is trained using contemporary interaction data has a better predictive accuracy than the body mass ratio model from @rohr2010. However, there is of course the caveat that there is a 'time cap' as to how far back in time we expect this type of approach to to be able to 'work'. @fricke2022 focused on mammals from the Late Pleistocene which are of course (physically (trait space)/phylogenetically) well represented by current mammal species and so the assumption that we can use these present links to inform past ones has merit. However as we move deeper into time there are 'novel' (at least in terms of contemporary species) forms and phylogenetic lineages and so these types of models probably wont work very well...
 
+I think specifically if we think of the marine communities (especially far back in time) there probably isn't that much overlap between contemporary and 'back in the day' species both in terms of form (traits) as well as family ties (phylogeny)
+
 ## Methods
 
 ## Example

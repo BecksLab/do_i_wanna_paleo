@@ -22,6 +22,8 @@ bibliography: references.bib
 
 -   Different underlying theory though
 
+    -   Focus here on the idea of different 'currencies' but also aggregations - energy vs compatibility.
+
 -   Insert brief overview of the different methods as they pertain to approach (so the T4T triangle)
 
 -   Challenges we face (even in contemporary settings)?
@@ -53,6 +55,14 @@ bibliography: references.bib
 -   Don't actually have both the complete community (preservation bias) or location specific occurrence (to account for preservation bias often need to aggregate from different locations???)
 
 -   We can't truly validate any predictions (maybe some)
+
+## Dataset Overview
+
+- Species
+
+- Time/space
+
+- And probably some other paleo things that will be relevant...
 
 ## Section Overview
 
