@@ -169,7 +169,7 @@
     "href": "01_reconstruction_methods.html#how-do-we-do-it",
     "title": "How we reconstruct paleo food webs",
     "section": "How do we do it?",
-    "text": "How do we do it?\n\nThere is an evolving body of work that focuses on developing tools specifically for the task of predicting food webs.\nThere are a handful that have been developed specifically in the context of paleo settings e.g., TODO but we can also talk about those that might have been developed/tested in contemporary settings but still have applicability in paleo ones.\nDifferent underlying theory though\nInsert brief overview of the different methods as they pertain to approach (so the T4T triangle)\nChallenges we face (even in contemporary settings)?\n\nkeep high level - I think the argument here should fall more in the data tradeoffs…",
+    "text": "How do we do it?\n\nThere is an evolving body of work that focuses on developing tools specifically for the task of predicting food webs.\nThere are a handful that have been developed specifically in the context of paleo settings e.g., TODO but we can also talk about those that might have been developed/tested in contemporary settings but still have applicability in paleo ones.\nDifferent underlying theory though\n\nFocus here on the idea of different ‘currencies’ but also aggregations - energy vs compatibility.\n\nInsert brief overview of the different methods as they pertain to approach (so the T4T triangle)\nChallenges we face (even in contemporary settings)?\n\nkeep high level - I think the argument here should fall more in the data tradeoffs…",
     "crumbs": [
       "(Re)constructing paleo networks",
       "How we reconstruct paleo food webs"
@@ -192,6 +192,17 @@
     "title": "How we reconstruct paleo food webs",
     "section": "Challenges specific to paleo communities/networks",
     "text": "Challenges specific to paleo communities/networks\n\nI think the goal here should be more a way of acknowledging some of the limitations we face and not a ‘this is a complete waste of time’ narrative\n\nIt’s a case of being aware of your blind spots and working with the acknowledgement that they are there.\n\nDon’t actually have both the complete community (preservation bias) or location specific occurrence (to account for preservation bias often need to aggregate from different locations???)\nWe can’t truly validate any predictions (maybe some)",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "How we reconstruct paleo food webs"
+    ]
+  },
+  {
+    "objectID": "01_reconstruction_methods.html#dataset-overview",
+    "href": "01_reconstruction_methods.html#dataset-overview",
+    "title": "How we reconstruct paleo food webs",
+    "section": "Dataset Overview",
+    "text": "Dataset Overview\n\nSpecies\nTime/space\nAnd probably some other paleo things that will be relevant…",
     "crumbs": [
       "(Re)constructing paleo networks",
       "How we reconstruct paleo food webs"
@@ -279,7 +290,7 @@
     "href": "05_contemporary.html",
     "title": "Using contemporary proxies",
     "section": "",
-    "text": "“simplifying assumption that species have similar interaction determinants over space and time”\n\nThere is also the potential to use the feeding links between contemporary to predict ones between historic/prehistoric e.g., Fricke et al. (2022) showcases how the use of machine learning (binary classifiers) that is trained using contemporary interaction data has a better predictive accuracy than the body mass ratio model from Rohr et al. (2010). However, there is of course the caveat that there is a ‘time cap’ as to how far back in time we expect this type of approach to to be able to ‘work’. Fricke et al. (2022) focused on mammals from the Late Pleistocene which are of course (physically (trait space)/phylogenetically) well represented by current mammal species and so the assumption that we can use these present links to inform past ones has merit. However as we move deeper into time there are ‘novel’ (at least in terms of contemporary species) forms and phylogenetic lineages and so these types of models probably wont work very well…",
+    "text": "“simplifying assumption that species have similar interaction determinants over space and time”\n\nThere is also the potential to use the feeding links between contemporary to predict ones between historic/prehistoric e.g., Fricke et al. (2022) showcases how the use of machine learning (binary classifiers) that is trained using contemporary interaction data has a better predictive accuracy than the body mass ratio model from Rohr et al. (2010). However, there is of course the caveat that there is a ‘time cap’ as to how far back in time we expect this type of approach to to be able to ‘work’. Fricke et al. (2022) focused on mammals from the Late Pleistocene which are of course (physically (trait space)/phylogenetically) well represented by current mammal species and so the assumption that we can use these present links to inform past ones has merit. However as we move deeper into time there are ‘novel’ (at least in terms of contemporary species) forms and phylogenetic lineages and so these types of models probably wont work very well…\nI think specifically if we think of the marine communities (especially far back in time) there probably isn’t that much overlap between contemporary and ‘back in the day’ species both in terms of form (traits) as well as family ties (phylogeny)",
     "crumbs": [
       "(Re)constructing paleo networks",
       "Using contemporary proxies"
@@ -290,7 +301,7 @@
     "href": "05_contemporary.html#overview",
     "title": "Using contemporary proxies",
     "section": "",
-    "text": "“simplifying assumption that species have similar interaction determinants over space and time”\n\nThere is also the potential to use the feeding links between contemporary to predict ones between historic/prehistoric e.g., Fricke et al. (2022) showcases how the use of machine learning (binary classifiers) that is trained using contemporary interaction data has a better predictive accuracy than the body mass ratio model from Rohr et al. (2010). However, there is of course the caveat that there is a ‘time cap’ as to how far back in time we expect this type of approach to to be able to ‘work’. Fricke et al. (2022) focused on mammals from the Late Pleistocene which are of course (physically (trait space)/phylogenetically) well represented by current mammal species and so the assumption that we can use these present links to inform past ones has merit. However as we move deeper into time there are ‘novel’ (at least in terms of contemporary species) forms and phylogenetic lineages and so these types of models probably wont work very well…",
+    "text": "“simplifying assumption that species have similar interaction determinants over space and time”\n\nThere is also the potential to use the feeding links between contemporary to predict ones between historic/prehistoric e.g., Fricke et al. (2022) showcases how the use of machine learning (binary classifiers) that is trained using contemporary interaction data has a better predictive accuracy than the body mass ratio model from Rohr et al. (2010). However, there is of course the caveat that there is a ‘time cap’ as to how far back in time we expect this type of approach to to be able to ‘work’. Fricke et al. (2022) focused on mammals from the Late Pleistocene which are of course (physically (trait space)/phylogenetically) well represented by current mammal species and so the assumption that we can use these present links to inform past ones has merit. However as we move deeper into time there are ‘novel’ (at least in terms of contemporary species) forms and phylogenetic lineages and so these types of models probably wont work very well…\nI think specifically if we think of the marine communities (especially far back in time) there probably isn’t that much overlap between contemporary and ‘back in the day’ species both in terms of form (traits) as well as family ties (phylogeny)",
     "crumbs": [
       "(Re)constructing paleo networks",
       "Using contemporary proxies"
