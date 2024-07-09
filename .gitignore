@@ -45,9 +45,6 @@ po/*~
 # RStudio Connect folder
 rsconnect/
 
-# R stuff
-*.R
-
 # VSCode
 /.vscode
 
@@ -67,3 +64,4 @@ data/raw/*
 # scrap folders
 _scrap.jl
 _scrap.md
+_scrap.R
