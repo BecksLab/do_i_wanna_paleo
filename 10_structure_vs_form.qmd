@@ -48,3 +48,8 @@ Linking structure and function to ecological processes
 ## What do we want to learn from networks?
 
 This is probably just going to churn up thoughts of existential dread...
+
+## References {.unnumbered}
+
+::: {#refs}
+:::
