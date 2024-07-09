@@ -45,14 +45,25 @@ po/*~
 # RStudio Connect folder
 rsconnect/
 
+# R stuff
+*.R
+
 # VSCode
 /.vscode
 
 # quarto stuff
 /.quarto/
 /docs/
-_scrap.jl
+
+# Julia stuff
 Manifest.toml
+
+# Mac OS nonsense
 .DS_Store
-*.R
+
+# protect raw data
+data/raw/*
+
+# scrap folders
+_scrap.jl
 _scrap.md
