@@ -64,6 +64,16 @@ bibliography: references.bib
 
 - And probably some other paleo things that will be relevant...
 
+## Methods to use
+
+-   PFIM (mechanistic compatibility)
+
+-   ADBM (energy explicit)
+
+-   Body size ratio (energy implicit)
+
+-   Niche (topographical/generative)
+
 ## Section Overview
 
 -   introduce/discuss some of the food web reconstruction methods
