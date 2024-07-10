@@ -57,16 +57,5 @@ abstract type sizes end
 # size types
 struct large <: sizes end
 struct medium <: sizes end
-struct parasitic_medium <: sizes end
-struct scavenger_medium <: sizes end
-struct scavenger_large <: sizes end
-struct microcarnivore_medium <: sizes end
-struct microcarnivore_large <: sizes end
 struct small <: sizes end
-struct parasitic_small <: sizes end
-struct scavenger_small <: sizes end
-struct microcarnivore_small <: sizes end
 struct tiny <: sizes end
-struct parasitic_tiny <: sizes end
-struct scavenger_tiny <: sizes end
-struct microcarnivore_tiny <: sizes end

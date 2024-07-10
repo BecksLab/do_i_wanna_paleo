@@ -39,8 +39,11 @@ tiering_rules(consumer::deep_infaunal, resource::shallow_infaunal) = 1
 
 # size rules
 size_rules(consumer::T1, resource::T2) where {T1<:sizes,T2<:sizes} = 0
+tiering_rules(consumer::T, resource::T) where {T<:sizes} = 1
 size_rules(consumer::very_large, resource::T) where {T<:sizes} = 1
 size_rules(consumer::large, resource::medium) = 1
 size_rules(consumer::large, resource::small) = 1
+size_rules(consumer::large, resource::tiny) = 1
 size_rules(consumer::medium, resource::small) = 1
-size_rules(consumer::small, resource::small) = 1
+size_rules(consumer::medium, resource::tiny) = 1
+size_rules(consumer::small, resource::tiny) = 1
