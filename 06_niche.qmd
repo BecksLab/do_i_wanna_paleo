@@ -28,52 +28,6 @@ Although the niche model doe snot require that much data it still requires that 
 
 I'm going to use 0.1 for now as a place holder but we will probably have to have a think on this
 
-```{julia}
-
-Co = 0.1
-
-```
-
-And now we can run through the motions (so to speak)
-
-```{julia}
-
-using CSV
-using DataFrames
-using SpeciesInteractionNetworks
-
-include("lib/internals.jl")
-
-# set seed
-import Random
-Random.seed!(66)
-
-topology = topo_df();
-
-# get the name of all communities (still need their richness)
-matrix_names = readdir(joinpath("data", "raw"))
-matrix_names = replace.(matrix_names, ".csv" => "")
-
-for i in eachindex(matrix_names)
-    
-    file_name = matrix_names[i]
-    df = DataFrame(
-        CSV.File.(
-            joinpath("data", "raw", "$file_name.csv"),
-        ),
-    )
-
-    d = model_summary(df, file_name, "niche"; connectance = Co)
-
-    push!(topology, d)
-
-end
-
-# write summaries as .csv
-CSV.write("data/processed/topology_niche.csv", topology)
-
-```
-
 ## References {.unnumbered}
 
 ::: {#refs}

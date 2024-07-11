@@ -14,53 +14,6 @@ Feeding 'rules' are based on the energetic content of species, which is theoreti
 
 ## Methods
 
-## Example
-
-```{julia}
-
-using CSV
-using DataFrames
-using Distributions
-using SpeciesInteractionNetworks
-
-include("lib/adbm/adbm.jl")
-include("lib/internals.jl")
-
-# set seed
-import Random
-Random.seed!(66)
-
-topology = topo_df();
-
-# get the name of all communities (still need their richness)
-matrix_names = readdir(joinpath("data", "raw"))
-matrix_names = replace.(matrix_names, ".csv" => "")
-
-for i in eachindex(matrix_names)
-    
-    file_name = matrix_names[i]
-    df = DataFrame(
-        CSV.File.(
-            joinpath("data", "raw", "$file_name.csv"),
-        ),
-    )
-
-    # were going to create some interim bodymass values
-    bodymass = rand(Truncated(Normal(0, 1), 0, 1), nrow(df))
-    # create some mock abundance/biomass values
-    biomass = rand(Truncated(Normal(0, 1), 0, 10), nrow(df))
-
-    d = model_summary(df, file_name, "adbm"; bodymass = bodymass, biomass = biomass)
-
-    push!(topology, d)
-
-end
-
-# write summaries as .csv
-CSV.write("data/processed/topology_adbm.csv", topology)
-
-```
-
 ## References {.unnumbered}
 
 ::: {#refs}

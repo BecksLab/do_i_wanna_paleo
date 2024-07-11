@@ -84,6 +84,11 @@ function _PFIM_network(PFIMcommunity::Vector{PFIMspecies})
         end
     end
 
+    # data check
+    if sum(int_matrix) == 0
+            error("No viable interactions for this community")
+        end
+
     # create SpeciesInteractionNetwork
     nodes = Unipartite(getproperty.(PFIMcommunity, :species))
     edges = Binary(int_matrix)

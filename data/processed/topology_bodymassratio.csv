@@ -1,3 +1,4 @@
 id,model,richness,connectance,complexity,distance,basal,top,S1,S2,S4,S5
-community_1,bodymassratio,13,0.03550295857988166,0.9893300421750798,1.0,8.0,8.0,2.0,0.0,1.0,1.0
-community_2,bodymassratio,10,0.02,1.0,2.0,8.0,8.0,0.0,0.0,0.0,0.0
+during_size,bodymassratio,54,0.0051440329218107,0.980690454857283,2.0,43.0,41.0,4.0,0.0,2.0,5.0
+post_size,bodymassratio,53,0.002491990032039872,0.9907567440496194,2.0,47.0,47.0,1.0,0.0,1.0,1.0
+pre_size,bodymassratio,355,1.5869867089863123e-5,1.0,2.0,353.0,353.0,0.0,0.0,0.0,0.0

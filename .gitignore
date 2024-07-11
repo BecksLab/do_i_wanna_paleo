@@ -60,6 +60,7 @@ Manifest.toml
 
 # protect raw data
 data/raw/*
+data/clean/*
 
 # scrap folders
 _scrap.jl
