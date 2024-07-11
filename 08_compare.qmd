@@ -41,6 +41,8 @@ df = list.files(path="data/processed/", full.names = TRUE) %>%
             str_detect(id, "^.*post.*$") ~ "during",
             TRUE ~ as.character(id)))
 
+df$id <- ordered(df$id, levels=c("pre", "during", "post"))
+
 ```
 
 Plot things...
@@ -50,13 +52,13 @@ Plot things...
 #| fig-cap: "Comparing the different structures that are recovered by the different models (colours) over a time series"
 
 
-ggplot(df) +
-    geom_line(aes(x = as.numeric(as.factor(`id`)), 
-                    y = stat_val, 
-                    colour = model)) +
-    geom_point(aes(x = as.numeric(as.factor(`id`)), 
-                y = stat_val, 
-                colour = model)) +
+ggplot(df,
+        aes(x = factor(`id`), 
+            y = stat_val, 
+            colour = model,
+            group = model)) +
+    geom_line() +
+    geom_point() +
     facet_wrap(vars(stat),
                 scales = 'free') +
     scale_size(guide = 'none') +
@@ -65,7 +67,6 @@ ggplot(df) +
     ylab("value") +
     theme(panel.border = element_rect(colour = 'black',
                                       fill = "#ffffff00"),
-            axis.text.x = element_blank(),
             axis.ticks.x = element_blank())
 
 ```
