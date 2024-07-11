@@ -28,51 +28,6 @@ $${#eq-bodymass}
 
 The original latent-trait model developed by @rohr2010 also included an additional latent trait term $v_{i} \delta f_{j}$ however for simplicity we will use @eq-bodymass as per @yeakel2014. Based on @rohr2010 it is possible to estimate the parameters $\alpha$, $\delta$, and $\gamma$ using a GLM but we will use the parameters from @yeakel2014, which was 'trained' on the Serengeti food web data and are as follows: $\alpha = 1.41$, $\delta = 3.75$, and $\gamma = 1.87$. 
 
-## Example
-
-```{julia}
-#| eval: false
-
-using CSV
-using DataFrames
-using Distributions
-
-include("lib/bodymass/bodymass.jl")
-include("lib/internals.jl")
-
-# set seed
-import Random
-Random.seed!(66)
-
-topology = topo_df();
-
-# get the name of all communities
-matrix_names = readdir(joinpath("data", "raw"))
-matrix_names = replace.(matrix_names, ".csv" => "")
-
-for i in eachindex(matrix_names)
-    
-    file_name = matrix_names[i]
-    df = DataFrame(
-        CSV.File.(
-            joinpath("data", "raw", "$file_name.csv"),
-        ),
-    )
-
-    # were going to create some interim bodymass values
-    bodymass = rand(Truncated(Normal(0, 1), 0, 1), nrow(df))
-
-    d = model_summary(df, file_name, "bodymassratio"; bodymass = bodymass)
-
-    push!(topology, d)
-
-end
-
-# write summaries as .csv
-CSV.write("data/processed/topology_bodymassratio.csv", topology)
-
-```
-
 ## References {.unnumbered}
 
 ::: {#refs}
