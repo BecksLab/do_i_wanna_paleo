@@ -39,7 +39,7 @@ for i in eachindex(size_names)
     # create some mock abundance/biomass values
     biomass = rand(Truncated(Normal(0, 1), 0, 10), nrow(df))
 
-    d = model_summary(df, file_name, "adbm"; bodymass = df.bodymass, biomass = biomass)
+    d = model_summary(df, trait_file, "adbm"; bodymass = df.bodymass, biomass = biomass)
 
     push!(topology, d)
 
