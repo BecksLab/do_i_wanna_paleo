@@ -4,9 +4,9 @@ include(joinpath("types.jl"))
 
 # feeding rules
 feeding_rules(consumer::T1, resource::T2) where {T1<:feeding,T2<:feeding} = 0
-feeding_rules(consumer::carnivore, resource::T) where {T<:motility} = 1
-feeding_rules(consumer::scavenger, resource::T) where {T<:motility} = 1
-feeding_rules(consumer::parasitic, resource::T) where {T<:motility} = 1
+feeding_rules(consumer::carnivore, resource::T) where {T<:feeding} = 1
+feeding_rules(consumer::scavenger, resource::T) where {T<:feeding} = 1
+feeding_rules(consumer::parasitic, resource::T) where {T<:feeding} = 1
 feeding_rules(consumer::parasitic, resource::parasitic) = 1
 feeding_rules(consumer::grazer_carnivore, resource::suspension) = 1
 
@@ -39,7 +39,7 @@ tiering_rules(consumer::deep_infaunal, resource::shallow_infaunal) = 1
 
 # size rules
 size_rules(consumer::T1, resource::T2) where {T1<:sizes,T2<:sizes} = 0
-tiering_rules(consumer::T, resource::T) where {T<:sizes} = 1
+size_rules(consumer::T, resource::T) where {T<:sizes} = 1
 size_rules(consumer::very_large, resource::T) where {T<:sizes} = 1
 size_rules(consumer::large, resource::medium) = 1
 size_rules(consumer::large, resource::small) = 1
