@@ -8,15 +8,14 @@ feeding_rules(consumer::carnivore, resource::T) where {T<:feeding} = 1
 feeding_rules(consumer::scavenger, resource::T) where {T<:feeding} = 1
 feeding_rules(consumer::parasitic, resource::T) where {T<:feeding} = 1
 feeding_rules(consumer::parasitic, resource::parasitic) = 1
-feeding_rules(consumer::grazer_carnivore, resource::suspension) = 1
 
 # motility rules
 motility_rules(consumer::T1, resource::T2) where {T1<:motility,T2<:motility} = 0
-motility_rules(consumer::motile_fast, resource::T) where {T<:motility} = 1
-motility_rules(consumer::motile_fast, resource::motile_fast) = 1
-motility_rules(consumer::motile_slow, resource::T) where {T<:motility} = 1
-motility_rules(consumer::motile_slow, resource::motile_fast) = 0
-motility_rules(consumer::motile_slow, resource::motile_slow) = 1
+motility_rules(consumer::fast_moving, resource::T) where {T<:motility} = 1
+motility_rules(consumer::fast_moving, resource::fast_moving) = 1
+motility_rules(consumer::slow_moving, resource::T) where {T<:motility} = 1
+motility_rules(consumer::slow_moving, resource::fast_moving) = 0
+motility_rules(consumer::slow_moving, resource::slow_moving) = 1
 motility_rules(consumer::facultative, resource::facultative) = 1
 motility_rules(consumer::facultative, resource::nonmotile) = 1
 

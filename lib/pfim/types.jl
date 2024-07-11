@@ -10,14 +10,12 @@ struct carnivore <: feeding end
 struct deposit_surficial <: feeding end
 struct deposit_mining <: feeding end
 struct deposit_mining_chemosymbiotic <: feeding end
-struct grazer_carnivore <: feeding end
 struct grazer_omnivore <: feeding end
 struct grazer_herbivore <: feeding end
 struct suspension <: feeding end
 struct suspension_chemosymbiotic <: feeding end
 struct parasitic <: feeding end
 struct scavenger <: feeding end
-struct microcarnivore <: feeding end
 
 """
 motility <: PFIM
