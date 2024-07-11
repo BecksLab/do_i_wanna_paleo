@@ -21,7 +21,11 @@ for (i in seq_along(trait_files)) {
             str_detect(size, "^.*medium.*$") ~ "medium",
             str_detect(size, "^.*tiny.*$") ~ "tiny",
             species == "Hemigordius baoqingensis" ~ "medium",
-            TRUE ~ as.character(size)))
+            TRUE ~ as.character(size)),
+            # same for feeding
+            feeding = case_when(
+            str_detect(feeding, "^.*carnivore.*$") ~ "carnivore",
+            TRUE ~ as.character(feeding)))
 
     # write as clean data
     write.csv(df, str_replace(trait_files[i], "raw.", "clean/trait/"),
