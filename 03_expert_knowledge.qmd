@@ -14,8 +14,6 @@ Both expert knowledge but also as derived from fossil observations? *e.g.,* gut 
 
 ## Methods
 
-## Example
-
 ## References {.unnumbered}
 
 ::: {#refs}

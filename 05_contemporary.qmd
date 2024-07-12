@@ -18,8 +18,6 @@ I think specifically if we think of the marine communities (especially far back 
 
 ## Methods
 
-## Example
-
 ## References {.unnumbered}
 
 ::: {#refs}

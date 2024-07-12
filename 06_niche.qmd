@@ -22,8 +22,6 @@ An important feature to keep in mind when it comes to the niche model is that it
 
 > secret aside is that the problem we have with using something like the niche model is that 1) it is not species specific and 2) we are making gross assumptions with regards to what we *suspect* the connectance of paleo food webs are. But maybe we are still going to get similar structural outputs - who knows...
 
-## Example
-
 Although the niche model doe snot require that much data it still requires that we make the critical assumption with regards to what we think the connectance of these paleo food webs/communities will look like... Also it means it is not a metric that we can 'track' when is comes to looking at how the networks change across space...
 
 I'm going to use 0.1 for now as a place holder but we will probably have to have a think on this
