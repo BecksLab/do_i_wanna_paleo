@@ -45,11 +45,10 @@ df$id <- ordered(df$id, levels=c("pre", "during", "post"))
 
 ```
 
-Plot things...
-
 ```{r}
+#| echo: false
 #| label: fig-line
-#| fig-cap: "Comparing the different structures that are recovered by the different models (colours) over a time series"
+#| fig-cap: "Comparing the different structures that are recovered by the different models (colours) over a time series. We can ignore richness - that's more a sanity check for me. S1, S2, S4, S5 are motifs; S1 = Number of linear chains, S2 = Number of omnivory motifs, S4 = Number of apparent competition motifs, S5 = Number of direct competition motifs"
 
 
 ggplot(df,
@@ -70,3 +69,11 @@ ggplot(df,
             axis.ticks.x = element_blank())
 
 ```
+
+We can obviously look at different 'summary statistics' (see [Form v Function](10_structure_vs_form.qmd)) but just throwing these out for now...
+
+Similar signal but different values... 
+
+Also the challenge that we don't really know what is 'true' so don't actually know how much we can infer but it is interesting to see what the different models are spitting out even if they are potentially wrong... 
+
+Also also does this influence the way we are thinking about the idea of 'feasibility' vs 'energy' networks? One would think they might have clustered a bit differently... although arguably the PFIM is the only feasibility network here and it is often the (visual) outlier...
