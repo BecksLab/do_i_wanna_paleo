@@ -10,11 +10,29 @@ bibliography: references.bib
 
 ## Overview
 
-> @fricke2022 methods discuss how in the *"using functional traits (especially binary or categorical traits), one can overestimate the ecological similarity of species, and thus the similarity of interaction patterns"*. 
+> @fricke2022 methods discuss how in the *"using functional traits (especially binary or categorical traits), one can overestimate the ecological similarity of species, and thus the similarity of interaction patterns"*.
 
-The Paleo Food web Inference Model (PFIM, @shaw2024) uses a series of rules for a set of trait categories (such as habitat and body size) to determine if an interaction can feasibly occur between a species pair.
+The Paleo Food web Inference Model (PFIM, @shaw2024) uses a series of rules for a set of trait categories (such as habitat and body size) to determine if an interaction can feasibly occur between a species pair. If all conditions are met for the different rule classes then an interaction is deemed to be feasible. The original work put forward in @shaw2024 also includes a 'downsampling' step developed by @roopnarine2006 that uses a power law, defined by the link distribution, to 'prune' down some of the links.
+
+> I think its one of Martinez's bodies of work that developed the power low idea?? need to check that. Also a food for thought. Downsampling in this way is quite interesting because it sort of steps from the feasibility space to making assumptions in the energy space of networks...
 
 ## Methods
+
+### Feeding rules
+
+Shaw approaches the determination of feeding rules buy assigning species a series of traits that will affect their ability to predate on (or be predated by) other species. Trait specifically focus on the idea of feeding (so diet), motility (ability to escape/capture), tiering (position in the water column) and size (ability to consume). In order for a link to exist between two species it must be feasible for each trait class [@fig-shaw].
+
+![The feeding rules from @shaw2024](figures/shaw_concept.png){#fig-shaw}
+
+### Link distribution downsampling 
+
+The link distribution ($D_{i}$) is defined by @eq-linkdist, which is a mixed exponential-power law distribution.
+
+$$
+P_{r} = e^{r/E}
+$${#eq-linkdist}
+
+$r$ is the in-degree of consumer $r$ and  $E = e^{ln(M)\frac{(y - 1)}{y}}$, where $M$ the species richness of the network and, as per @roopnarine2006, $y = 2.5$.
 
 ## References {.unnumbered}
 
