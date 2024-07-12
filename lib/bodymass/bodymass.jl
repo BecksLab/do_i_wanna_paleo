@@ -15,18 +15,14 @@ function bmratio(
     for i = 1:S
         for j = 1:S
             MR = bodymass[i] / bodymass[j]
-            if MR == 0
-                p = exp(α)
-            else
-                p = exp(α + β * log(MR) + γ * log(MR)^2)
-            end
+            p = exp(α + β * log(MR) + γ * log(MR)^2)
             if p / (1 - p) >= 0.0
-                prob_matrix[i, j] = p / (1 - p)
+                prob_matrix[i, j] = p / (1 + p)
             end
         end
     end
 
-    # make probabanilistic
+    # make probabilistic
     prob_matrix = prob_matrix ./ maximum(prob_matrix)
 
     edges = Probabilistic(prob_matrix)
