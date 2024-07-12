@@ -114,18 +114,7 @@
     "href": "06_niche.html#methods",
     "title": "Niche model(s)",
     "section": "Methods",
-    "text": "Methods\nDigging onto the details, the niche model introduces the idea that species interactions are based on the ‘feeding niche’ of a species. Broadly, all species are randomly assigned a ‘feeding niche’ range along the resource axis, and all species that fall in the range of a species can be consumed by that species (thereby allowing for cannibalism). The niche of each species is randomly assigned and the range of each species’ niche is (in part) also constrained by the specified connectance of the network. The original model itself has undergone some modification, however it appears that adding to the ‘complexity’ of the niche model does not improve on its ability to generate a more ecologically ‘correct’ network (Williams and Martinez 2008).\n\nI guess we can plop the OG schematic of the niche model in here…\n\nAn important feature to keep in mind when it comes to the niche model is that it defines a the nodes of the network as ‘trophic species’, that is nodes are considered the ‘same’ because they have the same diet and not because they are of the same taxonomic group, one can also think of nodes to thus represent feeding guilds. Importantly this means that the niche model is ‘species agnostic’ and it is not possible to recover pairwise links between specific pairs of species as the network itself is not informed by the identity of the species but rather on the assumption that ‘trophic species’ have a position along the niche axis. Although this way of defining the networks my seem to be a gross oversimplification it does have the advantage that it does not require a lot of data upfront (only species richness and the expected connectance of a network) while (supposedly) granting us a summary of the network structure\n\nsecret aside is that the problem we have with using something like the niche model is that 1) it is not species specific and 2) we are making gross assumptions with regards to what we suspect the connectance of paleo food webs are. But maybe we are still going to get similar structural outputs - who knows…",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "Niche model(s)"
-    ]
-  },
-  {
-    "objectID": "06_niche.html#example",
-    "href": "06_niche.html#example",
-    "title": "Niche model(s)",
-    "section": "Example",
-    "text": "Example\nAlthough the niche model doe snot require that much data it still requires that we make the critical assumption with regards to what we think the connectance of these paleo food webs/communities will look like… Also it means it is not a metric that we can ‘track’ when is comes to looking at how the networks change across space…\nI’m going to use 0.1 for now as a place holder but we will probably have to have a think on this",
+    "text": "Methods\nDigging onto the details, the niche model introduces the idea that species interactions are based on the ‘feeding niche’ of a species. Broadly, all species are randomly assigned a ‘feeding niche’ range along the resource axis, and all species that fall in the range of a species can be consumed by that species (thereby allowing for cannibalism). The niche of each species is randomly assigned and the range of each species’ niche is (in part) also constrained by the specified connectance of the network. The original model itself has undergone some modification, however it appears that adding to the ‘complexity’ of the niche model does not improve on its ability to generate a more ecologically ‘correct’ network (Williams and Martinez 2008).\n\nI guess we can plop the OG schematic of the niche model in here…\n\nAn important feature to keep in mind when it comes to the niche model is that it defines a the nodes of the network as ‘trophic species’, that is nodes are considered the ‘same’ because they have the same diet and not because they are of the same taxonomic group, one can also think of nodes to thus represent feeding guilds. Importantly this means that the niche model is ‘species agnostic’ and it is not possible to recover pairwise links between specific pairs of species as the network itself is not informed by the identity of the species but rather on the assumption that ‘trophic species’ have a position along the niche axis. Although this way of defining the networks my seem to be a gross oversimplification it does have the advantage that it does not require a lot of data upfront (only species richness and the expected connectance of a network) while (supposedly) granting us a summary of the network structure\n\nsecret aside is that the problem we have with using something like the niche model is that 1) it is not species specific and 2) we are making gross assumptions with regards to what we suspect the connectance of paleo food webs are. But maybe we are still going to get similar structural outputs - who knows…\n\nAlthough the niche model doe snot require that much data it still requires that we make the critical assumption with regards to what we think the connectance of these paleo food webs/communities will look like… Also it means it is not a metric that we can ‘track’ when is comes to looking at how the networks change across space…\nI’m going to use 0.1 for now as a place holder but we will probably have to have a think on this",
     "crumbs": [
       "(Re)constructing paleo networks",
       "Niche model(s)"
@@ -191,7 +180,7 @@
     "href": "08_compare.html",
     "title": "Comparing different methods",
     "section": "",
-    "text": "We can use the networks that we built from the previous section and showcase how they (maybe) are giving way different metrics (telling different stories)\nI think if we have multiple networks for different time points as well we can compare within and between network differences? (need to have a think on that)\n\nPlot things…\n\nggplot(df,\n        aes(x = factor(`id`), \n            y = stat_val, \n            colour = model,\n            group = model)) +\n    geom_line() +\n    geom_point() +\n    facet_wrap(vars(stat),\n                scales = 'free') +\n    scale_size(guide = 'none') +\n    theme_classic() +\n    xlab(\"time\") +\n    ylab(\"value\") +\n    theme(panel.border = element_rect(colour = 'black',\n                                      fill = \"#ffffff00\"),\n            axis.ticks.x = element_blank())\n\n\n\n\n\n\n\nFigure 1: Comparing the different structures that are recovered by the different models (colours) over a time series",
+    "text": "We can use the networks that we built from the previous section and showcase how they (maybe) are giving way different metrics (telling different stories)\nI think if we have multiple networks for different time points as well we can compare within and between network differences? (need to have a think on that)\n\n\n\n\n\n\n\n\n\nFigure 1: Comparing the different structures that are recovered by the different models (colours) over a time series. We can ignore richness - that’s more a sanity check for me. S1, S2, S4, S5 are motifs; S1 = Number of linear chains, S2 = Number of omnivory motifs, S4 = Number of apparent competition motifs, S5 = Number of direct competition motifs\n\n\n\n\n\nWe can obviously look at different ‘summary statistics’ (see Form v Function) but just throwing these out for now…\nSimilar signal but different values…\nAlso the challenge that we don’t really know what is ‘true’ so don’t actually know how much we can infer but it is interesting to see what the different models are spitting out even if they are potentially wrong…\nAlso also does this influence the way we are thinking about the idea of ‘feasibility’ vs ‘energy’ networks? One would think they might have clustered a bit differently… although arguably the PFIM is the only feasibility network here and it is often the (visual) outlier…",
     "crumbs": [
       "(Re)constructing paleo networks",
       "Comparing different methods"
@@ -225,17 +214,6 @@
     "title": "Expert Knowledge",
     "section": "Methods",
     "text": "Methods",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "Expert Knowledge"
-    ]
-  },
-  {
-    "objectID": "03_expert_knowledge.html#example",
-    "href": "03_expert_knowledge.html#example",
-    "title": "Expert Knowledge",
-    "section": "Example",
-    "text": "Example",
     "crumbs": [
       "(Re)constructing paleo networks",
       "Expert Knowledge"
@@ -379,17 +357,6 @@
     "title": "Using contemporary proxies",
     "section": "Methods",
     "text": "Methods",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "Using contemporary proxies"
-    ]
-  },
-  {
-    "objectID": "05_contemporary.html#example",
-    "href": "05_contemporary.html#example",
-    "title": "Using contemporary proxies",
-    "section": "Example",
-    "text": "Example",
     "crumbs": [
       "(Re)constructing paleo networks",
       "Using contemporary proxies"
