@@ -63,6 +63,7 @@ function model_summary(
     bodymass::Vector{Float64} = [0.0, 0.0],
     connectance::Float64 = 0.1,
     biomass::Vector{Float64} = [0.0, 0.0],
+    downsample::Bool = true,
 )
 
     # data checks
@@ -81,7 +82,7 @@ function model_summary(
         N = bmratio(df.species, bodymass)
         N = randomdraws(N) # from probabalistic to binary
     elseif model_name == "pfim"
-        N = PFIM(df)
+        N = PFIM(df; downsample = downsample)
         N = randomdraws(N) # from probabalistic to binary
     elseif model_name == "niche"
         N = structuralmodel(NicheModel, nrow(df), connectance)

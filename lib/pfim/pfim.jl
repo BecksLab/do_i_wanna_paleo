@@ -111,7 +111,7 @@ end
     Ancient Food Webs Using Functional Trait Data.” 
     https://doi.org/10.1101/2024.01.30.578036.
 """
-function PFIM(data::DataFrame; y::Float64 = 2.5)
+function PFIM(data::DataFrame; y::Float64 = 2.5, downsample::Bool = true)
 
     # data checks
     for (i, v) in enumerate(["species", "motility", "tiering", "feeding", "size"])
@@ -125,28 +125,32 @@ function PFIM(data::DataFrame; y::Float64 = 2.5)
     network, matrix = _PFIM_network(PFIMcommunity)
     link_dist = zeros(Float64, S)
 
-    # get link distribution
-    for i in eachindex(data.species)
-        sp = data.species[i]
-        r = generality(network, Symbol(sp))
-        E = exp(log(S) * (y - 1) / y)
-        link_dist[i] = exp(r / E)
-    end
+    # downsampling protocol
+    if downsample == true
+        # get link distribution
+        for i in eachindex(data.species)
+            sp = data.species[i]
+            r = generality(network, Symbol(sp))
+            E = exp(log(S) * (y - 1) / y)
+            link_dist[i] = exp(r / E)
+        end
 
-    # create probabilistic int matrix
-    prob_matrix = zeros(AbstractFloat, (S, S))
-    for i in axes(matrix, 1)
-        for j in axes(matrix, 2)
-            if matrix[i, j] == true
-                prob_matrix[i, j] = link_dist[i]
+        # create probabilistic int matrix
+        prob_matrix = zeros(AbstractFloat, (S, S))
+        for i in axes(matrix, 1)
+            for j in axes(matrix, 2)
+                if matrix[i, j] == true
+                    prob_matrix[i, j] = link_dist[i]
+                end
             end
         end
+        # make probabanilistic
+        network = prob_matrix ./ maximum(prob_matrix)
     end
 
-    # make probabanilistic
-    prob_matrix = prob_matrix ./ maximum(prob_matrix)
+    
 
-    edges = Probabilistic(prob_matrix)
+    edges = Probabilistic(network)
     nodes = Unipartite(Symbol.(data.species))
     return SpeciesInteractionNetwork(nodes, edges)
 end
