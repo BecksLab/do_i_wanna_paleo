@@ -444,7 +444,18 @@
     "href": "09_downsampling.html",
     "title": "Downsampling networks",
     "section": "",
-    "text": "Need to be clear about the fact that we are sometimes generating metawebs (all potential interactions) and sometimes realised networks (ones which are constrained in some way to reflect either foraging constraints or whatever)\nWhat is downsampling?\n\nA way to move from having a list of all interactions to one that is more ‘parametrised’ i.e., a closer approximation of reality\nSee Banville (in prep) and Dansereau, Barros, and Poisot (2023) for discussions on using the co-occurrence of species to ‘decrease’ the number of potential links based on the likelihood of an interaction being able to occur (so both having the physical compatibility as well as the species co-occurring in space).\nSee Roopnarine (2006) that uses the link distribution laws to prune the number of links. This is different to the previous examples because here it is using the expected link distribution that we might expect to find in the real world (so realised, energy constrained networks) to prune of links. I think we can argue this is somewhat stochastic, whereas the previous point is still operating within the feasibility space\n\nWhy do we want/need to downsample?\nThis is going to boil down to objectives… Something like a metaweb is useful in that it is going to give you an idea of diets/the potential prey of a species but going to be a poor representation of reality. When asking questions about ‘on the ground’ things that are happening you are going to need to be operating with networks that are closer to reality.\n\nI wonder how much this is going to link back again to how we are measuring form and function - particularly at the scale within the network (micro, meso, macro, meta)…\n\n\n\n\n\nReferences\n\nDansereau, Gabriel, Ceres Barros, and Timothée Poisot. 2023. “Spatially Explicit Predictions of Food Web Structure from Regional Level Data,” September. https://ecoevorxiv.org/repository/view/5941/.\n\n\nRoopnarine, Peter D. 2006. “Extinction Cascades and Catastrophe in Ancient Food Webs.” Paleobiology 32 (1): 1–19. https://www.jstor.org/stable/4096814.",
+    "text": "Need to be clear about the fact that we are sometimes generating metawebs (all potential interactions) and sometimes realised networks (ones which are constrained in some way to reflect either foraging constraints or whatever)\nWhat is downsampling?\nWhy do we want/need to downsample?\nThis is going to boil down to objectives… Something like a metaweb is useful in that it is going to give you an idea of diets/the potential prey of a species but going to be a poor representation of reality. When asking questions about ‘on the ground’ things that are happening you are going to need to be operating with networks that are closer to reality.",
+    "crumbs": [
+      "Downsampling",
+      "Downsampling networks"
+    ]
+  },
+  {
+    "objectID": "09_downsampling.html#references",
+    "href": "09_downsampling.html#references",
+    "title": "Downsampling networks",
+    "section": "References",
+    "text": "References\n\n\nDansereau, Gabriel, Ceres Barros, and Timothée Poisot. 2023. “Spatially Explicit Predictions of Food Web Structure from Regional Level Data,” September. https://ecoevorxiv.org/repository/view/5941/.\n\n\nRoopnarine, Peter D. 2006. “Extinction Cascades and Catastrophe in Ancient Food Webs.” Paleobiology 32 (1): 1–19. https://www.jstor.org/stable/4096814.",
     "crumbs": [
       "Downsampling",
       "Downsampling networks"
