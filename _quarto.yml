@@ -24,7 +24,7 @@ website:
           - 08_compare.qmd
       - section: "Downsampling"
         contents:
-          - 09_meta_vs_realised.qmd
+          - 09_downsampling.qmd
       - section: "Form vs Function"
         contents:
           - 10_structure_vs_form.qmd

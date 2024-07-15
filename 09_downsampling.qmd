@@ -1,0 +1,25 @@
+---
+title: "Downsampling networks"
+date: last-modified
+format:
+    html:
+        embed-resources: true
+title-block-banner: true
+bibliography: references.bib
+---
+
+Need to be clear about the fact that we are sometimes generating metawebs (all potential interactions) and sometimes realised networks (ones which are constrained in some way to reflect either foraging constraints or whatever)
+
+What is downsampling?
+
+-   A way to move from having a list of all interactions to one that is more 'parametrised' *i.e.,* a closer approximation of reality
+
+-   See Banville (in prep) and @dansereau2023 for discussions on using the co-occurrence of species to 'decrease' the number of potential links based on the likelihood of an interaction being able to occur (so both having the physical compatibility as well as the species co-occurring in space).
+
+-   See @roopnarine2006 that uses the link distribution laws to prune the number of links. This is different to the previous examples because here it is using the expected link distribution that we might expect to find in the real world (so realised, energy constrained networks) to prune of links. I think we can argue this is somewhat stochastic, whereas the previous point is still operating within the feasibility space
+
+Why do we want/need to downsample?
+
+This is going to boil down to objectives... Something like a metaweb is useful in that it is going to give you an idea of diets/the potential prey of a species but going to be a poor representation of reality. When asking questions about 'on the ground' things that are happening you are going to need to be operating with networks that are closer to reality.
+
+> I wonder how much this is going to link back again to how we are measuring form and function - particularly at the scale within the network (micro, meso, macro, meta)...
