@@ -83,7 +83,6 @@ function model_summary(
         N = randomdraws(N) # from probabalistic to binary
     elseif model_name == "pfim"
         N = PFIM(df; downsample = downsample)
-        N = randomdraws(N) # from probabalistic to binary
     elseif model_name == "niche"
         N = structuralmodel(NicheModel, nrow(df), connectance)
     else

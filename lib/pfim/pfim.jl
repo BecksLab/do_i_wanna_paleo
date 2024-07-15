@@ -145,12 +145,14 @@ function PFIM(data::DataFrame; y::Float64 = 2.5, downsample::Bool = true)
             end
         end
         # make probabanilistic
-        network = prob_matrix ./ maximum(prob_matrix)
+        prob_matrix = prob_matrix ./ maximum(prob_matrix)
+
+        edges = Probabilistic(prob_matrix)
+        nodes = Unipartite(Symbol.(data.species))
+        N = SpeciesInteractionNetwork(nodes, edges)
+        return randomdraws(N)
     end
 
+    return network
     
-
-    edges = Probabilistic(network)
-    nodes = Unipartite(Symbol.(data.species))
-    return SpeciesInteractionNetwork(nodes, edges)
 end
