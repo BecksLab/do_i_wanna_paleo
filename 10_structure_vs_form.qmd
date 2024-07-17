@@ -22,6 +22,8 @@ Linking structure and function to ecological processes
 
 -   Also does the form-function link differ when thinking of bipartite/unipartite systems? I'm inclined to think that many of the ways in which we measure form has been developed in the context of bipartite systems and is there really an ecological reason that they will hold in unipartite systems?
 
+-   See also @thompson2012 and @guimarães2020
+
 ## Measuring networks at 'scales'
 
 @delmas2019 gives a somewhat extensive overview of the different ways in which we can 'summarise' network properties (something akin to statistical moments) which is summarised in @tbl-summaries. Importantly we need to acknowledge that these summary statistics are 'retrieved' at different levels of organisation (scale) within the network. For example the in-degree is something that is determined on a by-species level, but connectance is at the network level.
