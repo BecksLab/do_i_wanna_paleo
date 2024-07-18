@@ -264,7 +264,7 @@
     "href": "01_PFIM.html#methods",
     "title": "PFIM",
     "section": "Methods",
-    "text": "Methods\n\nFeeding rules\nShaw approaches the determination of feeding rules buy assigning species a series of traits that will affect their ability to predate on (or be predated by) other species. Trait specifically focus on the idea of feeding (so diet), motility (ability to escape/capture), tiering (position in the water column) and size (ability to consume). In order for a link to exist between two species it must be feasible for each trait class Figure 1.\n\n\n\n\n\n\nFigure 1: The feeding rules from Shaw et al. (2024)\n\n\n\n\n\nLink distribution downsampling\nThe link distribution (\\(D_{i}\\)) is defined by Equation 1, which is a mixed exponential-power law distribution.\n\\[\nP_{r} = e^{r/E}\n\\tag{1}\\]\n\\(r\\) is the in-degree of consumer \\(r\\) and \\(E = e^{ln(M)\\frac{(y - 1)}{y}}\\), where \\(M\\) the species richness of the network and, as per Roopnarine (2006), \\(y = 2.5\\)."
+    "text": "Methods\n\nFeeding rules\nShaw approaches the determination of feeding rules buy assigning species a series of traits that will affect their ability to predate on (or be predated by) other species. Trait specifically focus on the idea of feeding (so diet), motility (ability to escape/capture), tiering (position in the water column) and size (ability to consume). In order for a link to exist between two species it must be feasible for each trait class Figure 1.\n\n\n\n\n\n\nFigure 1: The feeding rules from Shaw et al. (2024)"
   },
   {
     "objectID": "01_PFIM.html#references",
