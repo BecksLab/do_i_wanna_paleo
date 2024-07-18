@@ -26,7 +26,18 @@
     "href": "01_reconstruction_methods.html#how-do-we-do-it",
     "title": "How we reconstruct paleo food webs",
     "section": "How do we do it?",
-    "text": "How do we do it?\n\nThere is an evolving body of work that focuses on developing tools specifically for the task of predicting food webs.\nThere are a handful that have been developed specifically in the context of paleo settings e.g., TODO but we can also talk about those that might have been developed/tested in contemporary settings but still have applicability in paleo ones.\nDifferent underlying theory though\n\nFocus here on the idea of different ‘currencies’ but also aggregations - energy vs compatibility.\n\nInsert brief overview of the different methods as they pertain to approach (so the T4T triangle)\nChallenges we face (even in contemporary settings)?\n\nkeep high level - I think the argument here should fall more in the data tradeoffs…",
+    "text": "How do we do it?\n\nThere is an evolving body of work that focuses on developing tools specifically for the task of predicting food webs.\nThere are a handful that have been developed specifically in the context of paleo settings e.g., TODO but we can also talk about those that might have been developed/tested in contemporary settings but still have applicability in paleo ones.\nDifferent underlying theory though\n\nFocus here on the idea of different ‘currencies’ but also aggregations - energy vs compatibility.\n\nInsert brief overview of the different methods as they pertain to approach (so the T4T triangle)\nChallenges we face (even in contemporary settings)?\n\nkeep high level - I think the argument here should fall more in the data trade offs…",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "How we reconstruct paleo food webs"
+    ]
+  },
+  {
+    "objectID": "01_reconstruction_methods.html#the-cost-of-prediction",
+    "href": "01_reconstruction_methods.html#the-cost-of-prediction",
+    "title": "How we reconstruct paleo food webs",
+    "section": "The cost of prediction",
+    "text": "The cost of prediction\n\ndifferent models need different data and/or are making some very opinionated assumptions\nthis is going to link back to the goal of prediction as well (desire to discover or describe)\nwhich means need to make a cost-benefit analysis\nespecially if we want to think about how this intersects with model performance/benchmarking",
     "crumbs": [
       "(Re)constructing paleo networks",
       "How we reconstruct paleo food webs"
