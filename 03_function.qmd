@@ -1,0 +1,20 @@
+---
+title: "Form"
+date: last-modified
+format:
+    html:
+        embed-resources: true
+title-block-banner: true
+bibliography: references.bib
+---
+
+moving from summary to process (reductionist to process?, measuring vs describing?)
+
+## Stability
+
+## Flux
+
+## References {.unnumbered}
+
+::: {#refs}
+:::

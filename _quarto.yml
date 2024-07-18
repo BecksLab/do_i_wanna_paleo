@@ -19,7 +19,7 @@ website:
           contents:
             - 01_bodymass_ratio.qmd
             - 01_expert_knowledge.qmd
-            - 01_PFIM.qmd
+            - 01_pfim.qmd
             - 01_contemporary.qmd
             - 01_niche.qmd
             - 01_adbm.qmd
@@ -30,6 +30,7 @@ website:
       - section: "Form vs Function"
         contents:
           - 03_structure.qmd
+          - 03_function.qmd
 
 
 author:
