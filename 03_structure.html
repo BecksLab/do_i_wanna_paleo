@@ -5082,9 +5082,9 @@ window.Quarto = {
 <li><p>See also <span class="citation" data-cites="thompson2012">Thompson et al. (<a href="#ref-thompson2012" role="doc-biblioref">2012</a>)</span> and <span class="citation" data-cites="guimarães2020">Guimarães (<a href="#ref-guimarães2020" role="doc-biblioref">2020</a>)</span></p></li>
 </ul>
 </section>
-<section id="measuring-networks-at-scales" class="level2">
-<h2 class="anchored" data-anchor-id="measuring-networks-at-scales">Measuring networks at ‘scales’</h2>
-<p><span class="citation" data-cites="delmas2019">Delmas et al. (<a href="#ref-delmas2019" role="doc-biblioref">2019</a>)</span> gives a somewhat extensive overview of the different ways in which we can ‘summarise’ network properties (something akin to statistical moments) which is summarised in <a href="#tbl-summaries" class="quarto-xref">Table 1</a>. Importantly we need to acknowledge that these summary statistics are ‘retrieved’ at different levels of organisation (scale) within the network. For example the in-degree is something that is determined on a by-species level, but connectance is at the network level.</p>
+<section id="summarising-networks" class="level2">
+<h2 class="anchored" data-anchor-id="summarising-networks">Summarising networks</h2>
+<p><span class="citation" data-cites="delmas2019">Delmas et al. (<a href="#ref-delmas2019" role="doc-biblioref">2019</a>)</span> gives a somewhat extensive overview of the different ways in which we can ‘summarise’ network properties (something akin to statistical moments) which is summarised in <a href="#tbl-summaries" class="quarto-xref">Table 1</a>. Importantly we need to acknowledge that these summary statistics are ‘retrieved’ at different levels of organisation (scale) within the network. For example the in-degree is something that is determined on a by-species level (micro), but connectance is at the network (macro) level.</p>
 <div id="tbl-summaries" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-summaries-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -5093,11 +5093,11 @@ Table 1: Table with network summary statistics.
 <div aria-describedby="tbl-summaries-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 19%">
-<col style="width: 19%">
-<col style="width: 19%">
-<col style="width: 23%">
-<col style="width: 19%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -5117,90 +5117,83 @@ Table 1: Table with network summary statistics.
 <td>Micro</td>
 </tr>
 <tr class="even">
-<td>Generaility/vulnerability</td>
+<td>Generaility/vulnerability (In/out degree)</td>
 <td>Number of prey/predators</td>
-<td><span class="citation" data-cites="schoener1989">Schoener (<a href="#ref-schoener1989" role="doc-biblioref">1989</a>)</span></td>
+<td><span class="citation" data-cites="schoener1989">Schoener (<a href="#ref-schoener1989" role="doc-biblioref">1989</a>)</span>, <span class="citation" data-cites="williams2000">Williams and Martinez (<a href="#ref-williams2000" role="doc-biblioref">2000</a>)</span></td>
 <td>Position in food web <em>e.g.,</em> top/basal species</td>
 <td>Micro</td>
 </tr>
 <tr class="odd">
-<td>In/out degree</td>
-<td>Number of predators/prey but in a different context??</td>
-<td><span class="citation" data-cites="williams2000">Williams and Martinez (<a href="#ref-williams2000" role="doc-biblioref">2000</a>)</span></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
 <td>Degree distribution</td>
 <td>measures the probability (<em>P(k))</em> that a species has <em>k</em> interactions within the network</td>
 <td></td>
 <td></td>
 <td>Micro</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Centrality</td>
 <td></td>
-<td></td>
+<td><span class="citation" data-cites="estrada2008">Estrada and Bodin (<a href="#ref-estrada2008" role="doc-biblioref">2008</a>)</span></td>
 <td>Position of species in network. The idea of hubs…</td>
 <td>Macro</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Motifs/graphlets</td>
 <td>Smaller interacting units/patterns between 3 species</td>
-<td><span class="citation" data-cites="milo2002">Milo et al. (<a href="#ref-milo2002" role="doc-biblioref">2002</a>)</span></td>
+<td><span class="citation" data-cites="milo2002">Milo et al. (<a href="#ref-milo2002" role="doc-biblioref">2002</a>)</span>, <span class="citation" data-cites="stouffer2010">Stouffer and Bascompte (<a href="#ref-stouffer2010" role="doc-biblioref">2010</a>)</span></td>
 <td></td>
 <td>Meso</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Shortest path</td>
 <td>Shortest path from species <em>a</em> to a basal species</td>
 <td></td>
 <td>diameter, perturbation, food chain length</td>
 <td>Meso</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Links</td>
 <td>Number of links in the network</td>
 <td></td>
 <td></td>
 <td>Macro</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Connectance</td>
 <td>The number realised links compared to the number of potential links</td>
-<td></td>
+<td><span class="citation" data-cites="martinez1992">Martinez (<a href="#ref-martinez1992" role="doc-biblioref">1992</a>)</span></td>
 <td></td>
 <td>Macro</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Nestedness</td>
 <td>Interactions forming a subset of others - diets being subsets of others</td>
 <td><span class="citation" data-cites="bastolla2009">Bastolla et al. (<a href="#ref-bastolla2009" role="doc-biblioref">2009</a>)</span></td>
 <td></td>
 <td>Macro</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Clustering/modularity</td>
 <td>Non-interacting units/clusters of species (opposite of nestedness?)</td>
+<td><span class="citation" data-cites="watts1998">Watts and Strogatz (<a href="#ref-watts1998" role="doc-biblioref">1998</a>)</span></td>
 <td></td>
+<td>Macro</td>
+</tr>
+<tr class="odd">
+<td>Intervaility</td>
+<td>‘ordination’ of a network. How much can the network be described by a single trait</td>
+<td><span class="citation" data-cites="eklöf2016">Eklöf and Stouffer (<a href="#ref-eklöf2016" role="doc-biblioref">2016</a>)</span></td>
 <td></td>
 <td>Macro</td>
 </tr>
 <tr class="even">
-<td>Intervaility</td>
-<td>‘ordination’ of a network. How much can the network be described by a single trait</td>
-<td></td>
-<td></td>
-<td>Macro</td>
-</tr>
-<tr class="odd">
 <td>Complexity</td>
 <td>A representation of links between species in a system</td>
 <td><span class="citation" data-cites="strydom2021">Strydom, Dalla Riva, and Poisot (<a href="#ref-strydom2021" role="doc-biblioref">2021</a>)</span>, <span class="citation" data-cites="riva2023">Riva et al. (<a href="#ref-riva2023" role="doc-biblioref">2023</a>)</span></td>
 <td></td>
 <td>Macro</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><span class="math inline">\(\beta\)</span>-diversity</td>
 <td></td>
 <td><span class="citation" data-cites="poisot2012">Poisot et al. (<a href="#ref-poisot2012" role="doc-biblioref">2012</a>)</span></td>
@@ -5226,8 +5219,17 @@ Bastolla, Ugo, Miguel A. Fortuna, Alberto Pascual-García, Antonio Ferrera, Bart
 <div id="ref-delmas2019" class="csl-entry" role="listitem">
 Delmas, Eva, Mathilde Besson, Marie-Hélène Brice, Laura A. Burkle, Giulio V. Dalla Riva, Marie-Josée Fortin, Dominique Gravel, et al. 2019. <span>“Analysing Ecological Networks of Species Interactions.”</span> <em>Biological Reviews</em> 94 (1): 16–36. <a href="https://doi.org/10.1111/brv.12433">https://doi.org/10.1111/brv.12433</a>.
 </div>
+<div id="ref-eklöf2016" class="csl-entry" role="listitem">
+Eklöf, Anna, and Daniel B. Stouffer. 2016. <span>“The Phylogenetic Component of Food Web Structure and Intervality.”</span> <em>Theoretical Ecology</em> 9 (1): 107–15. <a href="https://doi.org/10.1007/s12080-015-0273-9">https://doi.org/10.1007/s12080-015-0273-9</a>.
+</div>
+<div id="ref-estrada2008" class="csl-entry" role="listitem">
+Estrada, Ernesto, and Örjan Bodin. 2008. <span>“Using Network Centrality Measures to Manage Landscape Connectivity.”</span> <em>Ecological Applications</em> 18 (7): 1810–25. <a href="https://doi.org/10.1890/07-1419.1">https://doi.org/10.1890/07-1419.1</a>.
+</div>
 <div id="ref-guimarães2020" class="csl-entry" role="listitem">
 Guimarães, Paulo R. 2020. <span>“The Structure of Ecological Networks Across Levels of Organization.”</span> <em>Annual Review of Ecology, Evolution, and Systematics</em> 51 (1). <a href="https://doi.org/10.1146/annurev-ecolsys-012220-120819">https://doi.org/10.1146/annurev-ecolsys-012220-120819</a>.
+</div>
+<div id="ref-martinez1992" class="csl-entry" role="listitem">
+Martinez, Neo D. 1992. <span>“Constant Connectance in Community Food Webs.”</span> <em>The American Naturalist</em> 139 (6): 1208–18. <a href="http://www.jstor.org/stable/2462337">http://www.jstor.org/stable/2462337</a>.
 </div>
 <div id="ref-milo2002" class="csl-entry" role="listitem">
 Milo, R., S. Shen-Orr, S. Itzkovitz, N. Kashtan, D. Chklovskii, and U. Alon. 2002. <span>“Network Motifs: Simple Building Blocks of Complex Networks.”</span> <em>Science</em> 298 (5594): 824–27. <a href="https://doi.org/10.1126/science.298.5594.824">https://doi.org/10.1126/science.298.5594.824</a>.
@@ -5241,11 +5243,17 @@ Riva, Federico, Caio Graco-Roza, Gergana N. Daskalova, Emma J. Hudgins, Jayme M.
 <div id="ref-schoener1989" class="csl-entry" role="listitem">
 Schoener, Thomas W. 1989. <span>“Food Webs from the Small to the Large.”</span> <em>Ecology</em> 70 (6): 1559–89.
 </div>
+<div id="ref-stouffer2010" class="csl-entry" role="listitem">
+Stouffer, Daniel B., and Jordi Bascompte. 2010. <span>“Understanding Food-Web Persistence from Local to Global Scales.”</span> <em>Ecology Letters</em> 13 (2): 154–61. <a href="https://doi.org/10.1111/j.1461-0248.2009.01407.x">https://doi.org/10.1111/j.1461-0248.2009.01407.x</a>.
+</div>
 <div id="ref-strydom2021" class="csl-entry" role="listitem">
 Strydom, Tanya, Giulio V. Dalla Riva, and Timothée Poisot. 2021. <span>“SVD Entropy Reveals the High Complexity of Ecological Networks.”</span> <em>Frontiers in Ecology and Evolution</em> 9. <a href="https://doi.org/10.3389/fevo.2021.623141">https://doi.org/10.3389/fevo.2021.623141</a>.
 </div>
 <div id="ref-thompson2012" class="csl-entry" role="listitem">
 Thompson, Ross M., Ulrich Brose, Jennifer Dunne, Robert O. Hall, Sally Hladyz, Roger L. Kitching, Neo D. Martinez, et al. 2012. <span>“Food Webs: Reconciling the Structure and Function of Biodiversity.”</span> <em>Trends in Ecology &amp; Evolution</em> 27 (12): 689–97. <a href="https://doi.org/10.1016/j.tree.2012.08.005">https://doi.org/10.1016/j.tree.2012.08.005</a>.
+</div>
+<div id="ref-watts1998" class="csl-entry" role="listitem">
+Watts, Duncan J., and Steven H. Strogatz. 1998. <span>“Collective Dynamics of <span>‘</span>Small-World<span>’</span> Networks.”</span> <em>Nature</em> 393 (6684): 440–42. <a href="https://doi.org/10.1038/30918">https://doi.org/10.1038/30918</a>.
 </div>
 <div id="ref-williams2000" class="csl-entry" role="listitem">
 Williams, Richard J., and Neo D. Martinez. 2000. <span>“Simple Rules Yield Complex Food Webs.”</span> <em>Nature</em> 404 (6774): 180–83. <a href="https://doi.org/10.1038/35004572">https://doi.org/10.1038/35004572</a>.
