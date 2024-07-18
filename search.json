@@ -191,6 +191,89 @@
     ]
   },
   {
+    "objectID": "03_function.html",
+    "href": "03_function.html",
+    "title": "Form",
+    "section": "",
+    "text": "moving from summary to process (reductionist to process?, measuring vs describing?)",
+    "crumbs": [
+      "Form vs Function",
+      "Form"
+    ]
+  },
+  {
+    "objectID": "03_function.html#stability",
+    "href": "03_function.html#stability",
+    "title": "Form",
+    "section": "Stability",
+    "text": "Stability",
+    "crumbs": [
+      "Form vs Function",
+      "Form"
+    ]
+  },
+  {
+    "objectID": "03_function.html#flux",
+    "href": "03_function.html#flux",
+    "title": "Form",
+    "section": "Flux",
+    "text": "Flux",
+    "crumbs": [
+      "Form vs Function",
+      "Form"
+    ]
+  },
+  {
+    "objectID": "03_function.html#references",
+    "href": "03_function.html#references",
+    "title": "Form",
+    "section": "References",
+    "text": "References",
+    "crumbs": [
+      "Form vs Function",
+      "Form"
+    ]
+  },
+  {
+    "objectID": "01_compare.html",
+    "href": "01_compare.html",
+    "title": "Comparing different methods",
+    "section": "",
+    "text": "We can use the networks that we built from the previous section and showcase how they (maybe) are giving way different metrics (telling different stories)\nI think if we have multiple networks for different time points as well we can compare within and between network differences? (need to have a think on that)\n\n\n\n\n\n\n\n\n\nFigure 1: Comparing the different structures that are recovered by the different models (colours) over a time series. We can ignore richness - that’s more a sanity check for me. S1, S2, S4, S5 are motifs; S1 = Number of linear chains, S2 = Number of omnivory motifs, S4 = Number of apparent competition motifs, S5 = Number of direct competition motifs\n\n\n\n\n\nWe can obviously look at different ‘summary statistics’ (see Form v Function) but just throwing these out for now…\nSimilar signal but different values…\nAlso the challenge that we don’t really know what is ‘true’ so don’t actually know how much we can infer but it is interesting to see what the different models are spitting out even if they are potentially wrong…\nAlso also does this influence the way we are thinking about the idea of ‘feasibility’ vs ‘energy’ networks? One would think they might have clustered a bit differently… although arguably the PFIM is the only feasibility network here and it is often the (visual) outlier…",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Comparing different methods"
+    ]
+  },
+  {
+    "objectID": "01_PFIM.html",
+    "href": "01_PFIM.html",
+    "title": "PFIM",
+    "section": "",
+    "text": "Fricke et al. (2022) methods discuss how in the “using functional traits (especially binary or categorical traits), one can overestimate the ecological similarity of species, and thus the similarity of interaction patterns”.\n\nThe Paleo Food web Inference Model (PFIM, Shaw et al. (2024)) uses a series of rules for a set of trait categories (such as habitat and body size) to determine if an interaction can feasibly occur between a species pair. If all conditions are met for the different rule classes then an interaction is deemed to be feasible. The original work put forward in Shaw et al. (2024) also includes a ‘downsampling’ step developed by Roopnarine (2006) that uses a power law, defined by the link distribution, to ‘prune’ down some of the links.\n\nI think its one of Martinez’s bodies of work that developed the power low idea?? need to check that. Also a food for thought. Downsampling in this way is quite interesting because it sort of steps from the feasibility space to making assumptions in the energy space of networks…"
+  },
+  {
+    "objectID": "01_PFIM.html#overview",
+    "href": "01_PFIM.html#overview",
+    "title": "PFIM",
+    "section": "",
+    "text": "Fricke et al. (2022) methods discuss how in the “using functional traits (especially binary or categorical traits), one can overestimate the ecological similarity of species, and thus the similarity of interaction patterns”.\n\nThe Paleo Food web Inference Model (PFIM, Shaw et al. (2024)) uses a series of rules for a set of trait categories (such as habitat and body size) to determine if an interaction can feasibly occur between a species pair. If all conditions are met for the different rule classes then an interaction is deemed to be feasible. The original work put forward in Shaw et al. (2024) also includes a ‘downsampling’ step developed by Roopnarine (2006) that uses a power law, defined by the link distribution, to ‘prune’ down some of the links.\n\nI think its one of Martinez’s bodies of work that developed the power low idea?? need to check that. Also a food for thought. Downsampling in this way is quite interesting because it sort of steps from the feasibility space to making assumptions in the energy space of networks…"
+  },
+  {
+    "objectID": "01_PFIM.html#methods",
+    "href": "01_PFIM.html#methods",
+    "title": "PFIM",
+    "section": "Methods",
+    "text": "Methods\n\nFeeding rules\nShaw approaches the determination of feeding rules buy assigning species a series of traits that will affect their ability to predate on (or be predated by) other species. Trait specifically focus on the idea of feeding (so diet), motility (ability to escape/capture), tiering (position in the water column) and size (ability to consume). In order for a link to exist between two species it must be feasible for each trait class Figure 1.\n\n\n\n\n\n\nFigure 1: The feeding rules from Shaw et al. (2024)\n\n\n\n\n\nLink distribution downsampling\nThe link distribution (\\(D_{i}\\)) is defined by Equation 1, which is a mixed exponential-power law distribution.\n\\[\nP_{r} = e^{r/E}\n\\tag{1}\\]\n\\(r\\) is the in-degree of consumer \\(r\\) and \\(E = e^{ln(M)\\frac{(y - 1)}{y}}\\), where \\(M\\) the species richness of the network and, as per Roopnarine (2006), \\(y = 2.5\\)."
+  },
+  {
+    "objectID": "01_PFIM.html#references",
+    "href": "01_PFIM.html#references",
+    "title": "PFIM",
+    "section": "References",
+    "text": "References\n\n\nFricke, Evan C., Chia Hsieh, Owen Middleton, Daniel Gorczynski, Caroline D. Cappello, Oscar Sanisidro, John Rowan, Jens-Christian Svenning, and Lydia Beaudrot. 2022. “Collapse of Terrestrial Mammal Food Webs Since the Late Pleistocene.” Science 377 (6609): 1008–11. https://doi.org/10.1126/science.abn4012.\n\n\nRoopnarine, Peter D. 2006. “Extinction Cascades and Catastrophe in Ancient Food Webs.” Paleobiology 32 (1): 1–19. https://www.jstor.org/stable/4096814.\n\n\nShaw, Jack O., Alexander M. Dunhill, Andrew P. Beckerman, Jennifer A. Dunne, and Pincelli M. Hull. 2024. “A Framework for Reconstructing Ancient Food Webs Using Functional Trait Data.” https://doi.org/10.1101/2024.01.30.578036."
+  },
+  {
     "objectID": "03_structure.html",
     "href": "03_structure.html",
     "title": "Structure",
@@ -243,65 +326,6 @@
     "crumbs": [
       "Form vs Function",
       "Structure"
-    ]
-  },
-  {
-    "objectID": "01_PFIM.html",
-    "href": "01_PFIM.html",
-    "title": "PFIM",
-    "section": "",
-    "text": "Fricke et al. (2022) methods discuss how in the “using functional traits (especially binary or categorical traits), one can overestimate the ecological similarity of species, and thus the similarity of interaction patterns”.\n\nThe Paleo Food web Inference Model (PFIM, Shaw et al. (2024)) uses a series of rules for a set of trait categories (such as habitat and body size) to determine if an interaction can feasibly occur between a species pair. If all conditions are met for the different rule classes then an interaction is deemed to be feasible. The original work put forward in Shaw et al. (2024) also includes a ‘downsampling’ step developed by Roopnarine (2006) that uses a power law, defined by the link distribution, to ‘prune’ down some of the links.\n\nI think its one of Martinez’s bodies of work that developed the power low idea?? need to check that. Also a food for thought. Downsampling in this way is quite interesting because it sort of steps from the feasibility space to making assumptions in the energy space of networks…",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "Methods",
-      "PFIM"
-    ]
-  },
-  {
-    "objectID": "01_PFIM.html#overview",
-    "href": "01_PFIM.html#overview",
-    "title": "PFIM",
-    "section": "",
-    "text": "Fricke et al. (2022) methods discuss how in the “using functional traits (especially binary or categorical traits), one can overestimate the ecological similarity of species, and thus the similarity of interaction patterns”.\n\nThe Paleo Food web Inference Model (PFIM, Shaw et al. (2024)) uses a series of rules for a set of trait categories (such as habitat and body size) to determine if an interaction can feasibly occur between a species pair. If all conditions are met for the different rule classes then an interaction is deemed to be feasible. The original work put forward in Shaw et al. (2024) also includes a ‘downsampling’ step developed by Roopnarine (2006) that uses a power law, defined by the link distribution, to ‘prune’ down some of the links.\n\nI think its one of Martinez’s bodies of work that developed the power low idea?? need to check that. Also a food for thought. Downsampling in this way is quite interesting because it sort of steps from the feasibility space to making assumptions in the energy space of networks…",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "Methods",
-      "PFIM"
-    ]
-  },
-  {
-    "objectID": "01_PFIM.html#methods",
-    "href": "01_PFIM.html#methods",
-    "title": "PFIM",
-    "section": "Methods",
-    "text": "Methods\n\nFeeding rules\nShaw approaches the determination of feeding rules buy assigning species a series of traits that will affect their ability to predate on (or be predated by) other species. Trait specifically focus on the idea of feeding (so diet), motility (ability to escape/capture), tiering (position in the water column) and size (ability to consume). In order for a link to exist between two species it must be feasible for each trait class Figure 1.\n\n\n\n\n\n\nFigure 1: The feeding rules from Shaw et al. (2024)\n\n\n\n\n\nLink distribution downsampling\nThe link distribution (\\(D_{i}\\)) is defined by Equation 1, which is a mixed exponential-power law distribution.\n\\[\nP_{r} = e^{r/E}\n\\tag{1}\\]\n\\(r\\) is the in-degree of consumer \\(r\\) and \\(E = e^{ln(M)\\frac{(y - 1)}{y}}\\), where \\(M\\) the species richness of the network and, as per Roopnarine (2006), \\(y = 2.5\\).",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "Methods",
-      "PFIM"
-    ]
-  },
-  {
-    "objectID": "01_PFIM.html#references",
-    "href": "01_PFIM.html#references",
-    "title": "PFIM",
-    "section": "References",
-    "text": "References\n\n\nFricke, Evan C., Chia Hsieh, Owen Middleton, Daniel Gorczynski, Caroline D. Cappello, Oscar Sanisidro, John Rowan, Jens-Christian Svenning, and Lydia Beaudrot. 2022. “Collapse of Terrestrial Mammal Food Webs Since the Late Pleistocene.” Science 377 (6609): 1008–11. https://doi.org/10.1126/science.abn4012.\n\n\nRoopnarine, Peter D. 2006. “Extinction Cascades and Catastrophe in Ancient Food Webs.” Paleobiology 32 (1): 1–19. https://www.jstor.org/stable/4096814.\n\n\nShaw, Jack O., Alexander M. Dunhill, Andrew P. Beckerman, Jennifer A. Dunne, and Pincelli M. Hull. 2024. “A Framework for Reconstructing Ancient Food Webs Using Functional Trait Data.” https://doi.org/10.1101/2024.01.30.578036.",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "Methods",
-      "PFIM"
-    ]
-  },
-  {
-    "objectID": "01_compare.html",
-    "href": "01_compare.html",
-    "title": "Comparing different methods",
-    "section": "",
-    "text": "We can use the networks that we built from the previous section and showcase how they (maybe) are giving way different metrics (telling different stories)\nI think if we have multiple networks for different time points as well we can compare within and between network differences? (need to have a think on that)\n\n\n\n\n\n\n\n\n\nFigure 1: Comparing the different structures that are recovered by the different models (colours) over a time series. We can ignore richness - that’s more a sanity check for me. S1, S2, S4, S5 are motifs; S1 = Number of linear chains, S2 = Number of omnivory motifs, S4 = Number of apparent competition motifs, S5 = Number of direct competition motifs\n\n\n\n\n\nWe can obviously look at different ‘summary statistics’ (see Form v Function) but just throwing these out for now…\nSimilar signal but different values…\nAlso the challenge that we don’t really know what is ‘true’ so don’t actually know how much we can infer but it is interesting to see what the different models are spitting out even if they are potentially wrong…\nAlso also does this influence the way we are thinking about the idea of ‘feasibility’ vs ‘energy’ networks? One would think they might have clustered a bit differently… although arguably the PFIM is the only feasibility network here and it is often the (visual) outlier…",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "Comparing different methods"
     ]
   },
   {
