@@ -28,22 +28,22 @@ Linking structure and function to ecological processes
 
 @delmas2019 gives a somewhat extensive overview of the different ways in which we can 'summarise' network properties (something akin to statistical moments) which is summarised in @tbl-summaries. Importantly we need to acknowledge that these summary statistics are 'retrieved' at different levels of organisation (scale) within the network. For example the in-degree is something that is determined on a by-species level, but connectance is at the network level.
 
-| Summary Statistic (form)  | What                                                                                     | Ref                     | Ecological interpretation (function)                | Scale (I like this idea and want to push it further) |
-|---------------|---------------|---------------|---------------|---------------|
-| Specificity               | Related to number of links at the species level                                          |                         | Measure of (diet) specialisation                    | Micro (what do species do?)                          |
-| Generaility/vulnerability | Number of prey/predators                                                                 | @schoener1989           | Position in food web *e.g.,* top/basal species      | Micro (what do species do?)                          |
-| In/out degree             | Number of predators/prey but in a different context??                                    | @williams2000           |                                                     |                                                      |
-| Degree distribution       | measures the probability (*P(k))* that a species has *k* interactions within the network |                         |                                                     | Micro (what do species do?)                          |
-| Centrality                |                                                                                          |                         | Position of species in network. The idea of hubs... | Macro (how does the community look?)                 |
-| Motifs/graphlets          | Smaller interacting units/patterns between 3 species                                     | @milo2002               |                                                     | Meso (how do species interact?)                      |
-| Shortest path             | Shortest path from species *a* to a basal species                                        |                         | diameter, perturbation, food chain length           | Meso (how do species interact?)                      |
-| Links                     | Number of links in the network                                                           |                         |                                                     | Macro (how does the community look?)                 |
-| Connectance               | The number realised links compared to the number of potential links                      |                         |                                                     | Macro (how does the community look?)                 |
-| Nestedness                | Interactions forming a subset of others - diets being subsets of others                  | @bastolla2009           |                                                     | Macro (how does the community look?)                 |
-| Clustering/modularity     | Non-interacting units/clusters of species (opposite of nestedness?)                      |                         |                                                     | Macro (how does the community look?)                 |
-| Intervaility              | 'ordination' of a network. How much can the network be described by a single trait       |                         |                                                     | Macro (how does the community look?)                 |
-| Complexity                | A representation of links between species in a system                                    | @strydom2021, @riva2023 |                                                     | Macro (how does the community look?)                 |
-| $\beta$-diversity         |                                                                                          | @poisot2012             |                                                     | Meta (how do communities differ?)                    |
+| Summary Statistic (form)  | What                                                                                     | Ref                     | Ecological interpretation (function)                | Scale |
+|---------------|---------------|---------------|------------------|---------------|
+| Specificity               | Related to number of links at the species level                                          |                         | Measure of (diet) specialisation                    | Micro |
+| Generaility/vulnerability | Number of prey/predators                                                                 | @schoener1989           | Position in food web *e.g.,* top/basal species      | Micro |
+| In/out degree             | Number of predators/prey but in a different context??                                    | @williams2000           |                                                     |       |
+| Degree distribution       | measures the probability (*P(k))* that a species has *k* interactions within the network |                         |                                                     | Micro |
+| Centrality                |                                                                                          |                         | Position of species in network. The idea of hubs... | Macro |
+| Motifs/graphlets          | Smaller interacting units/patterns between 3 species                                     | @milo2002               |                                                     | Meso  |
+| Shortest path             | Shortest path from species *a* to a basal species                                        |                         | diameter, perturbation, food chain length           | Meso  |
+| Links                     | Number of links in the network                                                           |                         |                                                     | Macro |
+| Connectance               | The number realised links compared to the number of potential links                      |                         |                                                     | Macro |
+| Nestedness                | Interactions forming a subset of others - diets being subsets of others                  | @bastolla2009           |                                                     | Macro |
+| Clustering/modularity     | Non-interacting units/clusters of species (opposite of nestedness?)                      |                         |                                                     | Macro |
+| Intervaility              | 'ordination' of a network. How much can the network be described by a single trait       |                         |                                                     | Macro |
+| Complexity                | A representation of links between species in a system                                    | @strydom2021, @riva2023 |                                                     | Macro |
+| $\beta$-diversity         |                                                                                          | @poisot2012             |                                                     | Meta  |
 
 : Table with network summary statistics. {#tbl-summaries}
 
