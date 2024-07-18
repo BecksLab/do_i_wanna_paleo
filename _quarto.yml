@@ -14,20 +14,22 @@ website:
           - index.qmd
       - section: "(Re)constructing paleo networks"
         contents:
-          - 01_reconstruction_methods.qmd
-          - 02_bodymass_ratio.qmd
-          - 03_expert_knowledge.qmd
-          - 04_PFIM.qmd
-          - 05_contemporary.qmd
-          - 06_niche.qmd
-          - 07_adbm.qmd
-          - 08_compare.qmd
+        - 01_reconstruction_methods.qmd
+        - section: "Methods"
+          contents:
+            - 01_bodymass_ratio.qmd
+            - 01_expert_knowledge.qmd
+            - 01_PFIM.qmd
+            - 01_contemporary.qmd
+            - 01_niche.qmd
+            - 01_adbm.qmd
+        - 01_compare.qmd
       - section: "Downsampling"
         contents:
-          - 09_downsampling.qmd
+          - 02_downsampling.qmd
       - section: "Form vs Function"
         contents:
-          - 10_structure_vs_form.qmd
+          - 03_structure.qmd
 
 
 author:

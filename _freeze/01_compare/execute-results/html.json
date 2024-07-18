@@ -1,0 +1,17 @@
+{
+  "hash": "d9468894249e91172b5b1e446e953de9",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Comparing different methods\"\ndate: last-modified\nformat:\n    html:\n        embed-resources: true\ntitle-block-banner: true\nbibliography: references.bib\n---\n\n\n-   We can use the networks that we built from the previous section and showcase how they (maybe) are giving way different metrics (telling different stories)\n\n-   I think if we have multiple networks for different time points as well we can compare within and between network differences? (need to have a think on that)\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![Comparing the different structures that are recovered by the different models (colours) over a time series. We can ignore richness - that's more a sanity check for me. S1, S2, S4, S5 are motifs; S1 = Number of linear chains, S2 = Number of omnivory motifs, S4 = Number of apparent competition motifs, S5 = Number of direct competition motifs](01_compare_files/figure-html/fig-line-1.png){#fig-line width=672}\n:::\n:::\n\n\nWe can obviously look at different 'summary statistics' (see [Form v Function](03_structure.qmd)) but just throwing these out for now...\n\nSimilar signal but different values... \n\nAlso the challenge that we don't really know what is 'true' so don't actually know how much we can infer but it is interesting to see what the different models are spitting out even if they are potentially wrong... \n\nAlso also does this influence the way we are thinking about the idea of 'feasibility' vs 'energy' networks? One would think they might have clustered a bit differently... although arguably the PFIM is the only feasibility network here and it is often the (visual) outlier...",
+    "supporting": [
+      "01_compare_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
