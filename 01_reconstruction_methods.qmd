@@ -28,7 +28,17 @@ bibliography: references.bib
 
 -   Challenges we face (even in contemporary settings)?
 
-    -   keep high level - I think the argument here should fall more in the data tradeoffs...
+    -   keep high level - I think the argument here should fall more in the data trade offs...
+
+## The cost of prediction
+
+-   different models need different data and/or are making some very opinionated assumptions
+
+-   this is going to link back to the goal of prediction as well (desire to discover or describe)
+
+-   which means need to make a cost-benefit analysis
+
+-   especially if we want to think about how this intersects with model performance/benchmarking
 
 ## Understanding how networks are different
 
