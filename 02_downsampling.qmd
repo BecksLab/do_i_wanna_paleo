@@ -26,6 +26,16 @@ This is going to boil down to objectives... Something like a metaweb is useful i
 
 > I wonder how much this is going to link back again to how we are measuring form and function - particularly at the scale within the network (micro, meso, macro, meta)...
 
+### Link distribution downsampling 
+
+The link distribution ($D_{i}$) is defined by @eq-linkdist, which is a mixed exponential-power law distribution.
+
+$$
+P_{r} = e^{r/E}
+$${#eq-linkdist}
+
+$r$ is the in-degree of consumer $r$ and  $E = e^{ln(M)\frac{(y - 1)}{y}}$, where $M$ the species richness of the network and, as per @roopnarine2006, $y = 2.5$.
+
 ## References {.unnumbered}
 
 ::: {#refs}

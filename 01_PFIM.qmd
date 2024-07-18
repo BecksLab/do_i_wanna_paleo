@@ -24,16 +24,6 @@ Shaw approaches the determination of feeding rules buy assigning species a serie
 
 ![The feeding rules from @shaw2024](figures/shaw_concept.png){#fig-shaw}
 
-### Link distribution downsampling 
-
-The link distribution ($D_{i}$) is defined by @eq-linkdist, which is a mixed exponential-power law distribution.
-
-$$
-P_{r} = e^{r/E}
-$${#eq-linkdist}
-
-$r$ is the in-degree of consumer $r$ and  $E = e^{ln(M)\frac{(y - 1)}{y}}$, where $M$ the species richness of the network and, as per @roopnarine2006, $y = 2.5$.
-
 ## References {.unnumbered}
 
 ::: {#refs}
