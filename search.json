@@ -193,45 +193,45 @@
   {
     "objectID": "03_function.html",
     "href": "03_function.html",
-    "title": "Form",
+    "title": "Function",
     "section": "",
     "text": "moving from summary to process (reductionist to process?, measuring vs describing?)",
     "crumbs": [
       "Form vs Function",
-      "Form"
+      "Function"
     ]
   },
   {
     "objectID": "03_function.html#stability",
     "href": "03_function.html#stability",
-    "title": "Form",
+    "title": "Function",
     "section": "Stability",
-    "text": "Stability",
+    "text": "Stability\nLandi et al. (2018)\n\n\n\nTable 1: Drivers of stability\n\n\n\n\n\nMeasure\nTheory (how it drives stability)\nRef\n\n\n\n\nModularity\nEnergy channels (modules)\nMoore and William Hunt (1988)",
     "crumbs": [
       "Form vs Function",
-      "Form"
+      "Function"
     ]
   },
   {
     "objectID": "03_function.html#flux",
     "href": "03_function.html#flux",
-    "title": "Form",
+    "title": "Function",
     "section": "Flux",
     "text": "Flux",
     "crumbs": [
       "Form vs Function",
-      "Form"
+      "Function"
     ]
   },
   {
     "objectID": "03_function.html#references",
     "href": "03_function.html#references",
-    "title": "Form",
+    "title": "Function",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nLandi, Pietro, Henintsoa O. Minoarivelo, Åke Brännström, Cang Hui, and Ulf Dieckmann. 2018. “Complexity and Stability of Ecological Networks: A Review of the Theory.” Population Ecology 60 (4): 319–45. https://doi.org/10.1007/s10144-018-0628-3.\n\n\nMoore, John C., and H. William Hunt. 1988. “Resource Compartmentation and the Stability of Real Ecosystems.” Nature 333 (6170): 261–63. https://doi.org/10.1038/333261a0.",
     "crumbs": [
       "Form vs Function",
-      "Form"
+      "Function"
     ]
   },
   {
@@ -289,7 +289,7 @@
     "href": "03_structure.html#section-overview",
     "title": "Structure",
     "section": "Section Overview",
-    "text": "Section Overview\n\nWhat do we mean by structure = a way in which we are ‘summarising’ the network.\nWhat do we mean by form? (probably nebulous and poorly articulated in general, or at least not explicitly backed by firm eco theory)\n\nspecies vs system?\n\nBut does form (structure) = function??\nAlso does the form-function link differ when thinking of bipartite/unipartite systems? I’m inclined to think that many of the ways in which we measure form has been developed in the context of bipartite systems and is there really an ecological reason that they will hold in unipartite systems?\nSee also Thompson et al. (2012) and Guimarães (2020)",
+    "text": "Section Overview\n\nWhat do we mean by structure = a way in which we are ‘summarising’ the network (the architecture of the network).\nWhat do we mean by form? (probably nebulous and poorly articulated in general, or at least not explicitly backed by firm eco theory)\n\nspecies vs system?\n\nBut does form (structure) = function??\nAlso does the form-function link differ when thinking of bipartite/unipartite systems? I’m inclined to think that many of the ways in which we measure form has been developed in the context of bipartite systems and is there really an ecological reason that they will hold in unipartite systems?\nSee also Thompson et al. (2012) and Guimarães (2020)",
     "crumbs": [
       "Form vs Function",
       "Structure"
