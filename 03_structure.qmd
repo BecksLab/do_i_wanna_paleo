@@ -12,7 +12,7 @@ Linking structure and function to ecological processes
 
 ## Section Overview
 
--   What do we mean by structure = a way in which we are 'summarising' the network.
+-   What do we mean by structure = a way in which we are 'summarising' the network (the architecture of the network).
 
 -   What do we mean by form? (probably nebulous and poorly articulated in general, or at least not explicitly backed by firm eco theory)
 

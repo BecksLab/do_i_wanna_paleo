@@ -1,5 +1,5 @@
 ---
-title: "Form"
+title: "Function"
 date: last-modified
 format:
     html:
@@ -11,6 +11,23 @@ bibliography: references.bib
 moving from summary to process (reductionist to process?, measuring vs describing?)
 
 ## Stability
+
+@landi2018
+
+| Measure    | Theory (how it drives stability) | Ref        |
+|------------|----------------------------------|------------|
+| Modularity | Energy channels (modules)        | @moore1988 |
+|            |                                  |            |
+|            |                                  |            |
+|            |                                  |            |
+|            |                                  |            |
+|            |                                  |            |
+|            |                                  |            |
+|            |                                  |            |
+|            |                                  |            |
+|            |                                  |            |
+
+: Drivers of stability {#tbl-stability}
 
 ## Flux
 
