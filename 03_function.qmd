@@ -12,20 +12,28 @@ moving from summary to process (reductionist to process?, measuring vs describin
 
 ## Stability
 
+Traditional definition of stability: the inclination of a system (network) to return to its original function following a stress/perturbation in its biotic component(s). Using this framework as a means to assess the stability of networks (and what property might be responsible for driving stability) means we need a firm grasp of what 'function' encapsulates and also how we define a stressor. Some working definitions of stability: local stability of equilibria, persistence of species
+
 @landi2018
 
-| Measure    | Theory (how it drives stability) | Ref        |
-|------------|----------------------------------|------------|
-| Modularity | Energy channels (modules)        | @moore1988 |
-|            |                                  |            |
-|            |                                  |            |
-|            |                                  |            |
-|            |                                  |            |
-|            |                                  |            |
-|            |                                  |            |
-|            |                                  |            |
-|            |                                  |            |
-|            |                                  |            |
+### Stability as robustness
+
+Understanding stability in the context of species loss - especially secondary extinctions. (which is very much a central theme in paleo ecology one would assume)
+
+### Stability as variance
+
+| Measure                              | Stability as... | Theory (how it drives stability)                                                          | Relationship | Ref         |
+|---------|---------|--------------------------------|----------|-----------|
+| Modularity                           |                 | Energy channels (modules)                                                                 |              | @moore1988  |
+| Centrality                           | robustness      | Keystone species (hubs) play key role in buffering extinction. Although see @allesina2009 |              | @dunne2002  |
+| Distribution of interaction strength |                 |                                                                                           |              | @solé2001   |
+| Trophic links                        |                 |                                                                                           |              | @neutel2002 |
+|                                      |                 |                                                                                           |              |             |
+|                                      |                 |                                                                                           |              |             |
+|                                      |                 |                                                                                           |              |             |
+|                                      |                 |                                                                                           |              |             |
+|                                      |                 |                                                                                           |              |             |
+|                                      |                 |                                                                                           |              |             |
 
 : Drivers of stability {#tbl-stability}
 
