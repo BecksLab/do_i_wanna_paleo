@@ -14,7 +14,7 @@ What is downsampling?
 
 -   A way to move from having a list of all interactions to one that is more 'parametrised' *i.e.,* a closer approximation of reality
 
--   See Banville (in prep) and @dansereau2023 for discussions on using the co-occurrence of species to 'decrease' the number of potential links based on the likelihood of an interaction being able to occur (so both having the physical compatibility as well as the species co-occurring in space).
+-   See @banville2024 and @dansereau2023 for discussions on using the co-occurrence of species to 'decrease' the number of potential links based on the likelihood of an interaction being able to occur (so both having the physical compatibility as well as the species co-occurring in space).
 
 -   See @roopnarine2006 that uses the link distribution laws to prune the number of links. This is different to the previous examples because here it is using the expected link distribution that we might expect to find in the real world (so realised, energy constrained networks) to prune of links. I think we can argue this is somewhat stochastic, whereas the previous point is still operating within the feasibility space
 
@@ -26,15 +26,15 @@ This is going to boil down to objectives... Something like a metaweb is useful i
 
 > I wonder how much this is going to link back again to how we are measuring form and function - particularly at the scale within the network (micro, meso, macro, meta)...
 
-### Link distribution downsampling 
+### Link distribution downsampling
 
 The link distribution ($D_{i}$) is defined by @eq-linkdist, which is a mixed exponential-power law distribution.
 
 $$
 P_{r} = e^{r/E}
-$${#eq-linkdist}
+$$ {#eq-linkdist}
 
-$r$ is the in-degree of consumer $r$ and  $E = e^{ln(M)\frac{(y - 1)}{y}}$, where $M$ the species richness of the network and, as per @roopnarine2006, $y = 2.5$.
+$r$ is the in-degree of consumer $r$ and $E = e^{ln(M)\frac{(y - 1)}{y}}$, where $M$ the species richness of the network and, as per @roopnarine2006, $y = 2.5$.
 
 ## References {.unnumbered}
 
