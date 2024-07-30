@@ -1,0 +1,11 @@
+---
+title: "CEG"
+date: last-modified
+format:
+    html:
+        embed-resources: true
+title-block-banner: true
+bibliography: references.bib
+---
+
+Cascading Extinction on Graphs (CEG, @roopnarine2009).

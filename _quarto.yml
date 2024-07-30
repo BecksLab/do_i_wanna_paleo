@@ -20,6 +20,7 @@ website:
             - 01_bodymass_ratio.qmd
             - 01_expert_knowledge.qmd
             - 01_pfim.qmd
+            - 01_ceg.qmd
             - 01_contemporary.qmd
             - 01_niche.qmd
             - 01_adbm.qmd
