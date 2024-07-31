@@ -221,7 +221,7 @@
     "href": "01_ceg.html",
     "title": "CEG",
     "section": "",
-    "text": "Cascading Extinction on Graphs (CEG, Roopnarine (2009)).\n\n\n\n\nReferences\n\nRoopnarine, Peter D. 2009. “Ecological Modelling of Paleocommunity Food Webs.” In. Vol. 15. The Paleontological Society Papers.",
+    "text": "Cascading Extinction on Graphs (CEG, Roopnarine (2009)). As a whole this model was developed to model/understand secondary extinctions specifically within paleo communities, however it does also come with the added benefit of having a network building component as well… Explicitly anti the idea of trophic species/using higher taxa for nodes. (but guilds are OK??) Then we do the link distribution to get to network realisations a la power law\nIn terms of implementing this I guess it becomes a case of defining a metaweb for the different feeding guilds for the larger community (where the feeding guilds themselves are the different combinations of the Bambach (spellings??) cube) and then doing the downsampling thingTM… The real question is if this is any different from PFIM and we can make the executive decision to just do PFIM and ignore this.\n“The basic data required by CEG for ecological parametrisation is a description of the guild membership of each species. Here we define guilds as the trophic habits and habitats of member species, for example, the “shallow, sedentary infaunal suspension feeders” of a marine community.”\n\n\n\n\nReferences\n\nRoopnarine, Peter D. 2009. “Ecological Modelling of Paleocommunity Food Webs.” In. Vol. 15. The Paleontological Society Papers.",
     "crumbs": [
       "(Re)constructing paleo networks",
       "Methods",
