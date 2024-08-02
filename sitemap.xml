@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://BecksLab.github.io/do_i_wanna_paleo/01_bodymass_ratio.html</loc>
-    <lastmod>2024-07-31T15:45:37.711Z</lastmod>
-  </url>
-  <url>
-    <loc>https://BecksLab.github.io/do_i_wanna_paleo/01_pfim.html</loc>
-    <lastmod>2024-07-31T15:45:37.711Z</lastmod>
-  </url>
-  <url>
-    <loc>https://BecksLab.github.io/do_i_wanna_paleo/02_downsampling.html</loc>
-    <lastmod>2024-07-31T15:45:37.715Z</lastmod>
-  </url>
-  <url>
-    <loc>https://BecksLab.github.io/do_i_wanna_paleo/01_reconstruction_methods.html</loc>
-    <lastmod>2024-07-31T15:45:37.715Z</lastmod>
-  </url>
-  <url>
-    <loc>https://BecksLab.github.io/do_i_wanna_paleo/01_ceg.html</loc>
-    <lastmod>2024-07-31T15:45:37.711Z</lastmod>
-  </url>
-  <url>
-    <loc>https://BecksLab.github.io/do_i_wanna_paleo/01_compare.html</loc>
-    <lastmod>2024-07-31T15:45:37.711Z</lastmod>
-  </url>
-  <url>
-    <loc>https://BecksLab.github.io/do_i_wanna_paleo/03_structure.html</loc>
-    <lastmod>2024-07-31T15:45:37.715Z</lastmod>
-  </url>
-  <url>
-    <loc>https://BecksLab.github.io/do_i_wanna_paleo/03_function.html</loc>
-    <lastmod>2024-07-31T15:45:37.715Z</lastmod>
-  </url>
-  <url>
     <loc>https://BecksLab.github.io/do_i_wanna_paleo/01_niche.html</loc>
-    <lastmod>2024-07-31T15:45:37.711Z</lastmod>
-  </url>
-  <url>
-    <loc>https://BecksLab.github.io/do_i_wanna_paleo/01_contemporary.html</loc>
-    <lastmod>2024-07-31T15:45:37.711Z</lastmod>
+    <lastmod>2024-08-02T10:36:07.882Z</lastmod>
   </url>
   <url>
     <loc>https://BecksLab.github.io/do_i_wanna_paleo/index.html</loc>
-    <lastmod>2024-07-31T15:45:37.723Z</lastmod>
+    <lastmod>2024-08-02T10:36:07.890Z</lastmod>
   </url>
   <url>
-    <loc>https://BecksLab.github.io/do_i_wanna_paleo/01_adbm.html</loc>
-    <lastmod>2024-07-31T15:45:37.711Z</lastmod>
+    <loc>https://BecksLab.github.io/do_i_wanna_paleo/01_contemporary.html</loc>
+    <lastmod>2024-08-02T10:36:07.882Z</lastmod>
+  </url>
+  <url>
+    <loc>https://BecksLab.github.io/do_i_wanna_paleo/01_bodymass_ratio.html</loc>
+    <lastmod>2024-08-02T10:36:07.882Z</lastmod>
   </url>
   <url>
     <loc>https://BecksLab.github.io/do_i_wanna_paleo/01_expert_knowledge.html</loc>
-    <lastmod>2024-07-31T15:45:37.711Z</lastmod>
+    <lastmod>2024-08-02T10:36:07.882Z</lastmod>
+  </url>
+  <url>
+    <loc>https://BecksLab.github.io/do_i_wanna_paleo/02_downsampling.html</loc>
+    <lastmod>2024-08-02T10:36:07.882Z</lastmod>
+  </url>
+  <url>
+    <loc>https://BecksLab.github.io/do_i_wanna_paleo/01_ceg.html</loc>
+    <lastmod>2024-08-02T10:36:07.882Z</lastmod>
+  </url>
+  <url>
+    <loc>https://BecksLab.github.io/do_i_wanna_paleo/01_pfim.html</loc>
+    <lastmod>2024-08-02T10:36:07.882Z</lastmod>
+  </url>
+  <url>
+    <loc>https://BecksLab.github.io/do_i_wanna_paleo/03_function.html</loc>
+    <lastmod>2024-08-02T10:36:07.882Z</lastmod>
+  </url>
+  <url>
+    <loc>https://BecksLab.github.io/do_i_wanna_paleo/01_compare.html</loc>
+    <lastmod>2024-08-02T10:36:07.882Z</lastmod>
+  </url>
+  <url>
+    <loc>https://BecksLab.github.io/do_i_wanna_paleo/01_adbm.html</loc>
+    <lastmod>2024-08-02T10:36:07.882Z</lastmod>
+  </url>
+  <url>
+    <loc>https://BecksLab.github.io/do_i_wanna_paleo/03_structure.html</loc>
+    <lastmod>2024-08-02T10:36:07.882Z</lastmod>
+  </url>
+  <url>
+    <loc>https://BecksLab.github.io/do_i_wanna_paleo/01_reconstruction_methods.html</loc>
+    <lastmod>2024-08-02T10:36:07.882Z</lastmod>
   </url>
 </urlset>
