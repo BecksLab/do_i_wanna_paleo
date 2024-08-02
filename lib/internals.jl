@@ -111,7 +111,7 @@ end
 """
 topo_df()
 
-    initiates an epty dataframe with the desired network summary fields.
+    initiates an empty dataframe with the desired network summary fields.
 """
 function topo_df()
     return DataFrame(
