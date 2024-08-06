@@ -16,6 +16,8 @@ Traditional definition of stability: the inclination of a system (network) to re
 
 @landi2018
 
+TBR: @fath2019 @antunes2024 @braga2019 @galiana2021
+
 ### Stability as robustness
 
 Understanding stability in the context of species loss - especially secondary extinctions. (which is very much a central theme in paleo ecology one would assume)
@@ -23,7 +25,7 @@ Understanding stability in the context of species loss - especially secondary ex
 ### Stability as variance
 
 | Measure                              | Stability as... | Theory (how it drives stability)                                                          | Relationship | Ref         |
-|---------|---------|--------------------------------|----------|-----------|
+|-----------------------|------------------|-------------------------------------|------------|---------------------|
 | Modularity                           |                 | Energy channels (modules)                                                                 |              | @moore1988  |
 | Centrality                           | robustness      | Keystone species (hubs) play key role in buffering extinction. Although see @allesina2009 |              | @dunne2002  |
 | Distribution of interaction strength |                 |                                                                                           |              | @solé2001   |
