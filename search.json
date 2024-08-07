@@ -1,72 +1,24 @@
 [
   {
-    "objectID": "01_niche.html",
-    "href": "01_niche.html",
-    "title": "Niche model(s)",
+    "objectID": "02_downsampling.html",
+    "href": "02_downsampling.html",
+    "title": "Downsampling networks",
     "section": "",
-    "text": "Broadly, the niche model (Williams and Martinez 2000) is based on the idea that networks follow a trophic hierarchy and that the structure of the network can be determined by distributing interactions along single dimension (*sensu* the “niche axis”; Allesina, Alonso, and Pascual (2008)), which is essentially a case of partitioning the species (based on their niches) along a one-dimensional resource. This is possible because there is the underlying assumption that food webs have an expected ‘shape’ (the standard ‘trophic pyramid’), which is constrained by connectence, and so the links between species (i.e the number of links) will be constrained as such. (something about ties to the idea of intervality?)",
+    "text": "Need to be clear about the fact that we are sometimes generating metawebs (all potential interactions) and sometimes realised networks (ones which are constrained in some way to reflect either foraging constraints or whatever)\nWhat is downsampling?\nWhy do we want/need to downsample?\nThis is going to boil down to objectives… Something like a metaweb is useful in that it is going to give you an idea of diets/the potential prey of a species but going to be a poor representation of reality. When asking questions about ‘on the ground’ things that are happening you are going to need to be operating with networks that are closer to reality.",
     "crumbs": [
-      "(Re)constructing paleo networks",
-      "Methods",
-      "Niche model(s)"
+      "Downsampling",
+      "Downsampling networks"
     ]
   },
   {
-    "objectID": "01_niche.html#overview",
-    "href": "01_niche.html#overview",
-    "title": "Niche model(s)",
-    "section": "",
-    "text": "Broadly, the niche model (Williams and Martinez 2000) is based on the idea that networks follow a trophic hierarchy and that the structure of the network can be determined by distributing interactions along single dimension (*sensu* the “niche axis”; Allesina, Alonso, and Pascual (2008)), which is essentially a case of partitioning the species (based on their niches) along a one-dimensional resource. This is possible because there is the underlying assumption that food webs have an expected ‘shape’ (the standard ‘trophic pyramid’), which is constrained by connectence, and so the links between species (i.e the number of links) will be constrained as such. (something about ties to the idea of intervality?)",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "Methods",
-      "Niche model(s)"
-    ]
-  },
-  {
-    "objectID": "01_niche.html#methods",
-    "href": "01_niche.html#methods",
-    "title": "Niche model(s)",
-    "section": "Methods",
-    "text": "Methods\nDigging onto the details, the niche model introduces the idea that species interactions are based on the ‘feeding niche’ of a species. Broadly, all species are randomly assigned a ‘feeding niche’ range along the resource axis, and all species that fall in the range of a species can be consumed by that species (thereby allowing for cannibalism). The niche of each species is randomly assigned and the range of each species’ niche is (in part) also constrained by the specified connectance of the network. The original model itself has undergone some modification, however it appears that adding to the ‘complexity’ of the niche model does not improve on its ability to generate a more ecologically ‘correct’ network (Williams and Martinez 2008).\n\nI guess we can plop the OG schematic of the niche model in here…\n\nAn important feature to keep in mind when it comes to the niche model is that it defines a the nodes of the network as ‘trophic species’, that is nodes are considered the ‘same’ because they have the same diet and not because they are of the same taxonomic group, one can also think of nodes to thus represent feeding guilds. Importantly this means that the niche model is ‘species agnostic’ and it is not possible to recover pairwise links between specific pairs of species as the network itself is not informed by the identity of the species but rather on the assumption that ‘trophic species’ have a position along the niche axis. Although this way of defining the networks my seem to be a gross oversimplification it does have the advantage that it does not require a lot of data upfront (only species richness and the expected connectance of a network) while (supposedly) granting us a summary of the network structure\n\nsecret aside is that the problem we have with using something like the niche model is that 1) it is not species specific and 2) we are making gross assumptions with regards to what we suspect the connectance of paleo food webs are. But maybe we are still going to get similar structural outputs - who knows…\n\nAlthough the niche model doe snot require that much data it still requires that we make the critical assumption with regards to what we think the connectance of these paleo food webs/communities will look like… Also it means it is not a metric that we can ‘track’ when is comes to looking at how the networks change across space…\nI’m going to use 0.1 for now as a place holder but we will probably have to have a think on this",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "Methods",
-      "Niche model(s)"
-    ]
-  },
-  {
-    "objectID": "01_niche.html#references",
-    "href": "01_niche.html#references",
-    "title": "Niche model(s)",
+    "objectID": "02_downsampling.html#references",
+    "href": "02_downsampling.html#references",
+    "title": "Downsampling networks",
     "section": "References",
-    "text": "References\n\n\nAllesina, Stefano, David Alonso, and Mercedes Pascual. 2008. “A General Model for Food Web Structure.” Science 320 (5876): 658–61. https://doi.org/10.1126/science.1156269.\n\n\nWilliams, Richard J., and Neo D. Martinez. 2000. “Simple Rules Yield Complex Food Webs.” Nature 404 (6774): 180–83. https://doi.org/10.1038/35004572.\n\n\n———. 2008. “Success and its limits among structural models of complex food webs.” The Journal of Animal Ecology 77 (3): 512–19. https://doi.org/10.1111/j.1365-2656.2008.01362.x.",
+    "text": "References\n\n\nBanville, Francis, Tanya Strydom, Penelope Blyth, Chris Brimacombe, Michael D. Catchen, Gabriel Dansereau, Gracielle Higino, et al. 2024. “Deciphering Probabilistic Species Interaction Networks,” July. https://ecoevorxiv.org/repository/view/7442/.\n\n\nDansereau, Gabriel, Ceres Barros, and Timothée Poisot. 2023. “Spatially Explicit Predictions of Food Web Structure from Regional Level Data,” September. https://ecoevorxiv.org/repository/view/5941/.\n\n\nRoopnarine, Peter D. 2006. “Extinction Cascades and Catastrophe in Ancient Food Webs.” Paleobiology 32 (1): 1–19. https://www.jstor.org/stable/4096814.",
     "crumbs": [
-      "(Re)constructing paleo networks",
-      "Methods",
-      "Niche model(s)"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Paleo-linked methods for network reconstruction",
-    "section": "",
-    "text": "A primer/template for thinking about the reconstruction of paleo networks. Particularly thinking about what we actually do with the data, how we interpret structure and function (linking the ‘summary statistics’ to ecological theory), and understanding the conceptual differences between a metaweb and a realised network (and how we downsample from one to the other).\nIn terms of turning these concepts into a tangible ‘item’ the idea is to compare and contrast some of the canonical methods used for reconstructing paleo food webs across different transitions (e.g., extinction events), see how these different methods might (or not) result in different ‘summary statistics’ and also make sure to link the ‘summary statistic’ to the relevant ecological theory (in the context of both structure and function).",
-    "crumbs": [
-      "Rationale",
-      "Paleo-linked methods for network reconstruction"
-    ]
-  },
-  {
-    "objectID": "index.html#references",
-    "href": "index.html#references",
-    "title": "Paleo-linked methods for network reconstruction",
-    "section": "References",
-    "text": "References",
-    "crumbs": [
-      "Rationale",
-      "Paleo-linked methods for network reconstruction"
+      "Downsampling",
+      "Downsampling networks"
     ]
   },
   {
@@ -118,51 +70,51 @@
     ]
   },
   {
-    "objectID": "01_bodymass_ratio.html",
-    "href": "01_bodymass_ratio.html",
-    "title": "Bodymass-ratio",
+    "objectID": "01_niche.html",
+    "href": "01_niche.html",
+    "title": "Niche model(s)",
     "section": "",
-    "text": "This concept of using body mass ratios to determine potential feeding links between species was primarily developed by Rohr et al. (2010) and has become quite popular in paleo settings (Yeakel et al. 2014; Pires et al. 2015)",
+    "text": "Broadly, the niche model (Williams and Martinez 2000) is based on the idea that networks follow a trophic hierarchy and that the structure of the network can be determined by distributing interactions along single dimension (*sensu* the “niche axis”; Allesina, Alonso, and Pascual (2008)), which is essentially a case of partitioning the species (based on their niches) along a one-dimensional resource. This is possible because there is the underlying assumption that food webs have an expected ‘shape’ (the standard ‘trophic pyramid’), which is constrained by connectence, and so the links between species (i.e the number of links) will be constrained as such. (something about ties to the idea of intervality?)",
     "crumbs": [
       "(Re)constructing paleo networks",
       "Methods",
-      "Bodymass-ratio"
+      "Niche model(s)"
     ]
   },
   {
-    "objectID": "01_bodymass_ratio.html#overview",
-    "href": "01_bodymass_ratio.html#overview",
-    "title": "Bodymass-ratio",
+    "objectID": "01_niche.html#overview",
+    "href": "01_niche.html#overview",
+    "title": "Niche model(s)",
     "section": "",
-    "text": "This concept of using body mass ratios to determine potential feeding links between species was primarily developed by Rohr et al. (2010) and has become quite popular in paleo settings (Yeakel et al. 2014; Pires et al. 2015)",
+    "text": "Broadly, the niche model (Williams and Martinez 2000) is based on the idea that networks follow a trophic hierarchy and that the structure of the network can be determined by distributing interactions along single dimension (*sensu* the “niche axis”; Allesina, Alonso, and Pascual (2008)), which is essentially a case of partitioning the species (based on their niches) along a one-dimensional resource. This is possible because there is the underlying assumption that food webs have an expected ‘shape’ (the standard ‘trophic pyramid’), which is constrained by connectence, and so the links between species (i.e the number of links) will be constrained as such. (something about ties to the idea of intervality?)",
     "crumbs": [
       "(Re)constructing paleo networks",
       "Methods",
-      "Bodymass-ratio"
+      "Niche model(s)"
     ]
   },
   {
-    "objectID": "01_bodymass_ratio.html#methods",
-    "href": "01_bodymass_ratio.html#methods",
-    "title": "Bodymass-ratio",
+    "objectID": "01_niche.html#methods",
+    "href": "01_niche.html#methods",
+    "title": "Niche model(s)",
     "section": "Methods",
-    "text": "Methods\nCore idea relates to the ratio between consumer and resource body sizes - which supposedly stems from niche theory (still trying to reconcile that myself). The probability of a link existing between a consumer and resource (in its most basic form) is defined as follows:\n\\[\nP_{ij} = \\frac{p}{1+p}\n\\]\nwhere\n\\[\np = exp[\\alpha + \\beta log(\\frac{M_{i}}{M_{j}}) + \\gamma log^{2}(\\frac{M_{i}}{M_{j}})]\n\\tag{1}\\]\nThe original latent-trait model developed by Rohr et al. (2010) also included an additional latent trait term \\(v_{i} \\delta f_{j}\\) however for simplicity we will use Equation 1 as per Yeakel et al. (2014). Based on Rohr et al. (2010) it is possible to estimate the parameters \\(\\alpha\\), \\(\\delta\\), and \\(\\gamma\\) using a GLM but we will use the parameters from Yeakel et al. (2014), which was ‘trained’ on the Serengeti food web data and are as follows: \\(\\alpha = 1.41\\), \\(\\delta = 3.75\\), and \\(\\gamma = 1.87\\).",
+    "text": "Methods\nDigging onto the details, the niche model introduces the idea that species interactions are based on the ‘feeding niche’ of a species. Broadly, all species are randomly assigned a ‘feeding niche’ range along the resource axis, and all species that fall in the range of a species can be consumed by that species (thereby allowing for cannibalism). The niche of each species is randomly assigned and the range of each species’ niche is (in part) also constrained by the specified connectance of the network. The original model itself has undergone some modification, however it appears that adding to the ‘complexity’ of the niche model does not improve on its ability to generate a more ecologically ‘correct’ network (Williams and Martinez 2008).\n\nI guess we can plop the OG schematic of the niche model in here…\n\nAn important feature to keep in mind when it comes to the niche model is that it defines a the nodes of the network as ‘trophic species’, that is nodes are considered the ‘same’ because they have the same diet and not because they are of the same taxonomic group, one can also think of nodes to thus represent feeding guilds. Importantly this means that the niche model is ‘species agnostic’ and it is not possible to recover pairwise links between specific pairs of species as the network itself is not informed by the identity of the species but rather on the assumption that ‘trophic species’ have a position along the niche axis. Although this way of defining the networks my seem to be a gross oversimplification it does have the advantage that it does not require a lot of data upfront (only species richness and the expected connectance of a network) while (supposedly) granting us a summary of the network structure\n\nsecret aside is that the problem we have with using something like the niche model is that 1) it is not species specific and 2) we are making gross assumptions with regards to what we suspect the connectance of paleo food webs are. But maybe we are still going to get similar structural outputs - who knows…\n\nAlthough the niche model doe snot require that much data it still requires that we make the critical assumption with regards to what we think the connectance of these paleo food webs/communities will look like… Also it means it is not a metric that we can ‘track’ when is comes to looking at how the networks change across space…\nI’m going to use 0.1 for now as a place holder but we will probably have to have a think on this",
     "crumbs": [
       "(Re)constructing paleo networks",
       "Methods",
-      "Bodymass-ratio"
+      "Niche model(s)"
     ]
   },
   {
-    "objectID": "01_bodymass_ratio.html#references",
-    "href": "01_bodymass_ratio.html#references",
-    "title": "Bodymass-ratio",
+    "objectID": "01_niche.html#references",
+    "href": "01_niche.html#references",
+    "title": "Niche model(s)",
     "section": "References",
-    "text": "References\n\n\nPires, Mathias M., Paul L. Koch, Richard A. Fariña, Marcus A. M. de Aguiar, Sérgio F. dos Reis, and Paulo R. Guimarães. 2015. “Pleistocene Megafaunal Interaction Networks Became More Vulnerable After Human Arrival.” Proceedings of the Royal Society B: Biological Sciences 282 (1814): 20151367. https://doi.org/10.1098/rspb.2015.1367.\n\n\nRohr, Rudolf Philippe, Heike Scherer, Patrik Kehrli, Christian Mazza, and Louis-Félix Bersier. 2010. “Modeling Food Webs: Exploring Unexplained Structure Using Latent Traits.” The American Naturalist 176 (2): 170–77. https://doi.org/10.1086/653667.\n\n\nYeakel, Justin D., Mathias M. Pires, Lars Rudolf, Nathaniel J. Dominy, Paul L. Koch, Paulo R. Guimarães, and Thilo Gross. 2014. “Collapse of an Ecological Network in Ancient Egypt.” PNAS 111 (40): 14472–77. https://doi.org/10.1073/pnas.1408471111.",
+    "text": "References\n\n\nAllesina, Stefano, David Alonso, and Mercedes Pascual. 2008. “A General Model for Food Web Structure.” Science 320 (5876): 658–61. https://doi.org/10.1126/science.1156269.\n\n\nWilliams, Richard J., and Neo D. Martinez. 2000. “Simple Rules Yield Complex Food Webs.” Nature 404 (6774): 180–83. https://doi.org/10.1038/35004572.\n\n\n———. 2008. “Success and its limits among structural models of complex food webs.” The Journal of Animal Ecology 77 (3): 512–19. https://doi.org/10.1111/j.1365-2656.2008.01362.x.",
     "crumbs": [
       "(Re)constructing paleo networks",
       "Methods",
-      "Bodymass-ratio"
+      "Niche model(s)"
     ]
   },
   {
@@ -214,40 +166,6 @@
     ]
   },
   {
-    "objectID": "02_downsampling.html",
-    "href": "02_downsampling.html",
-    "title": "Downsampling networks",
-    "section": "",
-    "text": "Need to be clear about the fact that we are sometimes generating metawebs (all potential interactions) and sometimes realised networks (ones which are constrained in some way to reflect either foraging constraints or whatever)\nWhat is downsampling?\nWhy do we want/need to downsample?\nThis is going to boil down to objectives… Something like a metaweb is useful in that it is going to give you an idea of diets/the potential prey of a species but going to be a poor representation of reality. When asking questions about ‘on the ground’ things that are happening you are going to need to be operating with networks that are closer to reality.",
-    "crumbs": [
-      "Downsampling",
-      "Downsampling networks"
-    ]
-  },
-  {
-    "objectID": "02_downsampling.html#references",
-    "href": "02_downsampling.html#references",
-    "title": "Downsampling networks",
-    "section": "References",
-    "text": "References\n\n\nBanville, Francis, Tanya Strydom, Penelope Blyth, Chris Brimacombe, Michael D. Catchen, Gabriel Dansereau, Gracielle Higino, et al. 2024. “Deciphering Probabilistic Species Interaction Networks,” July. https://ecoevorxiv.org/repository/view/7442/.\n\n\nDansereau, Gabriel, Ceres Barros, and Timothée Poisot. 2023. “Spatially Explicit Predictions of Food Web Structure from Regional Level Data,” September. https://ecoevorxiv.org/repository/view/5941/.\n\n\nRoopnarine, Peter D. 2006. “Extinction Cascades and Catastrophe in Ancient Food Webs.” Paleobiology 32 (1): 1–19. https://www.jstor.org/stable/4096814.",
-    "crumbs": [
-      "Downsampling",
-      "Downsampling networks"
-    ]
-  },
-  {
-    "objectID": "01_ceg.html",
-    "href": "01_ceg.html",
-    "title": "CEG",
-    "section": "",
-    "text": "Cascading Extinction on Graphs (CEG, Roopnarine (2009)). As a whole this model was developed to model/understand secondary extinctions specifically within paleo communities, however it does also come with the added benefit of having a network building component as well… Explicitly anti the idea of trophic species/using higher taxa for nodes. (but guilds are OK??) Then we do the link distribution to get to network realisations a la power law\nIn terms of implementing this I guess it becomes a case of defining a metaweb for the different feeding guilds for the larger community (where the feeding guilds themselves are the different combinations of the Bambach (spellings??) cube) and then doing the downsampling thingTM… The real question is if this is any different from PFIM and we can make the executive decision to just do PFIM and ignore this.\n“The basic data required by CEG for ecological parametrisation is a description of the guild membership of each species. Here we define guilds as the trophic habits and habitats of member species, for example, the “shallow, sedentary infaunal suspension feeders” of a marine community.”\n\n\n\n\nReferences\n\nRoopnarine, Peter D. 2009. “Ecological Modelling of Paleocommunity Food Webs.” In. Vol. 15. The Paleontological Society Papers.",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "Methods",
-      "CEG"
-    ]
-  },
-  {
     "objectID": "01_pfim.html",
     "href": "01_pfim.html",
     "title": "PFIM",
@@ -296,106 +214,15 @@
     ]
   },
   {
-    "objectID": "03_function.html",
-    "href": "03_function.html",
-    "title": "Function",
+    "objectID": "01_ceg.html",
+    "href": "01_ceg.html",
+    "title": "CEG",
     "section": "",
-    "text": "moving from summary to process (reductionist to process?, measuring vs describing?)",
-    "crumbs": [
-      "Form vs Function",
-      "Function"
-    ]
-  },
-  {
-    "objectID": "03_function.html#stability",
-    "href": "03_function.html#stability",
-    "title": "Function",
-    "section": "Stability",
-    "text": "Stability\nTraditional definition of stability: the inclination of a system (network) to return to its original function following a stress/perturbation in its biotic component(s). Using this framework as a means to assess the stability of networks (and what property might be responsible for driving stability) means we need a firm grasp of what ‘function’ encapsulates and also how we define a stressor. Some working definitions of stability: local stability of equilibria, persistence of species\nLandi et al. (2018)\nTBR: Fath et al. (2019) Antunes et al. (2024) Braga et al. (2019) Galiana et al. (2021)\n\nStability as robustness\nUnderstanding stability in the context of species loss - especially secondary extinctions. (which is very much a central theme in paleo ecology one would assume)\n\n\nStability as variance\n\n\n\nTable 1: Drivers of stability\n\n\n\n\n\n\n\n\n\n\n\n\nMeasure\nStability as…\nTheory (how it drives stability)\nRelationship\nRef\n\n\n\n\nModularity\n\nEnergy channels (modules)\n\nMoore and William Hunt (1988)\n\n\nCentrality\nrobustness\nKeystone species (hubs) play key role in buffering extinction. Although see Allesina, Bodini, and Pascual (2009)\n\nDunne, Williams, and Martinez (2002)\n\n\nDistribution of interaction strength\n\n\n\nSolé and Montoya (2001)\n\n\nTrophic links\n\n\n\nNeutel, Heesterbeek, and Ruiter (2002)",
-    "crumbs": [
-      "Form vs Function",
-      "Function"
-    ]
-  },
-  {
-    "objectID": "03_function.html#flux",
-    "href": "03_function.html#flux",
-    "title": "Function",
-    "section": "Flux",
-    "text": "Flux",
-    "crumbs": [
-      "Form vs Function",
-      "Function"
-    ]
-  },
-  {
-    "objectID": "03_function.html#references",
-    "href": "03_function.html#references",
-    "title": "Function",
-    "section": "References",
-    "text": "References\n\n\nAllesina, Stefano, Antonio Bodini, and Mercedes Pascual. 2009. “Functional Links and Robustness in Food Webs.” Philosophical Transactions of the Royal Society B: Biological Sciences 364 (1524): 1701–9. https://doi.org/10.1098/rstb.2008.0214.\n\n\nAntunes, Ana Carolina, Emilio Berti, Ulrich Brose, Myriam R. Hirt, Dirk N. Karger, Louise M. J. O’Connor, Laura J. Pollock, Wilfried Thuiller, and Benoit Gauzens. 2024. “Linking Biodiversity, Ecosystem Function, and Nature’s Contributions to People: A Macroecological Energy Flux Perspective.” Trends in Ecology & Evolution 39 (5): 427–34. https://doi.org/10.1016/j.tree.2024.01.004.\n\n\nBraga, J, Laura J. Pollock, C. Barros, J. Montoya, Dominique Gravel, Luigi Maiorano, Gentile Francesco Ficetola, Stéphane Dray, and Wilfried Thuiller. 2019. “Spatial Analyses of Multi-Trophic Terrestrial Vertebrate Assemblages in Europe.” Global Ecology and Biogeography 28 (11): 1636–48.\n\n\nDunne, Jennifer, Richard J Williams, and Néo D Martinez. 2002. “Network Structure and Biodiversity Loss in Food Webs: Robustness Increases with Connectance.” Ecol. Lett. 5 (4): 558–67.\n\n\nFath, Brian D., Harald Asmus, Ragnhild Asmus, Dan Baird, Stuart R. Borrett, Victor N. de Jonge, Alessandro Ludovisi, et al. 2019. “Ecological Network Analysis Metrics: The Need for an Entire Ecosystem Approach in Management and Policy.” Ocean & Coastal Management 174 (May): 1–14. https://doi.org/10.1016/j.ocecoaman.2019.03.007.\n\n\nGaliana, Núria, Ceres Barros, João Braga, Gentile Francesco Ficetola, Luigi Maiorano, Wilfried Thuiller, José M. Montoya, and Miguel Lurgi. 2021. “The Spatial Scaling of Food Web Structure Across European Biogeographical Regions.” Ecography 44 (5): 653–64. https://doi.org/10.1111/ecog.05229.\n\n\nLandi, Pietro, Henintsoa O. Minoarivelo, Åke Brännström, Cang Hui, and Ulf Dieckmann. 2018. “Complexity and Stability of Ecological Networks: A Review of the Theory.” Population Ecology 60 (4): 319–45. https://doi.org/10.1007/s10144-018-0628-3.\n\n\nMoore, John C., and H. William Hunt. 1988. “Resource Compartmentation and the Stability of Real Ecosystems.” Nature 333 (6170): 261–63. https://doi.org/10.1038/333261a0.\n\n\nNeutel, Anje-Margriet, Johan A. P. Heesterbeek, and Peter C. de Ruiter. 2002. “Stability in Real Food Webs: Weak Links in Long Loops.” Science 296 (5570): 1120–23. https://doi.org/10.1126/science.1068326.\n\n\nSolé, Ricard V., and M. Montoya. 2001. “Complexity and Fragility in Ecological Networks.” Proceedings of the Royal Society of London. Series B: Biological Sciences 268 (1480): 2039–45. https://doi.org/10.1098/rspb.2001.1767.",
-    "crumbs": [
-      "Form vs Function",
-      "Function"
-    ]
-  },
-  {
-    "objectID": "01_compare.html",
-    "href": "01_compare.html",
-    "title": "Comparing different methods",
-    "section": "",
-    "text": "We can use the networks that we built from the previous section and showcase how they (maybe) are giving way different metrics (telling different stories)\nI think if we have multiple networks for different time points as well we can compare within and between network differences? (need to have a think on that)\n\n\n\n\n\n\n\n\n\nFigure 1: Comparing the different structures that are recovered by the different models (colours) over a time series. We can ignore richness - that’s more a sanity check for me. S1, S2, S4, S5 are motifs; S1 = Number of linear chains, S2 = Number of omnivory motifs, S4 = Number of apparent competition motifs, S5 = Number of direct competition motifs\n\n\n\n\n\nWe can obviously look at different ‘summary statistics’ (see Form v Function) but just throwing these out for now…\nSimilar signal but different values…\nAlso the challenge that we don’t really know what is ‘true’ so don’t actually know how much we can infer but it is interesting to see what the different models are spitting out even if they are potentially wrong…\nAlso also does this influence the way we are thinking about the idea of ‘feasibility’ vs ‘energy’ networks? One would think they might have clustered a bit differently… although arguably the PFIM is the only feasibility network here and it is often the (visual) outlier…",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "Comparing different methods"
-    ]
-  },
-  {
-    "objectID": "01_adbm.html",
-    "href": "01_adbm.html",
-    "title": "Allometric Diet Breadth Model (ADBM)",
-    "section": "",
-    "text": "Feeding ‘rules’ are based on the energetic content of species, which is theoretically and conceptually embedded within the foraging ecology space (Petchey et al. 2008)",
+    "text": "Cascading Extinction on Graphs (CEG, Roopnarine (2009)). As a whole this model was developed to model/understand secondary extinctions specifically within paleo communities, however it does also come with the added benefit of having a network building component as well… Explicitly anti the idea of trophic species/using higher taxa for nodes. (but guilds are OK??) Then we do the link distribution to get to network realisations a la power law\nIn terms of implementing this I guess it becomes a case of defining a metaweb for the different feeding guilds for the larger community (where the feeding guilds themselves are the different combinations of the Bambach (spellings??) cube) and then doing the downsampling thingTM… The real question is if this is any different from PFIM and we can make the executive decision to just do PFIM and ignore this.\n“The basic data required by CEG for ecological parametrisation is a description of the guild membership of each species. Here we define guilds as the trophic habits and habitats of member species, for example, the “shallow, sedentary infaunal suspension feeders” of a marine community.”\n\n\n\n\nReferences\n\nRoopnarine, Peter D. 2009. “Ecological Modelling of Paleocommunity Food Webs.” In. Vol. 15. The Paleontological Society Papers.",
     "crumbs": [
       "(Re)constructing paleo networks",
       "Methods",
-      "Allometric Diet Breadth Model (ADBM)"
-    ]
-  },
-  {
-    "objectID": "01_adbm.html#overview",
-    "href": "01_adbm.html#overview",
-    "title": "Allometric Diet Breadth Model (ADBM)",
-    "section": "",
-    "text": "Feeding ‘rules’ are based on the energetic content of species, which is theoretically and conceptually embedded within the foraging ecology space (Petchey et al. 2008)",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "Methods",
-      "Allometric Diet Breadth Model (ADBM)"
-    ]
-  },
-  {
-    "objectID": "01_adbm.html#methods",
-    "href": "01_adbm.html#methods",
-    "title": "Allometric Diet Breadth Model (ADBM)",
-    "section": "Methods",
-    "text": "Methods",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "Methods",
-      "Allometric Diet Breadth Model (ADBM)"
-    ]
-  },
-  {
-    "objectID": "01_adbm.html#references",
-    "href": "01_adbm.html#references",
-    "title": "Allometric Diet Breadth Model (ADBM)",
-    "section": "References",
-    "text": "References\n\n\nPetchey, Owen L., Andrew P. Beckerman, Jens O. Riede, and Philip H. Warren. 2008. “Size, Foraging, and Food Web Structure.” Proceedings of the National Academy of Sciences 105 (11): 4191–96. https://doi.org/10.1073/pnas.0710672105.",
-    "crumbs": [
-      "(Re)constructing paleo networks",
-      "Methods",
-      "Allometric Diet Breadth Model (ADBM)"
+      "CEG"
     ]
   },
   {
@@ -451,6 +278,109 @@
     "crumbs": [
       "Form vs Function",
       "Structure"
+    ]
+  },
+  {
+    "objectID": "01_compare.html",
+    "href": "01_compare.html",
+    "title": "Comparing different methods",
+    "section": "",
+    "text": "We can use the networks that we built from the previous section and showcase how they (maybe) are giving way different metrics (telling different stories)\nI think if we have multiple networks for different time points as well we can compare within and between network differences? (need to have a think on that)\n\n\n\n\n\n\n\n\n\nFigure 1: Comparing the different structures that are recovered by the different models (colours) over a time series. We can ignore richness - that’s more a sanity check for me. S1, S2, S4, S5 are motifs; S1 = Number of linear chains, S2 = Number of omnivory motifs, S4 = Number of apparent competition motifs, S5 = Number of direct competition motifs\n\n\n\n\n\nWe can obviously look at different ‘summary statistics’ (see Form v Function) but just throwing these out for now…\nSimilar signal but different values…\nAlso the challenge that we don’t really know what is ‘true’ so don’t actually know how much we can infer but it is interesting to see what the different models are spitting out even if they are potentially wrong…\nAlso also does this influence the way we are thinking about the idea of ‘feasibility’ vs ‘energy’ networks? One would think they might have clustered a bit differently… although arguably the PFIM is the only feasibility network here and it is often the (visual) outlier…",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Comparing different methods"
+    ]
+  },
+  {
+    "objectID": "03_function.html",
+    "href": "03_function.html",
+    "title": "Function",
+    "section": "",
+    "text": "moving from summary to process (reductionist to process?, measuring vs describing?)",
+    "crumbs": [
+      "Form vs Function",
+      "Function"
+    ]
+  },
+  {
+    "objectID": "03_function.html#stability",
+    "href": "03_function.html#stability",
+    "title": "Function",
+    "section": "Stability",
+    "text": "Stability\nTraditional definition of stability: the inclination of a system (network) to return to its original function following a stress/perturbation in its biotic component(s). Using this framework as a means to assess the stability of networks (and what property might be responsible for driving stability) means we need a firm grasp of what ‘function’ encapsulates and also how we define a stressor. Some working definitions of stability: local stability of equilibria, persistence of species\nLandi et al. (2018)\nTBR: Fath et al. (2019) Antunes et al. (2024) Braga et al. (2019) Galiana et al. (2021)\n\nStability as robustness\nUnderstanding stability in the context of species loss - especially secondary extinctions. (which is very much a central theme in paleo ecology one would assume)\n\n\nStability as variance\n\n\n\nTable 1: Drivers of stability\n\n\n\n\n\n\n\n\n\n\n\n\nMeasure\nStability as…\nTheory (how it drives stability)\nRelationship\nRef\n\n\n\n\nModularity\n\nEnergy channels (modules)\n\nMoore and William Hunt (1988)\n\n\nCentrality\nrobustness\nKeystone species (hubs) play key role in buffering extinction. Although see Allesina, Bodini, and Pascual (2009)\n\nDunne, Williams, and Martinez (2002)\n\n\nDistribution of interaction strength\n\n\n\nSolé and Montoya (2001)\n\n\nTrophic links\n\n\n\nNeutel, Heesterbeek, and Ruiter (2002)",
+    "crumbs": [
+      "Form vs Function",
+      "Function"
+    ]
+  },
+  {
+    "objectID": "03_function.html#flux",
+    "href": "03_function.html#flux",
+    "title": "Function",
+    "section": "Flux",
+    "text": "Flux",
+    "crumbs": [
+      "Form vs Function",
+      "Function"
+    ]
+  },
+  {
+    "objectID": "03_function.html#references",
+    "href": "03_function.html#references",
+    "title": "Function",
+    "section": "References",
+    "text": "References\n\n\nAllesina, Stefano, Antonio Bodini, and Mercedes Pascual. 2009. “Functional Links and Robustness in Food Webs.” Philosophical Transactions of the Royal Society B: Biological Sciences 364 (1524): 1701–9. https://doi.org/10.1098/rstb.2008.0214.\n\n\nAntunes, Ana Carolina, Emilio Berti, Ulrich Brose, Myriam R. Hirt, Dirk N. Karger, Louise M. J. O’Connor, Laura J. Pollock, Wilfried Thuiller, and Benoit Gauzens. 2024. “Linking Biodiversity, Ecosystem Function, and Nature’s Contributions to People: A Macroecological Energy Flux Perspective.” Trends in Ecology & Evolution 39 (5): 427–34. https://doi.org/10.1016/j.tree.2024.01.004.\n\n\nBraga, J, Laura J. Pollock, C. Barros, J. Montoya, Dominique Gravel, Luigi Maiorano, Gentile Francesco Ficetola, Stéphane Dray, and Wilfried Thuiller. 2019. “Spatial Analyses of Multi-Trophic Terrestrial Vertebrate Assemblages in Europe.” Global Ecology and Biogeography 28 (11): 1636–48.\n\n\nDunne, Jennifer, Richard J Williams, and Néo D Martinez. 2002. “Network Structure and Biodiversity Loss in Food Webs: Robustness Increases with Connectance.” Ecol. Lett. 5 (4): 558–67.\n\n\nFath, Brian D., Harald Asmus, Ragnhild Asmus, Dan Baird, Stuart R. Borrett, Victor N. de Jonge, Alessandro Ludovisi, et al. 2019. “Ecological Network Analysis Metrics: The Need for an Entire Ecosystem Approach in Management and Policy.” Ocean & Coastal Management 174 (May): 1–14. https://doi.org/10.1016/j.ocecoaman.2019.03.007.\n\n\nGaliana, Núria, Ceres Barros, João Braga, Gentile Francesco Ficetola, Luigi Maiorano, Wilfried Thuiller, José M. Montoya, and Miguel Lurgi. 2021. “The Spatial Scaling of Food Web Structure Across European Biogeographical Regions.” Ecography 44 (5): 653–64. https://doi.org/10.1111/ecog.05229.\n\n\nLandi, Pietro, Henintsoa O. Minoarivelo, Åke Brännström, Cang Hui, and Ulf Dieckmann. 2018. “Complexity and Stability of Ecological Networks: A Review of the Theory.” Population Ecology 60 (4): 319–45. https://doi.org/10.1007/s10144-018-0628-3.\n\n\nMoore, John C., and H. William Hunt. 1988. “Resource Compartmentation and the Stability of Real Ecosystems.” Nature 333 (6170): 261–63. https://doi.org/10.1038/333261a0.\n\n\nNeutel, Anje-Margriet, Johan A. P. Heesterbeek, and Peter C. de Ruiter. 2002. “Stability in Real Food Webs: Weak Links in Long Loops.” Science 296 (5570): 1120–23. https://doi.org/10.1126/science.1068326.\n\n\nSolé, Ricard V., and M. Montoya. 2001. “Complexity and Fragility in Ecological Networks.” Proceedings of the Royal Society of London. Series B: Biological Sciences 268 (1480): 2039–45. https://doi.org/10.1098/rspb.2001.1767.",
+    "crumbs": [
+      "Form vs Function",
+      "Function"
+    ]
+  },
+  {
+    "objectID": "01_bodymass_ratio.html",
+    "href": "01_bodymass_ratio.html",
+    "title": "Bodymass-ratio",
+    "section": "",
+    "text": "This concept of using body mass ratios to determine potential feeding links between species was primarily developed by Rohr et al. (2010) and has become quite popular in paleo settings (Yeakel et al. 2014; Pires et al. 2015)",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Methods",
+      "Bodymass-ratio"
+    ]
+  },
+  {
+    "objectID": "01_bodymass_ratio.html#overview",
+    "href": "01_bodymass_ratio.html#overview",
+    "title": "Bodymass-ratio",
+    "section": "",
+    "text": "This concept of using body mass ratios to determine potential feeding links between species was primarily developed by Rohr et al. (2010) and has become quite popular in paleo settings (Yeakel et al. 2014; Pires et al. 2015)",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Methods",
+      "Bodymass-ratio"
+    ]
+  },
+  {
+    "objectID": "01_bodymass_ratio.html#methods",
+    "href": "01_bodymass_ratio.html#methods",
+    "title": "Bodymass-ratio",
+    "section": "Methods",
+    "text": "Methods\nCore idea relates to the ratio between consumer and resource body sizes - which supposedly stems from niche theory (still trying to reconcile that myself). The probability of a link existing between a consumer and resource (in its most basic form) is defined as follows:\n\\[\nP_{ij} = \\frac{p}{1+p}\n\\]\nwhere\n\\[\np = exp[\\alpha + \\beta log(\\frac{M_{i}}{M_{j}}) + \\gamma log^{2}(\\frac{M_{i}}{M_{j}})]\n\\tag{1}\\]\nThe original latent-trait model developed by Rohr et al. (2010) also included an additional latent trait term \\(v_{i} \\delta f_{j}\\) however for simplicity we will use Equation 1 as per Yeakel et al. (2014). Based on Rohr et al. (2010) it is possible to estimate the parameters \\(\\alpha\\), \\(\\delta\\), and \\(\\gamma\\) using a GLM but we will use the parameters from Yeakel et al. (2014), which was ‘trained’ on the Serengeti food web data and are as follows: \\(\\alpha = 1.41\\), \\(\\delta = 3.75\\), and \\(\\gamma = 1.87\\).",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Methods",
+      "Bodymass-ratio"
+    ]
+  },
+  {
+    "objectID": "01_bodymass_ratio.html#references",
+    "href": "01_bodymass_ratio.html#references",
+    "title": "Bodymass-ratio",
+    "section": "References",
+    "text": "References\n\n\nPires, Mathias M., Paul L. Koch, Richard A. Fariña, Marcus A. M. de Aguiar, Sérgio F. dos Reis, and Paulo R. Guimarães. 2015. “Pleistocene Megafaunal Interaction Networks Became More Vulnerable After Human Arrival.” Proceedings of the Royal Society B: Biological Sciences 282 (1814): 20151367. https://doi.org/10.1098/rspb.2015.1367.\n\n\nRohr, Rudolf Philippe, Heike Scherer, Patrik Kehrli, Christian Mazza, and Louis-Félix Bersier. 2010. “Modeling Food Webs: Exploring Unexplained Structure Using Latent Traits.” The American Naturalist 176 (2): 170–77. https://doi.org/10.1086/653667.\n\n\nYeakel, Justin D., Mathias M. Pires, Lars Rudolf, Nathaniel J. Dominy, Paul L. Koch, Paulo R. Guimarães, and Thilo Gross. 2014. “Collapse of an Ecological Network in Ancient Egypt.” PNAS 111 (40): 14472–77. https://doi.org/10.1073/pnas.1408471111.",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Methods",
+      "Bodymass-ratio"
     ]
   },
   {
@@ -550,6 +480,76 @@
     "crumbs": [
       "(Re)constructing paleo networks",
       "How we reconstruct paleo food webs"
+    ]
+  },
+  {
+    "objectID": "01_adbm.html",
+    "href": "01_adbm.html",
+    "title": "Allometric Diet Breadth Model (ADBM)",
+    "section": "",
+    "text": "Feeding ‘rules’ are based on the energetic content of species, which is theoretically and conceptually embedded within the foraging ecology space (Petchey et al. 2008)",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Methods",
+      "Allometric Diet Breadth Model (ADBM)"
+    ]
+  },
+  {
+    "objectID": "01_adbm.html#overview",
+    "href": "01_adbm.html#overview",
+    "title": "Allometric Diet Breadth Model (ADBM)",
+    "section": "",
+    "text": "Feeding ‘rules’ are based on the energetic content of species, which is theoretically and conceptually embedded within the foraging ecology space (Petchey et al. 2008)",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Methods",
+      "Allometric Diet Breadth Model (ADBM)"
+    ]
+  },
+  {
+    "objectID": "01_adbm.html#methods",
+    "href": "01_adbm.html#methods",
+    "title": "Allometric Diet Breadth Model (ADBM)",
+    "section": "Methods",
+    "text": "Methods",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Methods",
+      "Allometric Diet Breadth Model (ADBM)"
+    ]
+  },
+  {
+    "objectID": "01_adbm.html#references",
+    "href": "01_adbm.html#references",
+    "title": "Allometric Diet Breadth Model (ADBM)",
+    "section": "References",
+    "text": "References\n\n\nPetchey, Owen L., Andrew P. Beckerman, Jens O. Riede, and Philip H. Warren. 2008. “Size, Foraging, and Food Web Structure.” Proceedings of the National Academy of Sciences 105 (11): 4191–96. https://doi.org/10.1073/pnas.0710672105.",
+    "crumbs": [
+      "(Re)constructing paleo networks",
+      "Methods",
+      "Allometric Diet Breadth Model (ADBM)"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Paleo-linked methods for network reconstruction",
+    "section": "",
+    "text": "A primer/template for thinking about the reconstruction of paleo networks. Particularly thinking about what we actually do with the data, how we interpret structure and function (linking the ‘summary statistics’ to ecological theory), and understanding the conceptual differences between a metaweb and a realised network (and how we downsample from one to the other).\nIn terms of turning these concepts into a tangible ‘item’ the idea is to compare and contrast some of the canonical methods used for reconstructing paleo food webs across different transitions (e.g., extinction events), see how these different methods might (or not) result in different ‘summary statistics’ and also make sure to link the ‘summary statistic’ to the relevant ecological theory (in the context of both structure and function).",
+    "crumbs": [
+      "Rationale",
+      "Paleo-linked methods for network reconstruction"
+    ]
+  },
+  {
+    "objectID": "index.html#references",
+    "href": "index.html#references",
+    "title": "Paleo-linked methods for network reconstruction",
+    "section": "References",
+    "text": "References",
+    "crumbs": [
+      "Rationale",
+      "Paleo-linked methods for network reconstruction"
     ]
   }
 ]
