@@ -12,8 +12,8 @@ for (i in seq_along(trait_files)) {
         filter(!(feeding %in% c("primary", "zooplankton")))  %>%
         # change motiliy class - we can remove this later
         mutate(motility = case_when( 
-                startsWith(motility, "non_motile") ~ "nonmotile",
-                TRUE ~ as.character(motility)))  %>%
+               motility == "nonmotile" ~ "non_motile",
+               TRUE ~ as.character(motility)))  %>%
         # divorce feeding from size
         mutate(size = case_when(
             str_detect(size, "^.*small.*$") ~ "small",
@@ -24,8 +24,8 @@ for (i in seq_along(trait_files)) {
             TRUE ~ as.character(size)),
             # same for feeding
             feeding = case_when(
-            str_detect(feeding, "^.*carnivore.*$") ~ "carnivore",
-            TRUE ~ as.character(feeding)))
+                        feeding == "microcarnivore" ~ "carnivore",
+                        TRUE ~ as.character(feeding)))
 
     # write as clean data
     write.csv(df, str_replace(trait_files[i], "raw.", "clean/trait/"),

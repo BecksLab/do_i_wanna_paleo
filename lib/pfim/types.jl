@@ -10,6 +10,7 @@ struct carnivore <: feeding end
 struct deposit_surficial <: feeding end
 struct deposit_mining <: feeding end
 struct deposit_mining_chemosymbiotic <: feeding end
+struct grazer_carnivore <: feeding end
 struct grazer_omnivore <: feeding end
 struct grazer_herbivore <: feeding end
 struct suspension <: feeding end
@@ -28,7 +29,10 @@ abstract type motility end
 struct fast_moving <: motility end
 struct slow_moving <: motility end
 struct facultative <: motility end
-struct nonmotile <: motility end
+struct non_motile <: motility end
+struct non_motile_attached <: motility end
+struct non_motile_byssate <: motility end
+struct non_motile_unattached <: motility end
 
 """
 tiering <: PFIM
@@ -53,6 +57,7 @@ size categories for PFIM model
 abstract type sizes end
 
 # size types
+struct very_large <: sizes end
 struct large <: sizes end
 struct medium <: sizes end
 struct small <: sizes end
