@@ -31,3 +31,5 @@ end
 
 # write summaries as .csv
 CSV.write("data/processed/topology_bodymassratio.csv", topology)
+# write networks as object
+save_object("data/processed/networks/bodymassratio_networks.jlds", topology[:, ["id", "model", "network"]])

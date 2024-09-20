@@ -1,5 +1,6 @@
 using CSV
 using DataFrames
+using JLD2
 
 include("../lib/pfim/pfim.jl")
 include("../lib/internals.jl")
@@ -30,4 +31,6 @@ for i in eachindex(matrix_names)
 end
 
 # write summaries as .csv
-CSV.write("data/processed/topology_pfim.csv", topology)
+CSV.write("data/processed/topology_pfim.csv", topology[:,setdiff(names(topology), ["network"])])
+# write networks as object
+save_object("data/processed/networks/pfim_networks.jlds", topology[:, ["id", "model", "network"]])

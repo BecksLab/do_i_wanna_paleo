@@ -105,6 +105,7 @@ function model_summary(
     D[:S2] = d[:S2]
     D[:S4] = d[:S4]
     D[:S5] = d[:S5]
+    D[:network] = N
     return D
 end
 
@@ -127,5 +128,6 @@ function topo_df()
         S2 = Float64[],
         S4 = Float64[],
         S5 = Float64[],
+        network = SpeciesInteractionNetwork[],
     )
 end
